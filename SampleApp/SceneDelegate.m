@@ -6,6 +6,7 @@
 //
 
 #import "SceneDelegate.h"
+#import "ViewController.h"
 
 @interface SceneDelegate ()
 
@@ -18,6 +19,73 @@
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
     // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+    
+    UIWindowScene *windowScene = (UIWindowScene *)scene;
+    self.window = [[UIWindow alloc] initWithWindowScene:windowScene];
+    self.window.frame = windowScene.coordinateSpace.bounds;
+
+    
+    UIViewController *controller1 = [[UIViewController alloc] init];
+    controller1.view.backgroundColor = [UIColor tintColor];
+    controller1.tabBarItem.title = @"新闻";
+    UIViewController *controller2 = [[UIViewController alloc] init];
+    controller2.view.backgroundColor = [UIColor yellowColor];
+    controller2.tabBarItem.title = @"视频";
+    UIViewController *controller3 = [[UIViewController alloc] init];
+    controller3.view.backgroundColor = [UIColor grayColor];
+    controller3.tabBarItem.title = @"推荐";
+    UIViewController *controller4 = [[UIViewController alloc] init];
+    controller4.view.backgroundColor = [UIColor purpleColor];
+    controller4.tabBarItem.title = @"我的";
+    
+    
+    ViewController *viewController = [[ViewController alloc] init];
+    viewController.tabBarItem.title = @"view";
+    UITabBarController *tabbarController = [[UITabBarController alloc] init];
+    
+//    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:tabbarController];
+    navController.tabBarItem.title = @"Nav";
+    navController.view.backgroundColor = [UIColor whiteColor];
+    
+    // 将四个页面的 UIViewController 加入到 UITabBarController 之中
+//    [tabbarController setViewControllers: @[navController, controller2, controller3, controller4]];
+    [tabbarController setViewControllers: @[viewController, controller2, controller3, controller4]];
+    tabbarController.tabBar.translucent = NO;
+    tabbarController.tabBar.backgroundColor = [UIColor whiteColor];
+    tabbarController.tabBar.tintColor = [UIColor redColor];
+    tabbarController.tabBar.barTintColor = [UIColor redColor];
+    
+
+//    self.window.rootViewController = tabbarController;
+    self.window.rootViewController = navController;
+    [self.window makeKeyAndVisible];
+    
+/**
+ 布局方式：
+ 
+ window 的 RootViewController 为 TabbarController，每个 tabView 都是 NavgationController：这样每个 ViewController 切换都是在 TabbarController 内部切换
+ 
+             UIWindow
+                |
+          TabbarController
+              /        \
+NavgationController       NavgationController
+       |                                   |
+ ViewController               ViewController
+ 
+ 
+ window 的 RootViewController 为 NavgationController，第一个容器为 TabbarController：这样每个 ViewController  切换是以 TabbarController 整体切换，会覆盖 Tabbar
+ 
+        UIWindow
+            |
+     NavgationController
+            |
+     TabbarController
+          /       \
+ ViewController       ViewController
+ 
+ */
 }
 
 
