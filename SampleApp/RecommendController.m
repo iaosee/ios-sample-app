@@ -16,9 +16,9 @@
 - (instancetype) init {
     if (self = [super init]) {
         self.view.backgroundColor = [UIColor purpleColor];
-        self.tabBarItem.title = @"我的";
-        self.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/home@2x.png"];
-        self.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/home_selected@2x.png"];
+        self.tabBarItem.title = @"推荐";
+        self.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/like@2x.png"];
+        self.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/like_selected@2x.png"];
     }
     
     return self;

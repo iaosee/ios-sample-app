@@ -43,7 +43,7 @@
 //    将四个页面的 UIViewController 加入到 UITabBarController 之中
 //    [tabbarController setViewControllers: @[navController, videoController, recommendController, mineController]];
     [tabbarController setViewControllers: @[newsController, videoController, recommendController, mineController]];
-    
+    tabbarController.tabBar.translucent = NO;
 //    tabbarController.navigationItem.title = @"App";
 
 //    self.window.rootViewController = tabbarController;

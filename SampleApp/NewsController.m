@@ -6,6 +6,7 @@
 //
 
 #import "NewsController.h"
+#import "ViewController.h"
 
 @interface NewsController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -61,7 +62,7 @@
 //}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    UIViewController *viewController = [[UIViewController alloc] init];
+    ViewController *viewController = [[ViewController alloc] init];
     viewController.view.backgroundColor = [UIColor whiteColor];
     viewController.navigationItem.title = [NSString stringWithFormat:@"详情 %@", @(indexPath.row)];
     [self.navigationController pushViewController:viewController animated:YES];

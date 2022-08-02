@@ -7,7 +7,7 @@
 
 #import "VideoController.h"
 
-@interface VideoController ()
+@interface VideoController () <UICollectionViewDelegate, UICollectionViewDataSource>
 
 @end
 
@@ -27,6 +27,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    flowLayout.minimumLineSpacing = 10;
+    flowLayout.minimumInteritemSpacing = 10;
+    flowLayout.itemSize = CGSizeMake((self.view.frame.size.width - flowLayout.minimumInteritemSpacing) / 2, 300);
+    
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
+    
+    collectionView.delegate = self;
+    collectionView.dataSource = self;
+    
+    [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"UICollectionViewCell"];
+    
+    [self.view addSubview:collectionView];
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 40;
+}
+
+- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UICollectionViewCell" forIndexPath:indexPath];
+    
+    cell.backgroundColor = indexPath.row % 2 ? [UIColor greenColor] : [UIColor blueColor];
+    
+    return cell;
 }
 
 /*
