@@ -7,6 +7,7 @@
 
 #import "NewsController.h"
 #import "ViewController.h"
+#import "NormalTableViewCell.h"
 
 @interface NewsController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -43,23 +44,26 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"id"];
+    NormalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"id"];
     
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"id"];
+        cell = [[NormalTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"id"];
     }
 
-    cell.textLabel.text = @"Title";
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"sub title, %@-%@", @(indexPath.row), @(indexPath.row)];
-    cell.imageView.image = [UIImage imageNamed:@"icon.bundle/video@2x.png"];
+//    cell.textLabel.text = @"Title";
+//    cell.detailTextLabel.text = [NSString stringWithFormat:@"sub title, %@-%@", @(indexPath.row), @(indexPath.row)];
+//    cell.imageView.image = [UIImage imageNamed:@"icon.bundle/video@2x.png"];
+    
+    [cell layoutTableViewCell];
+    
     return cell;
 }
 
 #pragma mark - UITableViewDelegate
 
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    return 100;
-//}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 100;
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     ViewController *viewController = [[ViewController alloc] init];

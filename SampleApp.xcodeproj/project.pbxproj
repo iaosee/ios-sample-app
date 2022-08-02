@@ -22,6 +22,7 @@
 		3AAD38AD2898CA53006D3478 /* VideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD38AC2898CA53006D3478 /* VideoController.m */; };
 		3AAD38B02898CB19006D3478 /* RecommendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD38AF2898CB19006D3478 /* RecommendController.m */; };
 		3AAD38B32898CBC3006D3478 /* MineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD38B22898CBC3006D3478 /* MineController.m */; };
+		3AAD38B6289917AA006D3478 /* NormalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD38B5289917AA006D3478 /* NormalTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		3AAD38AF2898CB19006D3478 /* RecommendController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecommendController.m; sourceTree = "<group>"; };
 		3AAD38B12898CBC3006D3478 /* MineController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineController.h; sourceTree = "<group>"; };
 		3AAD38B22898CBC3006D3478 /* MineController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineController.m; sourceTree = "<group>"; };
+		3AAD38B4289917AA006D3478 /* NormalTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NormalTableViewCell.h; sourceTree = "<group>"; };
+		3AAD38B5289917AA006D3478 /* NormalTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NormalTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +141,8 @@
 				3AAD38AF2898CB19006D3478 /* RecommendController.m */,
 				3AAD38B12898CBC3006D3478 /* MineController.h */,
 				3AAD38B22898CBC3006D3478 /* MineController.m */,
+				3AAD38B4289917AA006D3478 /* NormalTableViewCell.h */,
+				3AAD38B5289917AA006D3478 /* NormalTableViewCell.m */,
 			);
 			path = SampleApp;
 			sourceTree = "<group>";
@@ -294,6 +299,7 @@
 				3AAD387628977C62006D3478 /* ViewController.m in Sources */,
 				3AAD387028977C62006D3478 /* AppDelegate.m in Sources */,
 				3AAD38A82897D706006D3478 /* NewsController.m in Sources */,
+				3AAD38B6289917AA006D3478 /* NormalTableViewCell.m in Sources */,
 				3AAD38AD2898CA53006D3478 /* VideoController.m in Sources */,
 				3AAD388128977C64006D3478 /* main.m in Sources */,
 				3AAD38B02898CB19006D3478 /* RecommendController.m in Sources */,
