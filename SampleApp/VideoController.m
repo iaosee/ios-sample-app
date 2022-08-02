@@ -37,9 +37,9 @@
     
     collectionView.delegate = self;
     collectionView.dataSource = self;
-    
+
     [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"UICollectionViewCell"];
-    
+
     [self.view addSubview:collectionView];
 }
 
@@ -50,9 +50,18 @@
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UICollectionViewCell" forIndexPath:indexPath];
     
-    cell.backgroundColor = indexPath.row % 2 ? [UIColor greenColor] : [UIColor blueColor];
+    cell.backgroundColor = indexPath.row % 3 ? [UIColor greenColor] : [UIColor blueColor];
     
     return cell;
+}
+
+- (CGSize) collectionView: (UICollectionView *) collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.row % 3 == 0) {
+        return CGSizeMake(self.view.frame.size.width, 200);
+    }
+    
+    return CGSizeMake((self.view.frame.size.width - 10) / 2, 300);
 }
 
 /*
