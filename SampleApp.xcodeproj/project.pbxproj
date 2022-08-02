@@ -19,6 +19,9 @@
 		3AAD38A52897C7AF006D3478 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AAD38A32897C7AF006D3478 /* Main.storyboard */; };
 		3AAD38A82897D706006D3478 /* NewsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD38A72897D706006D3478 /* NewsController.m */; };
 		3AAD38AA2898B8F6006D3478 /* icon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3AAD38A92898B8F5006D3478 /* icon.bundle */; };
+		3AAD38AD2898CA53006D3478 /* VideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD38AC2898CA53006D3478 /* VideoController.m */; };
+		3AAD38B02898CB19006D3478 /* RecommendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD38AF2898CB19006D3478 /* RecommendController.m */; };
+		3AAD38B32898CBC3006D3478 /* MineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD38B22898CBC3006D3478 /* MineController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,12 @@
 		3AAD38A62897D706006D3478 /* NewsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsController.h; sourceTree = "<group>"; };
 		3AAD38A72897D706006D3478 /* NewsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsController.m; sourceTree = "<group>"; };
 		3AAD38A92898B8F5006D3478 /* icon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = icon.bundle; sourceTree = "<group>"; };
+		3AAD38AB2898CA53006D3478 /* VideoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoController.h; sourceTree = "<group>"; };
+		3AAD38AC2898CA53006D3478 /* VideoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoController.m; sourceTree = "<group>"; };
+		3AAD38AE2898CB19006D3478 /* RecommendController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecommendController.h; sourceTree = "<group>"; };
+		3AAD38AF2898CB19006D3478 /* RecommendController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecommendController.m; sourceTree = "<group>"; };
+		3AAD38B12898CBC3006D3478 /* MineController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineController.h; sourceTree = "<group>"; };
+		3AAD38B22898CBC3006D3478 /* MineController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +132,12 @@
 				3AAD388028977C64006D3478 /* main.m */,
 				3AAD38A62897D706006D3478 /* NewsController.h */,
 				3AAD38A72897D706006D3478 /* NewsController.m */,
+				3AAD38AB2898CA53006D3478 /* VideoController.h */,
+				3AAD38AC2898CA53006D3478 /* VideoController.m */,
+				3AAD38AE2898CB19006D3478 /* RecommendController.h */,
+				3AAD38AF2898CB19006D3478 /* RecommendController.m */,
+				3AAD38B12898CBC3006D3478 /* MineController.h */,
+				3AAD38B22898CBC3006D3478 /* MineController.m */,
 			);
 			path = SampleApp;
 			sourceTree = "<group>";
@@ -275,10 +290,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AAD38B32898CBC3006D3478 /* MineController.m in Sources */,
 				3AAD387628977C62006D3478 /* ViewController.m in Sources */,
 				3AAD387028977C62006D3478 /* AppDelegate.m in Sources */,
 				3AAD38A82897D706006D3478 /* NewsController.m in Sources */,
+				3AAD38AD2898CA53006D3478 /* VideoController.m in Sources */,
 				3AAD388128977C64006D3478 /* main.m in Sources */,
+				3AAD38B02898CB19006D3478 /* RecommendController.m in Sources */,
 				3AAD387328977C62006D3478 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,6 +7,10 @@
 
 #import "SceneDelegate.h"
 #import "ViewController.h"
+#import "NewsController.h"
+#import "VideoController.h"
+#import "RecommendController.h"
+#import "MineController.h"
 
 @interface SceneDelegate ()
 
@@ -24,48 +28,23 @@
     self.window = [[UIWindow alloc] initWithWindowScene:windowScene];
     self.window.frame = windowScene.coordinateSpace.bounds;
 
-    
-    UIViewController *controller1 = [[UIViewController alloc] init];
-    controller1.view.backgroundColor = [UIColor tintColor];
-    controller1.tabBarItem.title = @"新闻";
-    controller1.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/page@2x.png"];
-    controller1.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/page_selected@2x.png"];
-    UIViewController *controller2 = [[UIViewController alloc] init];
-    controller2.view.backgroundColor = [UIColor yellowColor];
-    controller2.tabBarItem.title = @"视频";
-    controller2.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/video@2x.png"];
-    controller2.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/video_selected@2x.png"];
-    UIViewController *controller3 = [[UIViewController alloc] init];
-    controller3.view.backgroundColor = [UIColor grayColor];
-    controller3.tabBarItem.title = @"推荐";
-    controller3.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/like@2x.png"];
-    controller3.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/like_selected@2x.png"];
-    UIViewController *controller4 = [[UIViewController alloc] init];
-    controller4.view.backgroundColor = [UIColor purpleColor];
-    controller4.tabBarItem.title = @"我的";
-    controller4.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/home@2x.png"];
-    controller4.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/home_selected@2x.png"];
-    
-    
-    ViewController *viewController = [[ViewController alloc] init];
-    viewController.tabBarItem.title = @"View";
-    viewController.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/page@2x.png"];
-    viewController.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/page_selected@2x.png"];
+    NewsController *newsController = [[NewsController alloc] init];
+    VideoController *videoController = [[VideoController alloc] init];
+    RecommendController *recommendController = [[RecommendController alloc] init];
+    MineController *mineController = [[MineController alloc] init];
+
     UITabBarController *tabbarController = [[UITabBarController alloc] init];
-    
-//    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
+
+//    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:newsController];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:tabbarController];
     navController.tabBarItem.title = @"Nav";
     navController.view.backgroundColor = [UIColor whiteColor];
+
+//    将四个页面的 UIViewController 加入到 UITabBarController 之中
+//    [tabbarController setViewControllers: @[navController, videoController, recommendController, mineController]];
+    [tabbarController setViewControllers: @[newsController, videoController, recommendController, mineController]];
     
-    // 将四个页面的 UIViewController 加入到 UITabBarController 之中
-//    [tabbarController setViewControllers: @[navController, controller2, controller3, controller4]];
-    [tabbarController setViewControllers: @[viewController, controller2, controller3, controller4]];
-    tabbarController.tabBar.translucent = NO;
-    tabbarController.tabBar.backgroundColor = [UIColor whiteColor];
-    tabbarController.tabBar.tintColor = [UIColor redColor];
-    tabbarController.tabBar.barTintColor = [UIColor redColor];
-    
+//    tabbarController.navigationItem.title = @"App";
 
 //    self.window.rootViewController = tabbarController;
     self.window.rootViewController = navController;

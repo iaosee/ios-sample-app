@@ -13,6 +13,16 @@
 
 @implementation NewsController
 
+- (instancetype) init {
+    if (self = [super init]) {
+        self.tabBarItem.title = @"新闻";
+        self.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/page@2x.png"];
+        self.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/page_selected@2x.png"];
+    }
+    
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

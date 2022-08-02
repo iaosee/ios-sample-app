@@ -6,8 +6,7 @@
 //
 
 #import "ViewController.h"
-#import "NewsController.h""
-
+#import "NewsController.h"
 
 @interface TestView : UIView
 
