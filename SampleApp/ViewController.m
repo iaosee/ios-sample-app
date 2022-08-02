@@ -92,7 +92,7 @@
     NSLog(@"------- pushController");
     UIViewController *viewController = [[UIViewController alloc] init];
     viewController.view.backgroundColor = [UIColor whiteColor];
-    viewController.navigationItem.title = @"页面标题";
+    viewController.navigationItem.title = @"标题";
     viewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"右边标题" style:UIBarButtonItemStylePlain target:self action:nil];
     
     [self.navigationController pushViewController:viewController animated:YES];
@@ -102,7 +102,7 @@
     NSLog(@"------- pushNewsController");
     NewsController *viewController = [[NewsController alloc] init];
     viewController.view.backgroundColor = [UIColor whiteColor];
-    viewController.navigationItem.title = @"页面标题-News";
+    viewController.navigationItem.title = @"标题-News";
     viewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"右边标题" style:UIBarButtonItemStylePlain target:self action:nil];
 
     [self.navigationController pushViewController:viewController animated:YES];
