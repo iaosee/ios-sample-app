@@ -6,6 +6,7 @@
 //
 
 #import "MineController.h"
+#import "SliderController.h"
 
 @interface MineController ()
 
@@ -15,7 +16,6 @@
 
 - (instancetype) init {
     if (self = [super init]) {
-        self.view.backgroundColor = [UIColor grayColor];
         self.tabBarItem.title = @"我的";
         self.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/home@2x.png"];
         self.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/home_selected@2x.png"];
@@ -27,6 +27,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+//    self.view.backgroundColor = [UIColor grayColor];
+    
+    [self.view addSubview:({
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 100, 100, 30)];
+        [button setTitle:@"Button" forState:UIControlStateNormal];
+        button.backgroundColor = [UIColor blueColor];
+        
+        [button addTarget:self action:@selector(goSliderPage) forControlEvents:UIControlEventTouchUpInside];
+        button;
+    })];
+    
+}
+
+- (void) goSliderPage {
+    SliderController *viewController = [[SliderController alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 /*
