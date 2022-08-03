@@ -56,11 +56,26 @@
                                        scrollView.bounds.size.height)
             ];
             view.backgroundColor = [colorArray objectAtIndex:i];
+            
+            [view addSubview:({
+                UIView *subView = [[UIView alloc] initWithFrame:CGRectMake(view.bounds.size.width / 2 - 50, view.bounds.size.width / 2 - 50, 100, 100)];
+                subView.backgroundColor = [UIColor grayColor];
+                
+                UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewClickHandler)];
+                [view addGestureRecognizer:tapGesture];
+                
+                subView;
+            })];
+            
             view;
         })];
     }
 
     [self.view addSubview:scrollView];
+}
+
+- (void) viewClickHandler {
+    NSLog(@"viewClickHandler");
 }
 
 #pragma mark - UIScrollViewDelegate
