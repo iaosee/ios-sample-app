@@ -5,13 +5,13 @@
 //  Created by 肖峰 on 2022/8/3.
 //
 
-#import "SliderController.h"
+#import "SliderViewController.h"
 
-@interface SliderController () <UIScrollViewDelegate>
+@interface SliderViewController () <UIScrollViewDelegate>
 
 @end
 
-@implementation SliderController
+@implementation SliderViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

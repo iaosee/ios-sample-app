@@ -7,10 +7,10 @@
 
 #import "SceneDelegate.h"
 #import "ViewController.h"
-#import "NewsController.h"
-#import "VideoController.h"
-#import "RecommendController.h"
-#import "MineController.h"
+#import "NewsViewController.h"
+#import "VideoViewController.h"
+#import "RecommendViewController.h"
+#import "MineViewController.h"
 
 @interface SceneDelegate ()
 
@@ -28,10 +28,10 @@
     self.window = [[UIWindow alloc] initWithWindowScene:windowScene];
     self.window.frame = windowScene.coordinateSpace.bounds;
 
-    NewsController *newsController = [[NewsController alloc] init];
-    VideoController *videoController = [[VideoController alloc] init];
-    RecommendController *recommendController = [[RecommendController alloc] init];
-    MineController *mineController = [[MineController alloc] init];
+    NewsViewController *newsController = [[NewsViewController alloc] init];
+    VideoViewController *videoController = [[VideoViewController alloc] init];
+    RecommendViewController *recommendController = [[RecommendViewController alloc] init];
+    MineViewController *mineController = [[MineViewController alloc] init];
 
     UITabBarController *tabbarController = [[UITabBarController alloc] init];
 

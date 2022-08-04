@@ -5,15 +5,15 @@
 //  Created by 肖峰 on 2022/8/1.
 //
 
-#import "NewsController.h"
+#import "NewsViewController.h"
 #import "ViewController.h"
 #import "NormalTableViewCell.h"
 
-@interface NewsController () <UITableViewDataSource, UITableViewDelegate>
+@interface NewsViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @end
 
-@implementation NewsController
+@implementation NewsViewController
 
 - (instancetype) init {
     if (self = [super init]) {

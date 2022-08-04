@@ -17,13 +17,13 @@
 		3AAD389528977C64006D3478 /* SampleAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD389428977C64006D3478 /* SampleAppUITests.m */; };
 		3AAD389728977C64006D3478 /* SampleAppUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD389628977C64006D3478 /* SampleAppUITestsLaunchTests.m */; };
 		3AAD38A52897C7AF006D3478 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AAD38A32897C7AF006D3478 /* Main.storyboard */; };
-		3AAD38A82897D706006D3478 /* NewsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD38A72897D706006D3478 /* NewsController.m */; };
+		3AAD38A82897D706006D3478 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD38A72897D706006D3478 /* NewsViewController.m */; };
 		3AAD38AA2898B8F6006D3478 /* icon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3AAD38A92898B8F5006D3478 /* icon.bundle */; };
-		3AAD38AD2898CA53006D3478 /* VideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD38AC2898CA53006D3478 /* VideoController.m */; };
-		3AAD38B02898CB19006D3478 /* RecommendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD38AF2898CB19006D3478 /* RecommendController.m */; };
-		3AAD38B32898CBC3006D3478 /* MineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD38B22898CBC3006D3478 /* MineController.m */; };
+		3AAD38AD2898CA53006D3478 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD38AC2898CA53006D3478 /* VideoViewController.m */; };
+		3AAD38B02898CB19006D3478 /* RecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD38AF2898CB19006D3478 /* RecommendViewController.m */; };
+		3AAD38B32898CBC3006D3478 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD38B22898CBC3006D3478 /* MineViewController.m */; };
 		3AAD38B6289917AA006D3478 /* NormalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD38B5289917AA006D3478 /* NormalTableViewCell.m */; };
-		3AAD38BB289A0ED4006D3478 /* SliderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD38BA289A0ED4006D3478 /* SliderController.m */; };
+		3AAD38BB289A0ED4006D3478 /* SliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD38BA289A0ED4006D3478 /* SliderViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,19 +61,19 @@
 		3AAD389428977C64006D3478 /* SampleAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleAppUITests.m; sourceTree = "<group>"; };
 		3AAD389628977C64006D3478 /* SampleAppUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleAppUITestsLaunchTests.m; sourceTree = "<group>"; };
 		3AAD38A42897C7AF006D3478 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = SampleApp/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3AAD38A62897D706006D3478 /* NewsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsController.h; sourceTree = "<group>"; };
-		3AAD38A72897D706006D3478 /* NewsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsController.m; sourceTree = "<group>"; };
+		3AAD38A62897D706006D3478 /* NewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		3AAD38A72897D706006D3478 /* NewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		3AAD38A92898B8F5006D3478 /* icon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = icon.bundle; sourceTree = "<group>"; };
-		3AAD38AB2898CA53006D3478 /* VideoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoController.h; sourceTree = "<group>"; };
-		3AAD38AC2898CA53006D3478 /* VideoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoController.m; sourceTree = "<group>"; };
-		3AAD38AE2898CB19006D3478 /* RecommendController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecommendController.h; sourceTree = "<group>"; };
-		3AAD38AF2898CB19006D3478 /* RecommendController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecommendController.m; sourceTree = "<group>"; };
-		3AAD38B12898CBC3006D3478 /* MineController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineController.h; sourceTree = "<group>"; };
-		3AAD38B22898CBC3006D3478 /* MineController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineController.m; sourceTree = "<group>"; };
+		3AAD38AB2898CA53006D3478 /* VideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
+		3AAD38AC2898CA53006D3478 /* VideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
+		3AAD38AE2898CB19006D3478 /* RecommendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecommendViewController.h; sourceTree = "<group>"; };
+		3AAD38AF2898CB19006D3478 /* RecommendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecommendViewController.m; sourceTree = "<group>"; };
+		3AAD38B12898CBC3006D3478 /* MineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		3AAD38B22898CBC3006D3478 /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		3AAD38B4289917AA006D3478 /* NormalTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NormalTableViewCell.h; sourceTree = "<group>"; };
 		3AAD38B5289917AA006D3478 /* NormalTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NormalTableViewCell.m; sourceTree = "<group>"; };
-		3AAD38B9289A0ED4006D3478 /* SliderController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SliderController.h; sourceTree = "<group>"; };
-		3AAD38BA289A0ED4006D3478 /* SliderController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SliderController.m; sourceTree = "<group>"; };
+		3AAD38B9289A0ED4006D3478 /* SliderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SliderViewController.h; sourceTree = "<group>"; };
+		3AAD38BA289A0ED4006D3478 /* SliderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SliderViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,18 +136,18 @@
 				3AAD387C28977C64006D3478 /* LaunchScreen.storyboard */,
 				3AAD387F28977C64006D3478 /* Info.plist */,
 				3AAD388028977C64006D3478 /* main.m */,
-				3AAD38A62897D706006D3478 /* NewsController.h */,
-				3AAD38A72897D706006D3478 /* NewsController.m */,
-				3AAD38AB2898CA53006D3478 /* VideoController.h */,
-				3AAD38AC2898CA53006D3478 /* VideoController.m */,
-				3AAD38AE2898CB19006D3478 /* RecommendController.h */,
-				3AAD38AF2898CB19006D3478 /* RecommendController.m */,
-				3AAD38B12898CBC3006D3478 /* MineController.h */,
-				3AAD38B22898CBC3006D3478 /* MineController.m */,
+				3AAD38A62897D706006D3478 /* NewsViewController.h */,
+				3AAD38A72897D706006D3478 /* NewsViewController.m */,
+				3AAD38AB2898CA53006D3478 /* VideoViewController.h */,
+				3AAD38AC2898CA53006D3478 /* VideoViewController.m */,
+				3AAD38AE2898CB19006D3478 /* RecommendViewController.h */,
+				3AAD38AF2898CB19006D3478 /* RecommendViewController.m */,
+				3AAD38B12898CBC3006D3478 /* MineViewController.h */,
+				3AAD38B22898CBC3006D3478 /* MineViewController.m */,
 				3AAD38B4289917AA006D3478 /* NormalTableViewCell.h */,
 				3AAD38B5289917AA006D3478 /* NormalTableViewCell.m */,
-				3AAD38B9289A0ED4006D3478 /* SliderController.h */,
-				3AAD38BA289A0ED4006D3478 /* SliderController.m */,
+				3AAD38B9289A0ED4006D3478 /* SliderViewController.h */,
+				3AAD38BA289A0ED4006D3478 /* SliderViewController.m */,
 			);
 			path = SampleApp;
 			sourceTree = "<group>";
@@ -300,15 +300,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AAD38BB289A0ED4006D3478 /* SliderController.m in Sources */,
-				3AAD38B32898CBC3006D3478 /* MineController.m in Sources */,
+				3AAD38BB289A0ED4006D3478 /* SliderViewController.m in Sources */,
+				3AAD38B32898CBC3006D3478 /* MineViewController.m in Sources */,
 				3AAD387628977C62006D3478 /* ViewController.m in Sources */,
 				3AAD387028977C62006D3478 /* AppDelegate.m in Sources */,
-				3AAD38A82897D706006D3478 /* NewsController.m in Sources */,
+				3AAD38A82897D706006D3478 /* NewsViewController.m in Sources */,
 				3AAD38B6289917AA006D3478 /* NormalTableViewCell.m in Sources */,
-				3AAD38AD2898CA53006D3478 /* VideoController.m in Sources */,
+				3AAD38AD2898CA53006D3478 /* VideoViewController.m in Sources */,
 				3AAD388128977C64006D3478 /* main.m in Sources */,
-				3AAD38B02898CB19006D3478 /* RecommendController.m in Sources */,
+				3AAD38B02898CB19006D3478 /* RecommendViewController.m in Sources */,
 				3AAD387328977C62006D3478 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

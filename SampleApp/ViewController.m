@@ -6,7 +6,7 @@
 //
 
 #import "ViewController.h"
-#import "NewsController.h"
+#import "NewsViewController.h"
 
 @interface TestView : UIView
 
@@ -99,7 +99,7 @@
 
 - (void) pushNewsController {
     NSLog(@"------- pushNewsController");
-    NewsController *viewController = [[NewsController alloc] init];
+    NewsViewController *viewController = [[NewsViewController alloc] init];
     viewController.view.backgroundColor = [UIColor whiteColor];
     viewController.navigationItem.title = @"标题-News";
     viewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"右边标题" style:UIBarButtonItemStylePlain target:self action:nil];

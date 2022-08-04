@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NewsController : UIViewController
+@interface NewsViewController : UIViewController
 
 @end
 

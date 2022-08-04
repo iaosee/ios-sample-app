@@ -1,5 +1,5 @@
 //
-//  RecommendController.h
+//  MineController.h
 //  SampleApp
 //
 //  Created by 肖峰 on 2022/8/2.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RecommendController : UIViewController
+@interface MineViewController : UIViewController
 
 @end
 

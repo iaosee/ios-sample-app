@@ -5,13 +5,13 @@
 //  Created by 肖峰 on 2022/8/2.
 //
 
-#import "VideoController.h"
+#import "VideoViewController.h"
 
-@interface VideoController () <UICollectionViewDelegate, UICollectionViewDataSource>
+@interface VideoViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 
 @end
 
-@implementation VideoController
+@implementation VideoViewController
 
 - (instancetype) init {
     if (self = [super init]) {

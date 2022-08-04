@@ -5,13 +5,13 @@
 //  Created by 肖峰 on 2022/8/2.
 //
 
-#import "RecommendController.h"
+#import "RecommendViewController.h"
 
-@interface RecommendController ()
+@interface RecommendViewController ()
 
 @end
 
-@implementation RecommendController
+@implementation RecommendViewController
 
 - (instancetype) init {
     if (self = [super init]) {
