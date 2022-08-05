@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A90B52D289D01A80048F7AE /* ListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A90B52C289D01A80048F7AE /* ListLoader.m */; };
 		3AAD387028977C62006D3478 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD386F28977C62006D3478 /* AppDelegate.m */; };
 		3AAD387328977C62006D3478 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD387228977C62006D3478 /* SceneDelegate.m */; };
 		3AAD387628977C62006D3478 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD387528977C62006D3478 /* ViewController.m */; };
@@ -46,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A90B52B289D01A80048F7AE /* ListLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListLoader.h; sourceTree = "<group>"; };
+		3A90B52C289D01A80048F7AE /* ListLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListLoader.m; sourceTree = "<group>"; };
 		3AAD386B28977C62006D3478 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AAD386E28977C62006D3478 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3AAD386F28977C62006D3478 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -160,6 +163,15 @@
 			path = OtherView;
 			sourceTree = "<group>";
 		};
+		3A90B52A289D016C0048F7AE /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				3A90B52B289D01A80048F7AE /* ListLoader.h */,
+				3A90B52C289D01A80048F7AE /* ListLoader.m */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
 		3AAD386228977C62006D3478 = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +195,7 @@
 		3AAD386D28977C62006D3478 /* SampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				3A90B52A289D016C0048F7AE /* Loader */,
 				3A90B527289CFF840048F7AE /* Mine */,
 				3A90B528289CFFA50048F7AE /* Recommend */,
 				3A90B526289CFF420048F7AE /* Video */,
@@ -351,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AAD38BB289A0ED4006D3478 /* SliderViewController.m in Sources */,
+				3A90B52D289D01A80048F7AE /* ListLoader.m in Sources */,
 				71D2E613289C206100A34394 /* DialogCellView.m in Sources */,
 				3AAD38B32898CBC3006D3478 /* MineViewController.m in Sources */,
 				3AAD387628977C62006D3478 /* ViewController.m in Sources */,

@@ -10,11 +10,13 @@
 #import "DialogCellView.h"
 #import "NormalTableViewCell.h"
 #import "DetailViewController.h"
+#import "ListLoader.h"
 
 @interface NewsViewController () <UITableViewDataSource, UITableViewDelegate, NormalTableViewCellDelegate>
 
-@property(nonatomic, strong,readwrite) UITableView * tableView;
-@property(nonatomic, strong,readwrite) NSMutableArray * dataArray;
+@property(nonatomic, strong, readwrite) UITableView * tableView;
+@property(nonatomic, strong, readwrite) NSMutableArray * dataArray;
+@property(nonatomic, strong, readwrite) ListLoader *listLoader;
 
 @end
 
@@ -45,6 +47,11 @@
     _tableView.dataSource = self;
     _tableView.delegate = self;
     [self.view addSubview:_tableView];
+    
+    
+    self.listLoader = [[ListLoader alloc] init];
+    [self.listLoader loadListData];
+    
 }
 
 #pragma mark - UITableViewDataSource
