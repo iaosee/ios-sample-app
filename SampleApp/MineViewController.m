@@ -1,12 +1,14 @@
 //
-//  MineController.m
+//  MineViewController.m
 //  SampleApp
 //
 //  Created by 肖峰 on 2022/8/2.
 //
 
 #import "MineViewController.h"
+#import "ViewController.h"
 #import "SliderViewController.h"
+#import "DetailViewController.h"
 
 @interface MineViewController ()
 
@@ -31,15 +33,24 @@
     
     [self.view addSubview:({
         UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 100, 150, 30)];
+        [button setTitle:@"ViewPage" forState:UIControlStateNormal];
+        button.backgroundColor = [UIColor blueColor];
+        
+        [button addTarget:self action:@selector(goViewPage) forControlEvents:UIControlEventTouchUpInside];
+        button;
+    })];
+    
+    [self.view addSubview:({
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 150, 150, 30)];
         [button setTitle:@"SliderPage" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         
         [button addTarget:self action:@selector(goSliderPage) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
-    
+
     [self.view addSubview:({
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 150, 150, 30)];
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 200, 150, 30)];
         [button setTitle:@"WebViewPage" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         
@@ -49,13 +60,18 @@
     
 }
 
+- (void) goViewPage {
+    ViewController *viewController = [[ViewController alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
 - (void) goSliderPage {
     SliderViewController *viewController = [[SliderViewController alloc] init];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
 - (void) goWebViewPage {
-    SliderViewController *viewController = [[SliderViewController alloc] init];
+    DetailViewController *viewController = [[DetailViewController alloc] init];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 

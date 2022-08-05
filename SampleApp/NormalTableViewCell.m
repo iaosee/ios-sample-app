@@ -14,6 +14,7 @@
 @property(nonatomic, strong, readwrite) UILabel *sourceLabel;
 @property(nonatomic, strong, readwrite) UILabel *commentLabel;
 @property(nonatomic, strong, readwrite) UILabel *timeLabel;
+@property(nonatomic, strong, readwrite) UIButton *deleteButton;
 
 @property(nonatomic, strong, readwrite) UIImageView *rightImageView;
 
@@ -76,6 +77,22 @@
             self.timeLabel;
         })];
         [self.contentView addSubview:({
+            self.deleteButton = [[UIButton alloc] initWithFrame:CGRectMake(200, 80, 40, 20)];
+//            self.deleteButton.backgroundColor = [UIColor lightGrayColor];
+            self.deleteButton.contentMode = UIViewContentModeScaleAspectFit;
+
+            self.deleteButton.titleLabel.font = [UIFont systemFontOfSize: 12];
+            self.deleteButton.titleLabel.textColor = [UIColor grayColor];
+            [self.deleteButton setTitle:@"删除" forState:UIControlStateNormal];
+            [self.deleteButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+            self.deleteButton.layer.cornerRadius = 10;
+            self.deleteButton.layer.masksToBounds = YES;
+            self.deleteButton.layer.borderColor = [UIColor redColor].CGColor;
+            self.deleteButton.layer.borderWidth = 1;
+            [self.deleteButton addTarget:self action:@selector(deleteButtonClick) forControlEvents:UIControlEventTouchUpInside];
+            self.deleteButton;
+        })];
+        [self.contentView addSubview:({
             self.rightImageView = [[UIImageView alloc] initWithFrame:CGRectMake(300, 10, 80, 80)];
             self.rightImageView.backgroundColor = [UIColor lightGrayColor];
 //            self.rightImageView.contentMode = UIViewContentModeScaleAspectFit;
@@ -108,7 +125,18 @@
                                  self.timeLabel.frame.origin.y ,
                                  self.timeLabel.frame.size.width,
                                  self.timeLabel.frame.size.height);
+    self.deleteButton.frame = CGRectMake(
+                                 self.timeLabel.frame.origin.x + self.timeLabel.frame.size.width + 10,
+                                 self.deleteButton.frame.origin.y ,
+                                 self.deleteButton.frame.size.width,
+                                 self.deleteButton.frame.size.height);
     self.rightImageView.image = [UIImage imageNamed:@"icon.bundle/page@2x.png"];
+}
+
+- (void) deleteButtonClick {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(tableViewCell:clickDeleteButton:)]) {
+        [self.delegate tableViewCell:self clickDeleteButton:self.deleteButton];
+    }
 }
 
 @end
