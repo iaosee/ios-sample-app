@@ -107,6 +107,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A90B525289CFEFC0048F7AE /* News */ = {
+			isa = PBXGroup;
+			children = (
+				71D2E611289C206100A34394 /* DialogCellView.h */,
+				71D2E612289C206100A34394 /* DialogCellView.m */,
+				3AAD38B4289917AA006D3478 /* NormalTableViewCell.h */,
+				3AAD38B5289917AA006D3478 /* NormalTableViewCell.m */,
+				3AAD38A62897D706006D3478 /* NewsViewController.h */,
+				3AAD38A72897D706006D3478 /* NewsViewController.m */,
+				71D2E60E289BFF7600A34394 /* DetailViewController.h */,
+				71D2E60F289BFF7600A34394 /* DetailViewController.m */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		3A90B526289CFF420048F7AE /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				3AAD38AB2898CA53006D3478 /* VideoViewController.h */,
+				3AAD38AC2898CA53006D3478 /* VideoViewController.m */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		3A90B527289CFF840048F7AE /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				3AAD38B12898CBC3006D3478 /* MineViewController.h */,
+				3AAD38B22898CBC3006D3478 /* MineViewController.m */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		3A90B528289CFFA50048F7AE /* Recommend */ = {
+			isa = PBXGroup;
+			children = (
+				3AAD38AE2898CB19006D3478 /* RecommendViewController.h */,
+				3AAD38AF2898CB19006D3478 /* RecommendViewController.m */,
+			);
+			path = Recommend;
+			sourceTree = "<group>";
+		};
+		3A90B529289CFFDA0048F7AE /* OtherView */ = {
+			isa = PBXGroup;
+			children = (
+				3AAD387428977C62006D3478 /* ViewController.h */,
+				3AAD387528977C62006D3478 /* ViewController.m */,
+				3AAD38B9289A0ED4006D3478 /* SliderViewController.h */,
+				3AAD38BA289A0ED4006D3478 /* SliderViewController.m */,
+			);
+			path = OtherView;
+			sourceTree = "<group>";
+		};
 		3AAD386228977C62006D3478 = {
 			isa = PBXGroup;
 			children = (
@@ -130,34 +183,21 @@
 		3AAD386D28977C62006D3478 /* SampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				3A90B527289CFF840048F7AE /* Mine */,
+				3A90B528289CFFA50048F7AE /* Recommend */,
+				3A90B526289CFF420048F7AE /* Video */,
+				3A90B525289CFEFC0048F7AE /* News */,
+				3A90B529289CFFDA0048F7AE /* OtherView */,
 				3AAD38A92898B8F5006D3478 /* icon.bundle */,
 				3AAD386E28977C62006D3478 /* AppDelegate.h */,
 				3AAD386F28977C62006D3478 /* AppDelegate.m */,
 				3AAD387128977C62006D3478 /* SceneDelegate.h */,
 				3AAD387228977C62006D3478 /* SceneDelegate.m */,
-				3AAD387428977C62006D3478 /* ViewController.h */,
-				3AAD387528977C62006D3478 /* ViewController.m */,
 				3AAD38A32897C7AF006D3478 /* Main.storyboard */,
 				3AAD387A28977C64006D3478 /* Assets.xcassets */,
 				3AAD387C28977C64006D3478 /* LaunchScreen.storyboard */,
 				3AAD387F28977C64006D3478 /* Info.plist */,
 				3AAD388028977C64006D3478 /* main.m */,
-				3AAD38A62897D706006D3478 /* NewsViewController.h */,
-				3AAD38A72897D706006D3478 /* NewsViewController.m */,
-				3AAD38AB2898CA53006D3478 /* VideoViewController.h */,
-				3AAD38AC2898CA53006D3478 /* VideoViewController.m */,
-				3AAD38AE2898CB19006D3478 /* RecommendViewController.h */,
-				3AAD38AF2898CB19006D3478 /* RecommendViewController.m */,
-				3AAD38B12898CBC3006D3478 /* MineViewController.h */,
-				3AAD38B22898CBC3006D3478 /* MineViewController.m */,
-				3AAD38B4289917AA006D3478 /* NormalTableViewCell.h */,
-				3AAD38B5289917AA006D3478 /* NormalTableViewCell.m */,
-				3AAD38B9289A0ED4006D3478 /* SliderViewController.h */,
-				3AAD38BA289A0ED4006D3478 /* SliderViewController.m */,
-				71D2E60E289BFF7600A34394 /* DetailViewController.h */,
-				71D2E60F289BFF7600A34394 /* DetailViewController.m */,
-				71D2E611289C206100A34394 /* DialogCellView.h */,
-				71D2E612289C206100A34394 /* DialogCellView.m */,
 			);
 			path = SampleApp;
 			sourceTree = "<group>";
