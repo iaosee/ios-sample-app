@@ -22,7 +22,7 @@
     NSURLSessionTask *dataTask = [session dataTaskWithURL:listUrl completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         NSLog(@"%@", data);
     }];
- 
+
     [dataTask resume];
 }
 
