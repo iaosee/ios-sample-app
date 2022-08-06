@@ -50,7 +50,11 @@
     
     
     self.listLoader = [[ListLoader alloc] init];
-    [self.listLoader loadListData];
+    __weak typeof (self) wself = self;
+    [self.listLoader loadListDataWithFinishBlock:^(BOOL success, NSArray<ListItem *> * _Nonnull dataArray) {
+        __strong typeof (wself) strongSelf = wself;
+        NSLog(@"loadListDataWithFinishBlock - %@", dataArray);
+    }];
     
 }
 
@@ -101,7 +105,7 @@
     
     __weak typeof (self) wself = self;
     [deleteView showDialogViewFromPoint:rect.origin clickBlock:^{
-        __weak typeof (self) strongSelf = wself;
+        __strong typeof (wself) strongSelf = wself;
         [strongSelf.dataArray removeLastObject];
         [strongSelf.tableView deleteRowsAtIndexPaths:@[[self.tableView indexPathForCell:tableViewCell]]
                                     withRowAnimation:UITableViewRowAnimationLeft];

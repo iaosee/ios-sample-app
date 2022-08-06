@@ -9,9 +9,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class ListItem;
+
+typedef void(^ListLoaderFinishBlock)(BOOL success, NSArray<ListItem *> *dataArray);
+
 @interface ListLoader : NSObject
 
 - (void) loadListData;
+- (void) loadListDataWithFinishBlock:(ListLoaderFinishBlock) finsihBlock;
 
 @end
 

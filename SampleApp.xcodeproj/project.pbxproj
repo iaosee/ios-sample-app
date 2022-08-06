@@ -25,6 +25,7 @@
 		3AAD38B32898CBC3006D3478 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD38B22898CBC3006D3478 /* MineViewController.m */; };
 		3AAD38B6289917AA006D3478 /* NormalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD38B5289917AA006D3478 /* NormalTableViewCell.m */; };
 		3AAD38BB289A0ED4006D3478 /* SliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD38BA289A0ED4006D3478 /* SliderViewController.m */; };
+		71786D1F289D82F8005C13EC /* ListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 71786D1E289D82F8005C13EC /* ListItem.m */; };
 		71D2E610289BFF7600A34394 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D2E60F289BFF7600A34394 /* DetailViewController.m */; };
 		71D2E613289C206100A34394 /* DialogCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D2E612289C206100A34394 /* DialogCellView.m */; };
 		DE7F4C2793B770DECD9687B9 /* libPods-SampleApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 965D0AA0EA2E2A5DFC3AB933 /* libPods-SampleApp.a */; };
@@ -81,6 +82,8 @@
 		3AAD38B5289917AA006D3478 /* NormalTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NormalTableViewCell.m; sourceTree = "<group>"; };
 		3AAD38B9289A0ED4006D3478 /* SliderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SliderViewController.h; sourceTree = "<group>"; };
 		3AAD38BA289A0ED4006D3478 /* SliderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SliderViewController.m; sourceTree = "<group>"; };
+		71786D1D289D82F8005C13EC /* ListItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListItem.h; sourceTree = "<group>"; };
+		71786D1E289D82F8005C13EC /* ListItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListItem.m; sourceTree = "<group>"; };
 		71D2E60E289BFF7600A34394 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		71D2E60F289BFF7600A34394 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		71D2E611289C206100A34394 /* DialogCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DialogCellView.h; sourceTree = "<group>"; };
@@ -118,6 +121,7 @@
 		3A90B525289CFEFC0048F7AE /* News */ = {
 			isa = PBXGroup;
 			children = (
+				71786D1C289D82D2005C13EC /* Model */,
 				71D2E611289C206100A34394 /* DialogCellView.h */,
 				71D2E612289C206100A34394 /* DialogCellView.m */,
 				3AAD38B4289917AA006D3478 /* NormalTableViewCell.h */,
@@ -247,13 +251,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		71786D1C289D82D2005C13EC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				71786D1D289D82F8005C13EC /* ListItem.h */,
+				71786D1E289D82F8005C13EC /* ListItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F1850B45411A58AA383AFC09 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				C35683868B4D8244CAC50C3C /* Pods-SampleApp.debug.xcconfig */,
 				123D9E3C5A74594B2F40981D /* Pods-SampleApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -424,6 +436,7 @@
 				3AAD38B6289917AA006D3478 /* NormalTableViewCell.m in Sources */,
 				3AAD38AD2898CA53006D3478 /* VideoViewController.m in Sources */,
 				71D2E610289BFF7600A34394 /* DetailViewController.m in Sources */,
+				71786D1F289D82F8005C13EC /* ListItem.m in Sources */,
 				3AAD388128977C64006D3478 /* main.m in Sources */,
 				3AAD38B02898CB19006D3478 /* RecommendViewController.m in Sources */,
 				3AAD387328977C62006D3478 /* SceneDelegate.m in Sources */,
