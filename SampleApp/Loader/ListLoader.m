@@ -13,7 +13,7 @@
 
 - (void) loadListData {
     [self loadListDataNS:^(BOOL success, NSArray<ListItem *> * _Nonnull dataArray) {
-        NSLog(@"%@", dataArray);
+//        NSLog(@"%@", dataArray);
     }];
 }
 
@@ -24,7 +24,7 @@
 - (void) loadListDataAF:(ListLoaderFinishBlock)finsihBlock {
     NSString *urlString = @"https://static001.geekbang.org/univer/classes/ios_dev/lession/45/toutiao.json";
     NSURL *listUrl = [NSURL URLWithString:urlString];
-    
+
     [[AFHTTPSessionManager manager] GET:urlString parameters:nil headers:nil progress:^(NSProgress * _Nonnull downloadProgress) {
             NSLog(@"progress - %@", downloadProgress);
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -67,6 +67,37 @@
     }];
 
     [dataTask resume];
+    
+    [self getSandBoxPath];
+}
+
+- (void) getSandBoxPath {
+    NSArray<NSString *> *pathArray = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSString *cachePath = [pathArray firstObject];
+    
+    NSFileManager *fileManager = [[NSFileManager alloc] init];
+    
+    // create directory
+    NSString *dataPath = [cachePath stringByAppendingPathComponent:@"XFDdata"];
+    NSError *createError;
+    [fileManager createDirectoryAtPath:dataPath withIntermediateDirectories:YES attributes:nil error:nil];
+    
+    if (createError != nil) {
+        NSLog(@"Error - %@", createError);
+    }
+    
+    // create file with content
+    NSString *listDataFile = [dataPath stringByAppendingPathComponent:@"list"];
+    NSData *listData = [@"abc" dataUsingEncoding:NSUTF8StringEncoding];
+    [fileManager createFileAtPath:listDataFile contents:listData attributes:nil];
+//    BOOL fileExist = [fileManager fileExistsAtPath:listDataFile];
+    
+    // append content to file
+    NSFileHandle *fileHandle = [NSFileHandle fileHandleForUpdatingAtPath:listDataFile];
+    [fileHandle seekToEndOfFile];
+    [fileHandle writeData:[@"def" dataUsingEncoding:NSUTF8StringEncoding]];
+    [fileHandle synchronizeFile];
+    [fileHandle closeFile];
 }
 
 @end
