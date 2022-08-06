@@ -125,11 +125,35 @@
     self.commentLabel.text = item.category;
     self.timeLabel.text = item.date;
     
-#warning
-    UIImage *image = [NSData dataWithContentsOfURL: [NSURL URLWithString:item.picUrl]];
-    self.rightImageView.image = image;
-    
+    BOOL didRead = [[NSUserDefaults standardUserDefaults] boolForKey:item.uniqueKey];
+    if (didRead) {
+        self.titleLabel.textColor = [UIColor grayColor];
+    } else {
+        self.titleLabel.textColor = [UIColor blackColor];
+    }
+
     [self cellLayout];
+    
+//    UIImage *image = [NSData dataWithContentsOfURL: [NSURL URLWithString:item.picUrl]];
+//    self.rightImageView.image = image;
+
+//    NSThread *downloadImageThread = [[NSThread alloc] initWithBlock:^{
+//        UIImage *image = [NSData dataWithContentsOfURL: [NSURL URLWithString:item.picUrl]];
+//        self.rightImageView.image = image;
+//    }];
+//    downloadImageThread.name = @"downloadImageThread";
+//    [downloadImageThread start];
+    
+    dispatch_queue_global_t downloadQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_queue_main_t mainQueue = dispatch_get_main_queue();
+    
+    dispatch_async(downloadQueue, ^{
+        UIImage *image = [NSData dataWithContentsOfURL: [NSURL URLWithString:item.picUrl]];
+
+        dispatch_async(mainQueue, ^{
+            self.rightImageView.image = image;
+        });
+    });
 }
 
 - (void) cellLayout {

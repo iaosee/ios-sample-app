@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ListItem : NSObject
+@interface ListItem : NSObject <NSSecureCoding>
 
 @property(nonatomic, strong, readwrite) NSString *category;
 @property(nonatomic, strong, readwrite) NSString *picUrl;

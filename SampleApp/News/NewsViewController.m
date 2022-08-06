@@ -57,10 +57,12 @@
 //        NSLog(@"loadListDataWithFinishBlock - %@", dataArray);
         
         strongSelf.dataArray = dataArray;
-        [strongSelf.tableView reloadData
-        ];
+        [strongSelf.tableView reloadData];
     }];
-    
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [self.tableView reloadData];
 }
 
 #pragma mark - UITableViewDataSource
@@ -81,7 +83,8 @@
 //    cell.detailTextLabel.text = [NSString stringWithFormat:@"sub title, %@-%@", @(indexPath.row), @(indexPath.row)];
 //    cell.imageView.image = [UIImage imageNamed:@"icon.bundle/video@2x.png"];
     
-    [cell layoutTableViewCellWithItem:[self.dataArray objectAtIndex:indexPath.row]];
+    ListItem *item = [self.dataArray objectAtIndex:indexPath.row];
+    [cell layoutTableViewCellWithItem:item];
     
     return cell;
 }
@@ -97,8 +100,10 @@
 
     ListItem *item = [self.dataArray objectAtIndex:indexPath.row];
     DetailViewController *controller = [[DetailViewController alloc] initWithUrl:item.articleUrl];
-    controller.navigationItem.title = [NSString stringWithFormat:@"详情 %@", @(indexPath.row)];
+    controller.title = [NSString stringWithFormat:@"详情 %@", @(indexPath.row)];
     [self.navigationController pushViewController:controller animated:YES];
+    
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:item.uniqueKey];
 }
 
 
