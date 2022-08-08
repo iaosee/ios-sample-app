@@ -6,6 +6,7 @@
 //
 
 #import "DetailViewController.h"
+#import "ScreenAdapter.h"
 
 @interface DetailViewController () <WKNavigationDelegate>
 
@@ -41,12 +42,17 @@
     
     [self.view addSubview:({
         self.webView = [[WKWebView alloc]
-                        initWithFrame:CGRectMake(0, 88, self.view.frame.size.width, self.view.frame.size.height - 88)];
+                        initWithFrame:CGRectMake(
+                                                 0,
+                                                 (STATUSBARHEIGHT + 44),
+                                                 self.view.frame.size.width,
+                                                 self.view.frame.size.height - (STATUSBARHEIGHT + 44)
+                                                 )];
         self.webView;
     })];
     
     [self.view addSubview:({
-        self.progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 88, self.view.frame.size.width, 2)];
+        self.progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, (STATUSBARHEIGHT + 44), self.view.frame.size.width, 2)];
         self.progressView.progressViewStyle = UIProgressViewStyleBar;
         self.progressView;
     })];
