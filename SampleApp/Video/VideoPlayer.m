@@ -30,7 +30,7 @@
 }
 
 - (void) playVideoWithUrl: (NSString *) videoUrl attachView: (UIView *) attachView {
-    [self _stopPlay];
+    [self stopPlay];
     
     NSURL *url = [NSURL URLWithString:videoUrl];
     AVAsset *asset = [AVAsset assetWithURL:url];
@@ -63,7 +63,7 @@
 //    [_player play];
 }
 
-- (void) _stopPlay {
+- (void) stopPlay {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [_playerItem removeObserver:self forKeyPath:@"status" context:nil];
     [_playerItem removeObserver:self forKeyPath:@"loadedTimeRanges" context:nil];

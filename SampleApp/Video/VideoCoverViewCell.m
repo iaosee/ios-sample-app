@@ -7,12 +7,14 @@
 
 #import "VideoCoverViewCell.h"
 #import "VideoPlayer.h"
+#import "VideoToolbar.h"
 
 @interface VideoCoverViewCell()
 
 @property(nonatomic, strong, readwrite) UIImageView *coverView;
 @property(nonatomic, strong, readwrite) UIImageView *playButton;
 @property(nonatomic, copy, readwrite) NSString *videoUrl;
+@property(nonatomic, copy, readwrite) VideoToolbar *toolbar;
 
 @end
 
@@ -24,15 +26,21 @@
     if (self) {
         [self addSubview:({
             _coverView = [[UIImageView alloc] initWithFrame:
-                          CGRectMake(0, 0, frame.size.width, frame.size.height)];
+                          CGRectMake(0, 0, frame.size.width, frame.size.height - VideoToolbarHeight)];
             _coverView;
         })];
         [_coverView addSubview:({
             _playButton = [[UIImageView alloc] initWithFrame:
-                           CGRectMake((frame.size.width - 50) / 2, (frame.size.height - 50) / 2, 50, 50)];
+                           CGRectMake((frame.size.width - 50) / 2, (frame.size.height - 50 - VideoToolbarHeight) / 2, 50, 50)];
             _playButton;
         })];
-        
+
+        [self addSubview:({
+            _toolbar = [[VideoToolbar alloc] initWithFrame:
+                        CGRectMake(0, _coverView.bounds.size.height, frame.size.width, VideoToolbarHeight)];
+            _toolbar;
+        })];
+
         UIGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(_tapToPlayHandler)];
         [self addGestureRecognizer:tapGesture];
         
@@ -49,6 +57,7 @@
     _coverView.image = [UIImage imageNamed:videoCoverUrl];
     _playButton.image = [UIImage imageNamed:@"icon.bundle/videoPlay@3x.png"];
     _videoUrl = videoUrl;
+    [_toolbar layoutWithModel:self];
 }
 
 - (void) _tapToPlayHandler {

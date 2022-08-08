@@ -7,6 +7,8 @@
 
 #import "VideoViewController.h"
 #import "VideoCoverViewCell.h"
+#import "VideoToolbar.h"
+#import "VideoPlayer.h""
 
 @interface VideoViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 
@@ -33,7 +35,9 @@
     flowLayout.minimumLineSpacing = 10;
     flowLayout.minimumInteritemSpacing = 10;
 //    flowLayout.itemSize = CGSizeMake((self.view.frame.size.width - flowLayout.minimumInteritemSpacing) / 2, 300);
-    flowLayout.itemSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.width / (16.f/9.f));
+    flowLayout.itemSize = CGSizeMake(
+                                     self.view.frame.size.width,
+                                     self.view.frame.size.width / (16.f/9.f) + VideoToolbarHeight);
     
     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
     
@@ -43,6 +47,10 @@
     [collectionView registerClass:[VideoCoverViewCell class] forCellWithReuseIdentifier:@"VideoCoverViewCell"];
 
     [self.view addSubview:collectionView];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [[VideoPlayer Player] stopPlay];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {

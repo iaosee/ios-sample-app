@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (VideoPlayer *) Player;
 - (void) playVideoWithUrl: (NSString *) videoUrl attachView: (UIView *) attachView;
+- (void) stopPlay;
 
 @end
 
