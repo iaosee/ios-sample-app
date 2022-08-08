@@ -27,6 +27,7 @@
 		3AAD38BB289A0ED4006D3478 /* SliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD38BA289A0ED4006D3478 /* SliderViewController.m */; };
 		3ABBE28A28A0B0D3003BDC00 /* VideoToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABBE28928A0B0D3003BDC00 /* VideoToolbar.m */; };
 		3ABBE28D28A0E10E003BDC00 /* ScreenAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABBE28C28A0E10E003BDC00 /* ScreenAdapter.m */; };
+		3ABBE29128A10140003BDC00 /* SplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABBE29028A10140003BDC00 /* SplashView.m */; };
 		71786D1F289D82F8005C13EC /* ListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 71786D1E289D82F8005C13EC /* ListItem.m */; };
 		71786D22289EB76A005C13EC /* VideoCoverViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71786D21289EB76A005C13EC /* VideoCoverViewCell.m */; };
 		71786D25289FBC08005C13EC /* VideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 71786D24289FBC08005C13EC /* VideoPlayer.m */; };
@@ -90,6 +91,8 @@
 		3ABBE28928A0B0D3003BDC00 /* VideoToolbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoToolbar.m; sourceTree = "<group>"; };
 		3ABBE28B28A0E10E003BDC00 /* ScreenAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScreenAdapter.h; sourceTree = "<group>"; };
 		3ABBE28C28A0E10E003BDC00 /* ScreenAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenAdapter.m; sourceTree = "<group>"; };
+		3ABBE28F28A10140003BDC00 /* SplashView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashView.h; sourceTree = "<group>"; };
+		3ABBE29028A10140003BDC00 /* SplashView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashView.m; sourceTree = "<group>"; };
 		71786D1D289D82F8005C13EC /* ListItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListItem.h; sourceTree = "<group>"; };
 		71786D1E289D82F8005C13EC /* ListItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListItem.m; sourceTree = "<group>"; };
 		71786D20289EB76A005C13EC /* VideoCoverViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoCoverViewCell.h; sourceTree = "<group>"; };
@@ -242,6 +245,8 @@
 				3AAD388028977C64006D3478 /* main.m */,
 				3ABBE28B28A0E10E003BDC00 /* ScreenAdapter.h */,
 				3ABBE28C28A0E10E003BDC00 /* ScreenAdapter.m */,
+				3ABBE28F28A10140003BDC00 /* SplashView.h */,
+				3ABBE29028A10140003BDC00 /* SplashView.m */,
 			);
 			path = SampleApp;
 			sourceTree = "<group>";
@@ -446,6 +451,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ABBE29128A10140003BDC00 /* SplashView.m in Sources */,
 				3AAD38BB289A0ED4006D3478 /* SliderViewController.m in Sources */,
 				3ABBE28A28A0B0D3003BDC00 /* VideoToolbar.m in Sources */,
 				71786D22289EB76A005C13EC /* VideoCoverViewCell.m in Sources */,
@@ -635,6 +641,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q4X5YK9A3D;
@@ -645,6 +652,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -663,6 +671,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q4X5YK9A3D;
@@ -673,6 +682,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -11,6 +11,7 @@
 #import "VideoViewController.h"
 #import "RecommendViewController.h"
 #import "MineViewController.h"
+#import "SplashView.h"
 
 @interface SceneDelegate ()
 
@@ -50,6 +51,11 @@
     self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
     
+//    [self.window addSubview:({
+//        SplashView *splash = [[SplashView alloc] initWithFrame:self.window.bounds];
+//        splash;
+//    })];
+
 /**
  布局方式：
  
