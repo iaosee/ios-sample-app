@@ -8,6 +8,7 @@
 #import <SDWebImage.h>
 #import "NormalTableViewCell.h"
 #import "ListItem.h"
+#import "ScreenAdapter.h"
 
 @interface NormalTableViewCell()
 
@@ -95,7 +96,7 @@
 //            self.deleteButton;
 //        })];
         [self.contentView addSubview:({
-            self.rightImageView = [[UIImageView alloc] initWithFrame:CGRectMake(300, 10, 80, 80)];
+            self.rightImageView = [[UIImageView alloc] initWithFrame:UIRect(280, 10, 80, 80)];
             self.rightImageView.backgroundColor = [UIColor lightGrayColor];
             self.rightImageView.contentMode = UIViewContentModeScaleToFill;
             self.rightImageView;
@@ -165,17 +166,17 @@
     [self.commentLabel sizeToFit];
     [self.timeLabel sizeToFit];
     self.commentLabel.frame = CGRectMake(
-                                 self.sourceLabel.frame.origin.x + self.sourceLabel.frame.size.width + 10,
+                                 self.sourceLabel.frame.origin.x + self.sourceLabel.frame.size.width + (10),
                                  self.commentLabel.frame.origin.y ,
                                  self.commentLabel.frame.size.width,
                                  self.commentLabel.frame.size.height);
     self.timeLabel.frame = CGRectMake(
-                                 self.commentLabel.frame.origin.x + self.commentLabel.frame.size.width + 10,
+                                 self.commentLabel.frame.origin.x + self.commentLabel.frame.size.width + (10),
                                  self.timeLabel.frame.origin.y ,
                                  self.timeLabel.frame.size.width,
                                  self.timeLabel.frame.size.height);
     self.deleteButton.frame = CGRectMake(
-                                 self.timeLabel.frame.origin.x + self.timeLabel.frame.size.width + 10,
+                                 self.timeLabel.frame.origin.x + self.timeLabel.frame.size.width + (10),
                                  self.deleteButton.frame.origin.y ,
                                  self.deleteButton.frame.size.width,
                                  self.deleteButton.frame.size.height);
