@@ -39,20 +39,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+//    const int height = STATUSBARHEIGHT + 44;
+    const int height = 40 + 44;
     
     [self.view addSubview:({
         self.webView = [[WKWebView alloc]
                         initWithFrame:CGRectMake(
                                                  0,
-                                                 (STATUSBARHEIGHT + 44),
+                                                 height,
                                                  self.view.frame.size.width,
-                                                 self.view.frame.size.height - (STATUSBARHEIGHT + 44)
+                                                 self.view.frame.size.height - height
                                                  )];
         self.webView;
     })];
     
     [self.view addSubview:({
-        self.progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, (STATUSBARHEIGHT + 44), self.view.frame.size.width, 2)];
+        self.progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, height, self.view.frame.size.width, 2)];
         self.progressView.progressViewStyle = UIProgressViewStyleBar;
         self.progressView;
     })];

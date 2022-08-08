@@ -36,5 +36,12 @@
     // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
  }
 
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    
+    NSLog(@"openURL - %@ %@", url, options);
+    
+    return YES;
+}
+
 
 @end

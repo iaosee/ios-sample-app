@@ -58,6 +58,24 @@
         button;
     })];
     
+    [self.view addSubview:({
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 250, 150, 30)];
+        [button setTitle:@"OpenSafari" forState:UIControlStateNormal];
+        button.backgroundColor = [UIColor blueColor];
+        
+        [button addTarget:self action:@selector(openSafari) forControlEvents:UIControlEventTouchUpInside];
+        button;
+    })];
+    
+    [self.view addSubview:({
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 300, 150, 30)];
+        [button setTitle:@"Open App" forState:UIControlStateNormal];
+        button.backgroundColor = [UIColor blueColor];
+        
+        [button addTarget:self action:@selector(openApp) forControlEvents:UIControlEventTouchUpInside];
+        button;
+    })];
+    
 }
 
 - (void) goViewPage {
@@ -73,6 +91,18 @@
 - (void) goWebViewPage {
     DetailViewController *viewController = [[DetailViewController alloc] init];
     [self.navigationController pushViewController:viewController animated:YES];
+}
+
+- (void) openSafari {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.bing.com"]
+                                       options:nil
+                             completionHandler:nil];
+}
+
+- (void) openApp {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"testScheme://"] options:nil completionHandler:^(BOOL success) {
+        NSLog(@"completionHandler");
+    }];
 }
 
 /*
