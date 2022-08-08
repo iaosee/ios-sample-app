@@ -5,7 +5,9 @@
 //  Created by 肖峰 on 2022/8/2.
 //
 
+#import <SDWebImage.h>
 #import "NormalTableViewCell.h"
+#import "ListItem.h"
 
 @interface NormalTableViewCell()
 
@@ -41,14 +43,16 @@
     
     if (self) {
         [self.contentView addSubview:({
-            self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 10, 260, 20)];
+            self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, 260, 50)];
 //            self.titleLabel.backgroundColor = [UIColor redColor];
             self.titleLabel.font = [UIFont systemFontOfSize: 16];
             self.titleLabel.textColor = [UIColor blackColor];
+            self.titleLabel.numberOfLines = 1;
+            self.titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
             self.titleLabel;
         })];
         [self.contentView addSubview:({
-            self.contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 30, 260, 50)];
+            self.contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 40, 260, 30)];
 //            self.contentLabel.backgroundColor = [UIColor grayColor];
             self.contentLabel.font = [UIFont systemFontOfSize: 12];
             self.contentLabel.numberOfLines = 0;
@@ -76,26 +80,23 @@
             self.timeLabel.textColor = [UIColor grayColor];
             self.timeLabel;
         })];
-        [self.contentView addSubview:({
-            self.deleteButton = [[UIButton alloc] initWithFrame:CGRectMake(200, 80, 40, 20)];
-//            self.deleteButton.backgroundColor = [UIColor lightGrayColor];
-            self.deleteButton.contentMode = UIViewContentModeScaleAspectFit;
-
-            self.deleteButton.titleLabel.font = [UIFont systemFontOfSize: 12];
-            self.deleteButton.titleLabel.textColor = [UIColor grayColor];
-            [self.deleteButton setTitle:@"删除" forState:UIControlStateNormal];
-            [self.deleteButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-            self.deleteButton.layer.cornerRadius = 10;
-            self.deleteButton.layer.masksToBounds = YES;
-            self.deleteButton.layer.borderColor = [UIColor redColor].CGColor;
-            self.deleteButton.layer.borderWidth = 1;
-            [self.deleteButton addTarget:self action:@selector(deleteButtonClick) forControlEvents:UIControlEventTouchUpInside];
-            self.deleteButton;
-        })];
+//        [self.contentView addSubview:({
+//            self.deleteButton = [[UIButton alloc] initWithFrame:CGRectMake(200, 80, 40, 20)];
+//            self.deleteButton.contentMode = UIViewContentModeScaleAspectFit;
+//            self.deleteButton.titleLabel.font = [UIFont systemFontOfSize: 12];
+//            self.deleteButton.titleLabel.textColor = [UIColor grayColor];
+//            [self.deleteButton setTitle:@"删除" forState:UIControlStateNormal];
+//            [self.deleteButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+//            self.deleteButton.layer.cornerRadius = 10;
+//            self.deleteButton.layer.masksToBounds = YES;
+//            self.deleteButton.layer.borderColor = [UIColor redColor].CGColor;
+//            self.deleteButton.layer.borderWidth = 1;
+//            [self.deleteButton addTarget:self action:@selector(deleteButtonClick) forControlEvents:UIControlEventTouchUpInside];
+//            self.deleteButton;
+//        })];
         [self.contentView addSubview:({
             self.rightImageView = [[UIImageView alloc] initWithFrame:CGRectMake(300, 10, 80, 80)];
             self.rightImageView.backgroundColor = [UIColor lightGrayColor];
-//            self.rightImageView.contentMode = UIViewContentModeScaleAspectFit;
             self.rightImageView.contentMode = UIViewContentModeScaleToFill;
             self.rightImageView;
         })];
@@ -111,10 +112,58 @@
     self.sourceLabel.text = @"来源";
     self.commentLabel.text = @"1688条评论";
     self.timeLabel.text = @"三分钟前";
+    self.rightImageView.image = [UIImage imageNamed:@"icon.bundle/page@2x.png"];
+    
+    [self cellLayout];
+    
+}
+
+- (void) layoutTableViewCellWithItem: (ListItem *) item {
+    self.titleLabel.text = item.title;
+    self.contentLabel.text = [NSString stringWithFormat:@"%@ %@", item.title, item.title];
+    
+    self.sourceLabel.text = item.authorName;
+    self.commentLabel.text = item.category;
+    self.timeLabel.text = item.date;
+    
+    BOOL didRead = [[NSUserDefaults standardUserDefaults] boolForKey:item.uniqueKey];
+    if (didRead) {
+        self.titleLabel.textColor = [UIColor grayColor];
+    } else {
+        self.titleLabel.textColor = [UIColor blackColor];
+    }
+
+    [self cellLayout];
+    
+//    UIImage *image = [NSData dataWithContentsOfURL: [NSURL URLWithString:item.picUrl]];
+//    self.rightImageView.image = image;
+
+//    NSThread *downloadImageThread = [[NSThread alloc] initWithBlock:^{
+//        UIImage *image = [NSData dataWithContentsOfURL: [NSURL URLWithString:item.picUrl]];
+//        self.rightImageView.image = image;
+//    }];
+//    downloadImageThread.name = @"downloadImageThread";
+//    [downloadImageThread start];
+    
+//    dispatch_queue_global_t downloadQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+//    dispatch_queue_main_t mainQueue = dispatch_get_main_queue();
+//    dispatch_async(downloadQueue, ^{
+//        UIImage *image = [NSData dataWithContentsOfURL: [NSURL URLWithString:item.picUrl]];
+//
+//        dispatch_async(mainQueue, ^{
+//            self.rightImageView.image = image;
+//        });
+//    });
+
+    [self.rightImageView sd_setImageWithURL:[NSURL URLWithString:item.picUrl] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+//        NSLog(@"SDImageCacheType - %@", cacheType);
+    }];
+}
+
+- (void) cellLayout {
     [self.sourceLabel sizeToFit];
     [self.commentLabel sizeToFit];
     [self.timeLabel sizeToFit];
-    
     self.commentLabel.frame = CGRectMake(
                                  self.sourceLabel.frame.origin.x + self.sourceLabel.frame.size.width + 10,
                                  self.commentLabel.frame.origin.y ,
@@ -130,7 +179,6 @@
                                  self.deleteButton.frame.origin.y ,
                                  self.deleteButton.frame.size.width,
                                  self.deleteButton.frame.size.height);
-    self.rightImageView.image = [UIImage imageNamed:@"icon.bundle/page@2x.png"];
 }
 
 - (void) deleteButtonClick {

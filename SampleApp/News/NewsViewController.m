@@ -11,11 +11,12 @@
 #import "NormalTableViewCell.h"
 #import "DetailViewController.h"
 #import "ListLoader.h"
+#import "ListItem.h"
 
 @interface NewsViewController () <UITableViewDataSource, UITableViewDelegate, NormalTableViewCellDelegate>
 
 @property(nonatomic, strong, readwrite) UITableView * tableView;
-@property(nonatomic, strong, readwrite) NSMutableArray * dataArray;
+@property(nonatomic, strong, readwrite) NSArray * dataArray;
 @property(nonatomic, strong, readwrite) ListLoader *listLoader;
 
 @end
@@ -28,10 +29,10 @@
         self.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/page@2x.png"];
         self.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/page_selected@2x.png"];
         
-        _dataArray = @[].mutableCopy;
-        for(int i = 0; i < 20; i++) {
-            [_dataArray addObject:@(i)];
-        }
+//        _dataArray = @[].mutableCopy;
+//        for(int i = 0; i < 20; i++) {
+//            [_dataArray addObject:@(i)];
+//        }
     }
     
     return self;
@@ -53,9 +54,15 @@
     __weak typeof (self) wself = self;
     [self.listLoader loadListDataWithFinishBlock:^(BOOL success, NSArray<ListItem *> * _Nonnull dataArray) {
         __strong typeof (wself) strongSelf = wself;
-        NSLog(@"loadListDataWithFinishBlock - %@", dataArray);
+//        NSLog(@"loadListDataWithFinishBlock - %@", dataArray);
+        
+        strongSelf.dataArray = dataArray;
+        [strongSelf.tableView reloadData];
     }];
-    
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [self.tableView reloadData];
 }
 
 #pragma mark - UITableViewDataSource
@@ -76,7 +83,8 @@
 //    cell.detailTextLabel.text = [NSString stringWithFormat:@"sub title, %@-%@", @(indexPath.row), @(indexPath.row)];
 //    cell.imageView.image = [UIImage imageNamed:@"icon.bundle/video@2x.png"];
     
-    [cell layoutTableViewCell];
+    ListItem *item = [self.dataArray objectAtIndex:indexPath.row];
+    [cell layoutTableViewCellWithItem:item];
     
     return cell;
 }
@@ -88,10 +96,14 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    DetailViewController *controller = [[DetailViewController alloc] init];
+//    DetailViewController *controller = [[DetailViewController alloc] init];
 
-    controller.navigationItem.title = [NSString stringWithFormat:@"详情 %@", @(indexPath.row)];
+    ListItem *item = [self.dataArray objectAtIndex:indexPath.row];
+    DetailViewController *controller = [[DetailViewController alloc] initWithUrl:item.articleUrl];
+    controller.title = [NSString stringWithFormat:@"详情 %@", @(indexPath.row)];
     [self.navigationController pushViewController:controller animated:YES];
+    
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:item.uniqueKey];
 }
 
 
@@ -99,17 +111,17 @@
 
 - (void)tableViewCell:(UITableViewCell *)tableViewCell clickDeleteButton:(UIButton *)deleteButton {
     NSLog(@"clickDeleteButton");
-    DialogCellView *deleteView = [[DialogCellView alloc] initWithFrame:self.view.bounds];
-    
-    CGRect rect = [tableViewCell convertRect:deleteButton.frame toView:nil];
-    
-    __weak typeof (self) wself = self;
-    [deleteView showDialogViewFromPoint:rect.origin clickBlock:^{
-        __strong typeof (wself) strongSelf = wself;
-        [strongSelf.dataArray removeLastObject];
-        [strongSelf.tableView deleteRowsAtIndexPaths:@[[self.tableView indexPathForCell:tableViewCell]]
-                                    withRowAnimation:UITableViewRowAnimationLeft];
-    }];
+//    DialogCellView *deleteView = [[DialogCellView alloc] initWithFrame:self.view.bounds];
+//
+//    CGRect rect = [tableViewCell convertRect:deleteButton.frame toView:nil];
+//
+//    __weak typeof (self) wself = self;
+//    [deleteView showDialogViewFromPoint:rect.origin clickBlock:^{
+//        __strong typeof (wself) strongSelf = wself;
+//        [strongSelf.dataArray removeLastObject];
+//        [strongSelf.tableView deleteRowsAtIndexPaths:@[[self.tableView indexPathForCell:tableViewCell]]
+//                                    withRowAnimation:UITableViewRowAnimationLeft];
+//    }];
 }
 
 /*
