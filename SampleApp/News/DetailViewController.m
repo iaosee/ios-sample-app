@@ -31,7 +31,7 @@
 }
 
 - (instancetype) init {
-    return [self initWithUrl: @"https://time.geekbang.org"];
+    return [self initWithUrl: @"https://iaosee.com"];
 }
 
 - (instancetype) initWithUrl:(NSString *) url {

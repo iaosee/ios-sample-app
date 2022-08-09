@@ -37,5 +37,7 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>需要您的位置推荐地方新闻</string>
 </dict>
 </plist>
