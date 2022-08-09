@@ -7,6 +7,7 @@
 
 #import "AppDelegate.h"
 #import "Location.h"
+#import "Notification.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +20,7 @@
     // Override point for customization after application launch.
     
     [[Location locationManager] checkLocationAuthorization];
-    
+    [[Notification notificationManager] checkNotificationAuthorization];
     return YES;
 }
 
@@ -45,6 +46,13 @@
     NSLog(@"openURL - %@ %@", url, options);
     
     return YES;
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    
+}
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    
 }
 
 

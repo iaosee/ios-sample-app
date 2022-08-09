@@ -10,6 +10,7 @@
 		3A90B52D289D01A80048F7AE /* ListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A90B52C289D01A80048F7AE /* ListLoader.m */; };
 		3AA4437B28A1FB5F0058A067 /* Mediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA4437A28A1FB5F0058A067 /* Mediator.m */; };
 		3AA4439128A23FE40058A067 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA4439028A23FE40058A067 /* Location.m */; };
+		3AA4439528A251DE0058A067 /* Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA4439428A251DE0058A067 /* Notification.m */; };
 		3AAD387028977C62006D3478 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD386F28977C62006D3478 /* AppDelegate.m */; };
 		3AAD387328977C62006D3478 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD387228977C62006D3478 /* SceneDelegate.m */; };
 		3AAD387628977C62006D3478 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD387528977C62006D3478 /* ViewController.m */; };
@@ -69,6 +70,8 @@
 		3AA4438D28A22C720058A067 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		3AA4438F28A23FE40058A067 /* Location.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		3AA4439028A23FE40058A067 /* Location.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		3AA4439328A251DE0058A067 /* Notification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Notification.h; sourceTree = "<group>"; };
+		3AA4439428A251DE0058A067 /* Notification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Notification.m; sourceTree = "<group>"; };
 		3AAD386B28977C62006D3478 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AAD386E28977C62006D3478 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3AAD386F28977C62006D3478 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -233,6 +236,8 @@
 				3AA4437A28A1FB5F0058A067 /* Mediator.m */,
 				3AA4438F28A23FE40058A067 /* Location.h */,
 				3AA4439028A23FE40058A067 /* Location.m */,
+				3AA4439328A251DE0058A067 /* Notification.h */,
+				3AA4439428A251DE0058A067 /* Notification.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -493,6 +498,7 @@
 				3AA4439128A23FE40058A067 /* Location.m in Sources */,
 				3AAD38BB289A0ED4006D3478 /* SliderViewController.m in Sources */,
 				3ABBE28A28A0B0D3003BDC00 /* VideoToolbar.m in Sources */,
+				3AA4439528A251DE0058A067 /* Notification.m in Sources */,
 				71786D22289EB76A005C13EC /* VideoCoverViewCell.m in Sources */,
 				3A90B52D289D01A80048F7AE /* ListLoader.m in Sources */,
 				71D2E613289C206100A34394 /* DialogCellView.m in Sources */,

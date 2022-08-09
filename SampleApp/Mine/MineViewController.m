@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "SliderViewController.h"
 #import "DetailViewController.h"
+#import "Notification.h"
 
 @interface MineViewController ()
 
@@ -35,7 +36,6 @@
         UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 100, 150, 30)];
         [button setTitle:@"ViewPage" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
-        
         [button addTarget:self action:@selector(goViewPage) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
@@ -44,7 +44,6 @@
         UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 150, 150, 30)];
         [button setTitle:@"SliderPage" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
-        
         [button addTarget:self action:@selector(goSliderPage) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
@@ -53,7 +52,6 @@
         UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 200, 150, 30)];
         [button setTitle:@"WebViewPage" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
-        
         [button addTarget:self action:@selector(goWebViewPage) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
@@ -62,7 +60,6 @@
         UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 250, 150, 30)];
         [button setTitle:@"OpenSafari" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
-        
         [button addTarget:self action:@selector(openSafari) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
@@ -71,8 +68,15 @@
         UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 300, 150, 30)];
         [button setTitle:@"Open App" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
-        
         [button addTarget:self action:@selector(openApp) forControlEvents:UIControlEventTouchUpInside];
+        button;
+    })];
+    
+    [self.view addSubview:({
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 350, 150, 30)];
+        [button setTitle:@"Push Notification" forState:UIControlStateNormal];
+        button.backgroundColor = [UIColor blueColor];
+        [button addTarget:self action:@selector(notify) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
     
@@ -105,6 +109,9 @@
     }];
 }
 
+- (void) notify {
+    [[Notification notificationManager] _localNotification];
+}
 /*
 #pragma mark - Navigation
 
