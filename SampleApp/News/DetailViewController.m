@@ -7,6 +7,7 @@
 
 #import "DetailViewController.h"
 #import "ScreenAdapter.h"
+#import "Mediator.h"
 
 @interface DetailViewController () <WKNavigationDelegate>
 
@@ -18,6 +19,17 @@
 
 @implementation DetailViewController
 
++ (void) load {
+//    [Mediator registerScheme:@"detail://" processBlock:^(NSDictionary * _Nonnull params) {
+//        NSString *url = [params objectForKey:@"url"];
+//        UINavigationController *navController = (UINavigationController *) [params objectForKey:@"controller"];
+//        DetailViewController *detailController = [[DetailViewController alloc] initWithUrl:url];
+//        [navController pushViewController:detailController animated:YES];
+//    }];
+    
+    [Mediator registerProtocol:@protocol(DetailViewControllerProtocol) cls:[self class]];
+}
+
 - (instancetype) init {
     return [self initWithUrl: @"https://time.geekbang.org"];
 }
@@ -27,6 +39,7 @@
 
     if (self) {
         self.url = url;
+        self.title = @"详情";
     }
 
     return self;

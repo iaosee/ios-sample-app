@@ -101,7 +101,7 @@
 
 - (void) openApp {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"testScheme://"] options:nil completionHandler:^(BOOL success) {
-        NSLog(@"completionHandler");
+        NSLog(@"completionHandler - %@", success ? @"成功" : @"失败");
     }];
 }
 

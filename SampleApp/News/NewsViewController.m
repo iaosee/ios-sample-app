@@ -9,9 +9,10 @@
 #import "ViewController.h"
 #import "DialogCellView.h"
 #import "NormalTableViewCell.h"
-#import "DetailViewController.h"
+//#import "DetailViewController.h"
 #import "ListLoader.h"
 #import "ListItem.h"
+#import "Mediator.h"
 
 @interface NewsViewController () <UITableViewDataSource, UITableViewDelegate, NormalTableViewCellDelegate>
 
@@ -96,12 +97,23 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    DetailViewController *controller = [[DetailViewController alloc] init];
-
     ListItem *item = [self.dataArray objectAtIndex:indexPath.row];
-    DetailViewController *controller = [[DetailViewController alloc] initWithUrl:item.articleUrl];
-    controller.title = [NSString stringWithFormat:@"详情 %@", @(indexPath.row)];
-    [self.navigationController pushViewController:controller animated:YES];
+
+//    DetailViewController *controller = [[DetailViewController alloc] initWithUrl:item.articleUrl];
+//    [self.navigationController pushViewController:controller animated:YES];
+    
+
+//    target action
+//        __kindof UIViewController *detailController = [Mediator detailViewControllerWithUrl:item.articleUrl];
+//        detailController.title = [NSString stringWithFormat:@"详情 - %@", @(indexPath.row)];
+//        [self.navigationController pushViewController:detailController animated:YES];
+
+//    url scheme
+//    [Mediator openUrl:@"detail://" params:@{@"url":item.articleUrl,@"controller":self.navigationController}];
+    
+//    protocol class
+    Class cls = [Mediator classForProtocol:@protocol(DetailViewControllerProtocol)];
+    [self.navigationController pushViewController:[[cls alloc] initWithUrl:item.articleUrl] animated:YES];
     
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:item.uniqueKey];
 }

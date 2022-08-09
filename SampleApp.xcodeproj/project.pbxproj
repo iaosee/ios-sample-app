@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3A90B52D289D01A80048F7AE /* ListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A90B52C289D01A80048F7AE /* ListLoader.m */; };
+		3AA4437B28A1FB5F0058A067 /* Mediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA4437A28A1FB5F0058A067 /* Mediator.m */; };
 		3AAD387028977C62006D3478 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD386F28977C62006D3478 /* AppDelegate.m */; };
 		3AAD387328977C62006D3478 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD387228977C62006D3478 /* SceneDelegate.m */; };
 		3AAD387628977C62006D3478 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD387528977C62006D3478 /* ViewController.m */; };
@@ -57,6 +58,8 @@
 		123D9E3C5A74594B2F40981D /* Pods-SampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleApp.release.xcconfig"; path = "Target Support Files/Pods-SampleApp/Pods-SampleApp.release.xcconfig"; sourceTree = "<group>"; };
 		3A90B52B289D01A80048F7AE /* ListLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListLoader.h; sourceTree = "<group>"; };
 		3A90B52C289D01A80048F7AE /* ListLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListLoader.m; sourceTree = "<group>"; };
+		3AA4437928A1FB5F0058A067 /* Mediator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mediator.h; sourceTree = "<group>"; };
+		3AA4437A28A1FB5F0058A067 /* Mediator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mediator.m; sourceTree = "<group>"; };
 		3AAD386B28977C62006D3478 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AAD386E28977C62006D3478 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3AAD386F28977C62006D3478 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -247,6 +250,8 @@
 				3ABBE28C28A0E10E003BDC00 /* ScreenAdapter.m */,
 				3ABBE28F28A10140003BDC00 /* SplashView.h */,
 				3ABBE29028A10140003BDC00 /* SplashView.m */,
+				3AA4437928A1FB5F0058A067 /* Mediator.h */,
+				3AA4437A28A1FB5F0058A067 /* Mediator.m */,
 			);
 			path = SampleApp;
 			sourceTree = "<group>";
@@ -461,6 +466,7 @@
 				3AAD387628977C62006D3478 /* ViewController.m in Sources */,
 				3AAD387028977C62006D3478 /* AppDelegate.m in Sources */,
 				3AAD38A82897D706006D3478 /* NewsViewController.m in Sources */,
+				3AA4437B28A1FB5F0058A067 /* Mediator.m in Sources */,
 				3AAD38B6289917AA006D3478 /* NormalTableViewCell.m in Sources */,
 				3AAD38AD2898CA53006D3478 /* VideoViewController.m in Sources */,
 				3ABBE28D28A0E10E003BDC00 /* ScreenAdapter.m in Sources */,
