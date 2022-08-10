@@ -32,7 +32,7 @@
      completionHandler:^(BOOL granted, NSError * _Nullable error) {
         NSLog(@"requestAuthorizationWithOptions finish");
         if (granted) {
-            [self _localNotification];
+//            [self _localNotification];
         }
     }];
 }

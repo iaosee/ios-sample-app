@@ -11,6 +11,7 @@
 		3AA4437B28A1FB5F0058A067 /* Mediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA4437A28A1FB5F0058A067 /* Mediator.m */; };
 		3AA4439128A23FE40058A067 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA4439028A23FE40058A067 /* Location.m */; };
 		3AA4439528A251DE0058A067 /* Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA4439428A251DE0058A067 /* Notification.m */; };
+		3AA4439828A348690058A067 /* SearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA4439728A348690058A067 /* SearchBar.m */; };
 		3AAD387028977C62006D3478 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD386F28977C62006D3478 /* AppDelegate.m */; };
 		3AAD387328977C62006D3478 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD387228977C62006D3478 /* SceneDelegate.m */; };
 		3AAD387628977C62006D3478 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD387528977C62006D3478 /* ViewController.m */; };
@@ -62,16 +63,12 @@
 		3A90B52C289D01A80048F7AE /* ListLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListLoader.m; sourceTree = "<group>"; };
 		3AA4437928A1FB5F0058A067 /* Mediator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mediator.h; sourceTree = "<group>"; };
 		3AA4437A28A1FB5F0058A067 /* Mediator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mediator.m; sourceTree = "<group>"; };
-		3AA4438328A22BFA0058A067 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		3AA4438528A22C270058A067 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
-		3AA4438728A22C3D0058A067 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		3AA4438928A22C460058A067 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		3AA4438B28A22C670058A067 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		3AA4438D28A22C720058A067 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		3AA4438F28A23FE40058A067 /* Location.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		3AA4439028A23FE40058A067 /* Location.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		3AA4439328A251DE0058A067 /* Notification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Notification.h; sourceTree = "<group>"; };
 		3AA4439428A251DE0058A067 /* Notification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Notification.m; sourceTree = "<group>"; };
+		3AA4439628A348690058A067 /* SearchBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchBar.h; sourceTree = "<group>"; };
+		3AA4439728A348690058A067 /* SearchBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchBar.m; sourceTree = "<group>"; };
 		3AAD386B28977C62006D3478 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AAD386E28977C62006D3478 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3AAD386F28977C62006D3478 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -161,6 +158,8 @@
 				3AAD38A72897D706006D3478 /* NewsViewController.m */,
 				71D2E60E289BFF7600A34394 /* DetailViewController.h */,
 				71D2E60F289BFF7600A34394 /* DetailViewController.m */,
+				3AA4439628A348690058A067 /* SearchBar.h */,
+				3AA4439728A348690058A067 /* SearchBar.m */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -308,12 +307,6 @@
 		478B472F4831A81AD4EEF18F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3AA4438D28A22C720058A067 /* CoreTelephony.framework */,
-				3AA4438B28A22C670058A067 /* libsqlite3.tbd */,
-				3AA4438928A22C460058A067 /* CoreGraphics.framework */,
-				3AA4438728A22C3D0058A067 /* SystemConfiguration.framework */,
-				3AA4438528A22C270058A067 /* libiconv.tbd */,
-				3AA4438328A22BFA0058A067 /* Security.framework */,
 				965D0AA0EA2E2A5DFC3AB933 /* libPods-SampleApp.a */,
 			);
 			name = Frameworks;
@@ -504,6 +497,7 @@
 				71D2E613289C206100A34394 /* DialogCellView.m in Sources */,
 				3AAD38B32898CBC3006D3478 /* MineViewController.m in Sources */,
 				3AAD387628977C62006D3478 /* ViewController.m in Sources */,
+				3AA4439828A348690058A067 /* SearchBar.m in Sources */,
 				3AAD387028977C62006D3478 /* AppDelegate.m in Sources */,
 				3AAD38A82897D706006D3478 /* NewsViewController.m in Sources */,
 				3AA4437B28A1FB5F0058A067 /* Mediator.m in Sources */,
