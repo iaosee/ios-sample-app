@@ -10,6 +10,7 @@
 #import "SliderViewController.h"
 #import "DetailViewController.h"
 #import "Notification.h"
+#import "CommentManager.h"
 
 @interface MineViewController ()
 
@@ -80,6 +81,13 @@
         button;
     })];
     
+    [self.view addSubview:({
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 400, 150, 30)];
+        [button setTitle:@"Click Comment" forState:UIControlStateNormal];
+        button.backgroundColor = [UIColor blueColor];
+        [button addTarget:self action:@selector(showCommentView) forControlEvents:UIControlEventTouchUpInside];
+        button;
+    })];
 }
 
 - (void) goViewPage {
@@ -112,6 +120,11 @@
 - (void) notify {
     [[Notification notificationManager] _localNotification];
 }
+
+- (void) showCommentView{
+    [[CommentManager sharedManager] showCommentView];
+}
+
 /*
 #pragma mark - Navigation
 

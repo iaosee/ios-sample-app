@@ -37,6 +37,7 @@
 		71786D25289FBC08005C13EC /* VideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 71786D24289FBC08005C13EC /* VideoPlayer.m */; };
 		71D2E610289BFF7600A34394 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D2E60F289BFF7600A34394 /* DetailViewController.m */; };
 		71D2E613289C206100A34394 /* DialogCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D2E612289C206100A34394 /* DialogCellView.m */; };
+		71D73E2B28A55C4B004C8D30 /* CommentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D73E2A28A55C4B004C8D30 /* CommentManager.m */; };
 		DE7F4C2793B770DECD9687B9 /* libPods-SampleApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 965D0AA0EA2E2A5DFC3AB933 /* libPods-SampleApp.a */; };
 /* End PBXBuildFile section */
 
@@ -115,6 +116,8 @@
 		71D2E60F289BFF7600A34394 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		71D2E611289C206100A34394 /* DialogCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DialogCellView.h; sourceTree = "<group>"; };
 		71D2E612289C206100A34394 /* DialogCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DialogCellView.m; sourceTree = "<group>"; };
+		71D73E2928A55C4B004C8D30 /* CommentManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentManager.h; sourceTree = "<group>"; };
+		71D73E2A28A55C4B004C8D30 /* CommentManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentManager.m; sourceTree = "<group>"; };
 		965D0AA0EA2E2A5DFC3AB933 /* libPods-SampleApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SampleApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C35683868B4D8244CAC50C3C /* Pods-SampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleApp.debug.xcconfig"; path = "Target Support Files/Pods-SampleApp/Pods-SampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -237,6 +240,8 @@
 				3AA4439028A23FE40058A067 /* Location.m */,
 				3AA4439328A251DE0058A067 /* Notification.h */,
 				3AA4439428A251DE0058A067 /* Notification.m */,
+				71D73E2928A55C4B004C8D30 /* CommentManager.h */,
+				71D73E2A28A55C4B004C8D30 /* CommentManager.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -488,6 +493,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3ABBE29128A10140003BDC00 /* SplashView.m in Sources */,
+				71D73E2B28A55C4B004C8D30 /* CommentManager.m in Sources */,
 				3AA4439128A23FE40058A067 /* Location.m in Sources */,
 				3AAD38BB289A0ED4006D3478 /* SliderViewController.m in Sources */,
 				3ABBE28A28A0B0D3003BDC00 /* VideoToolbar.m in Sources */,

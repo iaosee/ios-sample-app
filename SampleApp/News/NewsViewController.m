@@ -66,18 +66,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
     [self.tableView reloadData];
-    [self.tabBarController.navigationItem setTitleView:({
-        SearchBar *searchBar = [[SearchBar alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH - 20, self.navigationController.navigationBar.bounds.size.height)];
-        searchBar;
-        //拉起键盘和输入框
-//        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH - UI(20), self.navigationController.navigationBar.bounds.size.height)];
-//        button.backgroundColor = [UIColor lightGrayColor];
-//        [button addTarget:self action:@selector(_showCommentView) forControlEvents:UIControlEventTouchUpInside];
-//        button;
-    })];
-    
 }
 
 #pragma mark - UITableViewDataSource
@@ -132,6 +121,10 @@
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:item.uniqueKey];
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    SearchBar *searchBar = [[SearchBar alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH - 20, self.navigationController.navigationBar.bounds.size.height)];
+    return searchBar;
+}
 
 #pragma mark - NormalTableViewCellDelegate
 
