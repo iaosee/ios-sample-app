@@ -2,7 +2,7 @@
 //  SampleAppUITests.m
 //  SampleAppUITests
 //
-//  Created by 肖峰 on 2022/8/1.
+//  Created by iaosee on 2022/8/1.
 //
 
 #import <XCTest/XCTest.h>

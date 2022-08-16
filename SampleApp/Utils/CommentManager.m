@@ -43,7 +43,7 @@
             _textView.delegate = self;
             _textView;
         })];
-        
+
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_doTextViewAnimationWithNotification:) name:UIKeyboardWillChangeFrameNotification object:nil];
     }
     return self;
