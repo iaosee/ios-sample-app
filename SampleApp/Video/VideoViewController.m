@@ -8,7 +8,7 @@
 #import "VideoViewController.h"
 #import "VideoCoverViewCell.h"
 #import "VideoToolbar.h"
-#import "VideoPlayer.h""
+#import "VideoPlayer.h"
 
 @interface VideoViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 
