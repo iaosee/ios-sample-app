@@ -32,6 +32,7 @@
 		3ABBE28A28A0B0D3003BDC00 /* VideoToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABBE28928A0B0D3003BDC00 /* VideoToolbar.m */; };
 		3ABBE28D28A0E10E003BDC00 /* ScreenAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABBE28C28A0E10E003BDC00 /* ScreenAdapter.m */; };
 		3ABBE29128A10140003BDC00 /* SplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABBE29028A10140003BDC00 /* SplashView.m */; };
+		71476C8F28AFF1380054573C /* ImageZoomController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71476C8E28AFF1380054573C /* ImageZoomController.m */; };
 		71786D1F289D82F8005C13EC /* ListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 71786D1E289D82F8005C13EC /* ListItem.m */; };
 		71786D22289EB76A005C13EC /* VideoCoverViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71786D21289EB76A005C13EC /* VideoCoverViewCell.m */; };
 		71786D25289FBC08005C13EC /* VideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 71786D24289FBC08005C13EC /* VideoPlayer.m */; };
@@ -106,6 +107,8 @@
 		3ABBE28C28A0E10E003BDC00 /* ScreenAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenAdapter.m; sourceTree = "<group>"; };
 		3ABBE28F28A10140003BDC00 /* SplashView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashView.h; sourceTree = "<group>"; };
 		3ABBE29028A10140003BDC00 /* SplashView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashView.m; sourceTree = "<group>"; };
+		71476C8D28AFF1380054573C /* ImageZoomController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageZoomController.h; sourceTree = "<group>"; };
+		71476C8E28AFF1380054573C /* ImageZoomController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageZoomController.m; sourceTree = "<group>"; };
 		71786D1D289D82F8005C13EC /* ListItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListItem.h; sourceTree = "<group>"; };
 		71786D1E289D82F8005C13EC /* ListItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListItem.m; sourceTree = "<group>"; };
 		71786D20289EB76A005C13EC /* VideoCoverViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoCoverViewCell.h; sourceTree = "<group>"; };
@@ -187,6 +190,8 @@
 			children = (
 				3AAD38B12898CBC3006D3478 /* MineViewController.h */,
 				3AAD38B22898CBC3006D3478 /* MineViewController.m */,
+				71476C8D28AFF1380054573C /* ImageZoomController.h */,
+				71476C8E28AFF1380054573C /* ImageZoomController.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -506,6 +511,7 @@
 				3AA4439828A348690058A067 /* SearchBar.m in Sources */,
 				3AAD387028977C62006D3478 /* AppDelegate.m in Sources */,
 				3AAD38A82897D706006D3478 /* NewsViewController.m in Sources */,
+				71476C8F28AFF1380054573C /* ImageZoomController.m in Sources */,
 				3AA4437B28A1FB5F0058A067 /* Mediator.m in Sources */,
 				3AAD38B6289917AA006D3478 /* NormalTableViewCell.m in Sources */,
 				3AAD38AD2898CA53006D3478 /* VideoViewController.m in Sources */,

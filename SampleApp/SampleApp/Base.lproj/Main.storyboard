@@ -24,8 +24,42 @@
             </objects>
             <point key="canvasLocation" x="65" y="4"/>
         </scene>
+        <!--Image Zoom Controller-->
+        <scene sceneID="YCH-Kb-qs8">
+            <objects>
+                <viewController storyboardIdentifier="ImageZoomController" id="rhU-Xk-a5D" customClass="ImageZoomController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nw0-Wx-yNw">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GKQ-DA-jME">
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="chart-large" translatesAutoresizingMaskIntoConstraints="NO" id="p92-cG-vZ9">
+                                        <rect key="frame" x="0.0" y="0.0" width="7680" height="4320"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="3Va-ko-bWR"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Q68-cN-nFV"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nTq-fw-vIX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="p92-cG-vZ9" id="Oaz-Lp-Dbp"/>
+                        <outlet property="scrollView" destination="GKQ-DA-jME" id="j3W-F0-AFD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9xB-dr-fGK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="769.23076923076917" y="3.5545023696682461"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="chart-large" width="7680" height="4320"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
