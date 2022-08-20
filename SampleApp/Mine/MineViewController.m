@@ -11,6 +11,7 @@
 #import "DetailViewController.h"
 #import "Notification.h"
 #import "CommentManager.h"
+#import "ImageZoomController.h"
 
 @interface MineViewController ()
 
@@ -88,6 +89,13 @@
         [button addTarget:self action:@selector(showCommentView) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
+    [self.view addSubview:({
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 450, 150, 30)];
+        [button setTitle:@"Image Zoom" forState:UIControlStateNormal];
+        button.backgroundColor = [UIColor blueColor];
+        [button addTarget:self action:@selector(goToImageZoom) forControlEvents:UIControlEventTouchUpInside];
+        button;
+    })];
 }
 
 - (void) goViewPage {
@@ -125,6 +133,13 @@
     [[CommentManager sharedManager] showCommentView];
 }
 
+-(void) goToImageZoom {
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *viewController = [storyBoard instantiateViewControllerWithIdentifier:@"ImageZoomController"];
+
+//    ImageZoomController *viewController = [[ImageZoomController alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
 /*
 #pragma mark - Navigation
 
