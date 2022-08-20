@@ -63,13 +63,25 @@
     return [NSString stringWithFormat:@"GroupFooter %ld", (long)section];
 }
 
+// generate right index bar
+- (NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    return @[@"A", @"B", @"C"];
+}
+
 #pragma mark - UITableViewDelegate
 
 // return pre cell
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *identifierID = @"cell-item";
     NSString *name = self.apps[indexPath.row % self.apps.count];
 
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
+//    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifierID];
+    if (cell == nil) {
+        NSLog(@"cellForRowAtIndexPath: %ld , %ld", indexPath.section, indexPath.row);
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifierID];
+    }
+    
     cell.imageView.image = [UIImage imageNamed:name];
     cell.textLabel.text = name;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@,%@,%@", name, name, name];
@@ -83,6 +95,24 @@
     
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *item = self.apps[indexPath.row % self.apps.count];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Alert Title"
+                                                                   message:[NSString stringWithFormat:@"You selected: %@", item]
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"OK Action");
+    }];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"Cancel Action");
+    }];
+
+    [alertController addAction:okAction];
+    [alertController addAction:cancelAction];
+
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 /*

@@ -76,6 +76,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
     NormalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"id"];
     
     if (!cell) {
