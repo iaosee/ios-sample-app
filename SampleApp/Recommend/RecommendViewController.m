@@ -55,8 +55,8 @@
     CGFloat marginX = (viewWidth  - columns * itemWidth) / (columns + 1);
     CGFloat marginY = marginX;
     
-    for (int i = 0; i < self.apps.count; i++) {
-        NSString *item = self.apps[i];
+    for (int i = 0; i < 40; i++) {
+        NSString *item = self.apps[i % self.apps.count];
         
         UIView *itemView = [[UIView alloc] init];
 //        itemView.backgroundColor = [UIColor lightGrayColor];

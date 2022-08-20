@@ -9,6 +9,9 @@
 
 @interface SliderViewController () <UIScrollViewDelegate>
 
+@property(nonatomic, weak) UIScrollView *scrollView;
+@property(nonatomic, weak) UIPageControl *pageControl;
+
 @end
 
 @implementation SliderViewController
@@ -19,7 +22,7 @@
     
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     scrollView.backgroundColor = [UIColor lightGrayColor];
-    scrollView.contentSize = CGSizeMake(self.view.bounds.size.width * 5, self.view.bounds.size.height);
+    scrollView.contentSize = CGSizeMake(self.view.bounds.size.width * 5, 0);
     
     scrollView.pagingEnabled = YES;
     scrollView.showsVerticalScrollIndicator = NO;
@@ -60,7 +63,15 @@
         })];
     }
 
+    
+    UIPageControl *pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(scrollView.bounds) - 80, scrollView.frame.size.width, 30)];
+    pageControl.numberOfPages = [colorArray count];
+    pageControl.tintColor = [UIColor lightGrayColor];
+
     [self.view addSubview:scrollView];
+    [self.view addSubview:pageControl];
+    self.scrollView = scrollView;
+    self.pageControl = pageControl;
 }
 
 - (void) viewClickHandler {
@@ -71,6 +82,12 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     NSLog(@"scrollViewDidScroll");
+    
+    CGFloat offsetX = scrollView.contentOffset.x;
+    offsetX = offsetX + scrollView.frame.size.width;
+    int page = offsetX / scrollView.frame.size.width;
+    
+    self.pageControl.currentPage = page - 1;
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
