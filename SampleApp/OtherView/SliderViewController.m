@@ -11,6 +11,7 @@
 
 @property(nonatomic, weak) UIScrollView *scrollView;
 @property(nonatomic, weak) UIPageControl *pageControl;
+@property(nonatomic, weak) NSTimer *timer;
 
 @end
 
@@ -22,7 +23,7 @@
     
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     scrollView.backgroundColor = [UIColor lightGrayColor];
-    scrollView.contentSize = CGSizeMake(self.view.bounds.size.width * 5, 0);
+    scrollView.contentSize = CGSizeMake(self.view.frame.size.width * 5, 0);
     
     scrollView.pagingEnabled = YES;
     scrollView.showsVerticalScrollIndicator = NO;
@@ -34,7 +35,7 @@
         [UIColor redColor],
         [UIColor greenColor],
         [UIColor blueColor],
-        [UIColor yellowColor],
+        [UIColor systemPinkColor],
         [UIColor orangeColor],
     ];
 
@@ -58,7 +59,7 @@
                 
                 subView;
             })];
-            
+
             view;
         })];
     }
@@ -67,15 +68,30 @@
     UIPageControl *pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(scrollView.bounds) - 80, scrollView.frame.size.width, 30)];
     pageControl.numberOfPages = [colorArray count];
     pageControl.tintColor = [UIColor lightGrayColor];
+    pageControl.currentPage = 0;
 
     [self.view addSubview:scrollView];
     [self.view addSubview:pageControl];
     self.scrollView = scrollView;
     self.pageControl = pageControl;
+    
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(scrollContentHandler) userInfo:nil repeats:YES];
+    
+    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode: NSRunLoopCommonModes];
 }
 
 - (void) viewClickHandler {
     NSLog(@"viewClickHandler");
+}
+
+- (void) scrollContentHandler {
+    NSInteger currentPage = self.pageControl.currentPage;
+    NSInteger nextPage = (currentPage + 1) % self.pageControl.numberOfPages;
+    CGFloat offsetX = self.scrollView.contentSize.width / self.pageControl.numberOfPages * nextPage;
+    
+    self.pageControl.currentPage = nextPage;
+//    self.scrollView.contentOffset = CGPointMake(offsetX, 0);
+    [self.scrollView setContentOffset:CGPointMake(offsetX, 0) animated:YES];
 }
 
 #pragma mark - UIScrollViewDelegate
@@ -84,18 +100,22 @@
     NSLog(@"scrollViewDidScroll");
     
     CGFloat offsetX = scrollView.contentOffset.x;
-    offsetX = offsetX + scrollView.frame.size.width;
+    offsetX += scrollView.frame.size.width / 2;     // If half of the page, next / prev
     int page = offsetX / scrollView.frame.size.width;
     
-    self.pageControl.currentPage = page - 1;
+    self.pageControl.currentPage = page;
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    NSLog(@"scrollViewWillBeginDragging");
+//    NSLog(@"scrollViewWillBeginDragging");
+    [self.timer invalidate];
+    self.timer = nil;
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
-    NSLog(@"scrollViewDidEndDragging");
+//    NSLog(@"scrollViewDidEndDragging");
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(scrollContentHandler) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode: NSRunLoopCommonModes];
 }
 
 /*
