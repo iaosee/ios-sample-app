@@ -12,6 +12,7 @@
 #import "Notification.h"
 #import "CommentManager.h"
 #import "ImageZoomController.h"
+#import "TableView01Controller.h"
 
 @interface MineViewController ()
 
@@ -96,6 +97,13 @@
         [button addTarget:self action:@selector(goToImageZoom) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
+    [self.view addSubview:({
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 500, 150, 30)];
+        [button setTitle:@"TableView 01" forState:UIControlStateNormal];
+        button.backgroundColor = [UIColor blueColor];
+        [button addTarget:self action:@selector(goToTableView01) forControlEvents:UIControlEventTouchUpInside];
+        button;
+    })];
 }
 
 - (void) goViewPage {
@@ -138,6 +146,11 @@
     UIViewController *viewController = [storyBoard instantiateViewControllerWithIdentifier:@"ImageZoomController"];
 
 //    ImageZoomController *viewController = [[ImageZoomController alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
+- (void) goToTableView01 {
+    UIViewController *viewController = [[TableView01Controller alloc] init];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 /*
