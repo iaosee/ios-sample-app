@@ -42,6 +42,36 @@
     // Do any additional setup after loading the view.
     
     [self initView];
+    
+//    [self generateFile];
+}
+
+
+-(void) generateFile {
+    NSArray *names = @[
+        @"Manuel.Bode79", @"Grayce51", @"Rozella_Trantow", @"Estrella_Toy48",
+        @"Glenna20", @"Morton47", @"Demarcus.Gleason", @"Shirley.Weimann",
+        @"Diego2", @"Destiney_Goldner", @"Clemmie.Little67",
+        @"Harry_Lind", @"Naomie7", @"Ellen98", @"Brendan2", @"Gracie_Funk88"
+    ];
+    NSMutableArray *arr = [[NSMutableArray alloc] init];
+    for (NSString *item in self.apps) {
+        int index = (arc4random() % [names count]);
+        NSString *name = names[index];
+        NSDictionary *dict = @{
+            @"icon": item,
+            @"name": item,
+            @"title": name,
+            @"count": @((arc4random() % 1000)),
+            @"price": @((arc4random() % 10000)),
+        };
+        [arr addObject:dict];
+    }
+
+    NSArray<NSString *> *pathArray = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSString *dataPath = [[pathArray firstObject] stringByAppendingPathComponent:@"XFDdata"];
+    NSString *listDataFile = [dataPath stringByAppendingPathComponent:@"datalist.plist"];
+    [arr writeToFile:listDataFile atomically:YES];
 }
 
 - (void) initView {

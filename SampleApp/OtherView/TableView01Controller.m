@@ -72,7 +72,7 @@
 
 // return pre cell
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *identifierID = @"cell-item";
+    NSString *identifierID = @"cell_item";
     NSString *name = self.apps[indexPath.row % self.apps.count];
 
 //    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];

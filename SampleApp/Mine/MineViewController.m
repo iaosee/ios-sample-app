@@ -13,6 +13,7 @@
 #import "CommentManager.h"
 #import "ImageZoomController.h"
 #import "TableView01Controller.h"
+#import "TableView02Controller.h"
 
 @interface MineViewController ()
 
@@ -104,6 +105,13 @@
         [button addTarget:self action:@selector(goToTableView01) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
+    [self.view addSubview:({
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 550, 150, 30)];
+        [button setTitle:@"TableView 02" forState:UIControlStateNormal];
+        button.backgroundColor = [UIColor blueColor];
+        [button addTarget:self action:@selector(goToTableView02) forControlEvents:UIControlEventTouchUpInside];
+        button;
+    })];
 }
 
 - (void) goViewPage {
@@ -151,6 +159,11 @@
 
 - (void) goToTableView01 {
     UIViewController *viewController = [[TableView01Controller alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
+- (void) goToTableView02 {
+    UIViewController *viewController = [[TableView02Controller alloc] init];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 /*
