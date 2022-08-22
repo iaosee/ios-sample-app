@@ -189,7 +189,7 @@
 }
 
 - (void) goToStaticTableView {
-    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"StaticTable" bundle:nil];
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Table" bundle:nil];
     UIViewController *viewController = [storyBoard instantiateViewControllerWithIdentifier:@"StaticTableController"];
     [self.navigationController pushViewController:viewController animated:YES];
 }
