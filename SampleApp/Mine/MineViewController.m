@@ -120,6 +120,13 @@
         [button addTarget:self action:@selector(goToTableView03) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
+    [self.view addSubview:({
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 650, 150, 30)];
+        [button setTitle:@"Static TbaleView" forState:UIControlStateNormal];
+        button.backgroundColor = [UIColor blueColor];
+        [button addTarget:self action:@selector(goToStaticTableView) forControlEvents:UIControlEventTouchUpInside];
+        button;
+    })];
 }
 
 - (void) goViewPage {
@@ -176,11 +183,17 @@
 }
 
 - (void) goToTableView03 {
-    
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UIViewController *viewController = [storyBoard instantiateViewControllerWithIdentifier:@"TableView03Controller"];
     [self.navigationController pushViewController:viewController animated:YES];
 }
+
+- (void) goToStaticTableView {
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"StaticTable" bundle:nil];
+    UIViewController *viewController = [storyBoard instantiateViewControllerWithIdentifier:@"StaticTableController"];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
 /*
 #pragma mark - Navigation
 
