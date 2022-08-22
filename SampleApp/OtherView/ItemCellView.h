@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class DataModel;
 
-@interface ItemViewCell : UITableViewCell
+@interface ItemCellView : UITableViewCell
 
 @property(nonatomic, strong) DataModel *data;
 

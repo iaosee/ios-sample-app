@@ -5,16 +5,16 @@
 //  Created by 肖峰 on 2022/8/22.
 //
 
-#import "ItemViewCell.h"
+#import "ItemCellView.h"
 #import "DataModel.h"
 
-@implementation ItemViewCell
+@implementation ItemCellView
 
 + (instancetype) dataCellWithTableView:(UITableView *) tableView {
     static NSString *identifierID = @"table-cell";
-    ItemViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifierID];
+    ItemCellView *cell = [tableView dequeueReusableCellWithIdentifier:identifierID];
     if (cell == nil) {
-        cell = [[ItemViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifierID];
+        cell = [[ItemCellView alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifierID];
     }
     return cell;
 }

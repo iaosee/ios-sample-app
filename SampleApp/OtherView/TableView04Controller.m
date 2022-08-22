@@ -7,7 +7,8 @@
 
 #import "TableView04Controller.h"
 #import "DataModel.h"
-#import "ItemViewCell.h"
+#import "ItemCellView.h"
+#import "GroupHeaderView.h"
 
 #define GroupCount 4
 
@@ -47,7 +48,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    NSLog(@"%@", self.groups);
+    self.tableView.sectionHeaderHeight = 40;
 }
 
 #pragma mark - Table view data source
@@ -64,13 +65,19 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSArray *groupItem = self.groups[indexPath.section];
     DataModel *item = [groupItem objectAtIndex:indexPath.row % GroupCount];
-    ItemViewCell *cell = [ItemViewCell dataCellWithTableView:tableView];
+    ItemCellView *cell = [ItemCellView dataCellWithTableView:tableView];
     cell.data = item;
     return cell;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return [NSString stringWithFormat:@"Group %ld", section];
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+//    return [NSString stringWithFormat:@"Group %ld", section];
+//}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    GroupHeaderView *goupHeadear = [GroupHeaderView gourpHeaderWithTableView:tableView];
+    goupHeadear.gorupName = [NSString stringWithFormat:@"Group %ld", section];
+    return goupHeadear;
 }
 
 /*

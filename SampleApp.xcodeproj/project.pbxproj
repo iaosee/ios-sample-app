@@ -32,9 +32,10 @@
 		3ABBE28A28A0B0D3003BDC00 /* VideoToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABBE28928A0B0D3003BDC00 /* VideoToolbar.m */; };
 		3ABBE28D28A0E10E003BDC00 /* ScreenAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABBE28C28A0E10E003BDC00 /* ScreenAdapter.m */; };
 		3ABBE29128A10140003BDC00 /* SplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABBE29028A10140003BDC00 /* SplashView.m */; };
+		3AD6209828B3826F00437A40 /* GroupHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6209728B3826F00437A40 /* GroupHeaderView.m */; };
 		3AFFD5E528B3619300A4661A /* Table.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AFFD5E428B3619300A4661A /* Table.storyboard */; };
 		3AFFD5E828B36CC500A4661A /* TableView04Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFFD5E728B36CC500A4661A /* TableView04Controller.m */; };
-		3AFFD5EB28B36E6F00A4661A /* ItemViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFFD5EA28B36E6F00A4661A /* ItemViewCell.m */; };
+		3AFFD5EB28B36E6F00A4661A /* ItemCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFFD5EA28B36E6F00A4661A /* ItemCellView.m */; };
 		71476C8F28AFF1380054573C /* ImageZoomController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71476C8E28AFF1380054573C /* ImageZoomController.m */; };
 		71476C9428B0E28D0054573C /* TableView01Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 71476C9328B0E28D0054573C /* TableView01Controller.m */; };
 		71476C9628B12B650054573C /* mockdata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71476C9528B12B650054573C /* mockdata.plist */; };
@@ -124,11 +125,13 @@
 		3ABBE28C28A0E10E003BDC00 /* ScreenAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenAdapter.m; sourceTree = "<group>"; };
 		3ABBE28F28A10140003BDC00 /* SplashView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashView.h; sourceTree = "<group>"; };
 		3ABBE29028A10140003BDC00 /* SplashView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashView.m; sourceTree = "<group>"; };
+		3AD6209628B3826F00437A40 /* GroupHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupHeaderView.h; sourceTree = "<group>"; };
+		3AD6209728B3826F00437A40 /* GroupHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupHeaderView.m; sourceTree = "<group>"; };
 		3AFFD5E428B3619300A4661A /* Table.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Table.storyboard; sourceTree = "<group>"; };
 		3AFFD5E628B36CC500A4661A /* TableView04Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableView04Controller.h; sourceTree = "<group>"; };
 		3AFFD5E728B36CC500A4661A /* TableView04Controller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableView04Controller.m; sourceTree = "<group>"; };
-		3AFFD5E928B36E6F00A4661A /* ItemViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemViewCell.h; sourceTree = "<group>"; };
-		3AFFD5EA28B36E6F00A4661A /* ItemViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemViewCell.m; sourceTree = "<group>"; };
+		3AFFD5E928B36E6F00A4661A /* ItemCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemCellView.h; sourceTree = "<group>"; };
+		3AFFD5EA28B36E6F00A4661A /* ItemCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemCellView.m; sourceTree = "<group>"; };
 		71476C8D28AFF1380054573C /* ImageZoomController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageZoomController.h; sourceTree = "<group>"; };
 		71476C8E28AFF1380054573C /* ImageZoomController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageZoomController.m; sourceTree = "<group>"; };
 		71476C9228B0E28D0054573C /* TableView01Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableView01Controller.h; sourceTree = "<group>"; };
@@ -275,8 +278,10 @@
 				3AFFD5E428B3619300A4661A /* Table.storyboard */,
 				3AFFD5E628B36CC500A4661A /* TableView04Controller.h */,
 				3AFFD5E728B36CC500A4661A /* TableView04Controller.m */,
-				3AFFD5E928B36E6F00A4661A /* ItemViewCell.h */,
-				3AFFD5EA28B36E6F00A4661A /* ItemViewCell.m */,
+				3AFFD5E928B36E6F00A4661A /* ItemCellView.h */,
+				3AFFD5EA28B36E6F00A4661A /* ItemCellView.m */,
+				3AD6209628B3826F00437A40 /* GroupHeaderView.h */,
+				3AD6209728B3826F00437A40 /* GroupHeaderView.m */,
 			);
 			path = OtherView;
 			sourceTree = "<group>";
@@ -608,6 +613,7 @@
 				3AAD387028977C62006D3478 /* AppDelegate.m in Sources */,
 				3AAD38A82897D706006D3478 /* NewsViewController.m in Sources */,
 				71476C8F28AFF1380054573C /* ImageZoomController.m in Sources */,
+				3AD6209828B3826F00437A40 /* GroupHeaderView.m in Sources */,
 				3AA4437B28A1FB5F0058A067 /* Mediator.m in Sources */,
 				3AAD38B6289917AA006D3478 /* NormalTableViewCell.m in Sources */,
 				3AAD38AD2898CA53006D3478 /* VideoViewController.m in Sources */,
@@ -621,7 +627,7 @@
 				3AAD38B02898CB19006D3478 /* RecommendViewController.m in Sources */,
 				71476C9D28B12E380054573C /* TableView02Controller.m in Sources */,
 				3AAD387328977C62006D3478 /* SceneDelegate.m in Sources */,
-				3AFFD5EB28B36E6F00A4661A /* ItemViewCell.m in Sources */,
+				3AFFD5EB28B36E6F00A4661A /* ItemCellView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
