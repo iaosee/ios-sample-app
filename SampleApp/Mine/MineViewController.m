@@ -14,6 +14,7 @@
 #import "ImageZoomController.h"
 #import "TableView01Controller.h"
 #import "TableView02Controller.h"
+#import "TableView03Controller.h"
 
 @interface MineViewController ()
 
@@ -112,6 +113,13 @@
         [button addTarget:self action:@selector(goToTableView02) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
+    [self.view addSubview:({
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 600, 150, 30)];
+        [button setTitle:@"TableView 03" forState:UIControlStateNormal];
+        button.backgroundColor = [UIColor blueColor];
+        [button addTarget:self action:@selector(goToTableView03) forControlEvents:UIControlEventTouchUpInside];
+        button;
+    })];
 }
 
 - (void) goViewPage {
@@ -164,6 +172,13 @@
 
 - (void) goToTableView02 {
     UIViewController *viewController = [[TableView02Controller alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
+- (void) goToTableView03 {
+    
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *viewController = [storyBoard instantiateViewControllerWithIdentifier:@"TableView03Controller"];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 /*

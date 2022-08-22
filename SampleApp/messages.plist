@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>icon</key>
+		<string>apple-logo</string>
+		<key>type</key>
+		<integer>0</integer>
+		<key>text</key>
+		<string>喂，2B，在不在！</string>
+		<key>time</key>
+		<string>2022-01-01 10:18</string>
+	</dict>
+	<dict>
+		<key>icon</key>
+		<string>apple-logo</string>
+		<key>type</key>
+		<integer>0</integer>
+		<key>text</key>
+		<string>问你一个严肃的事情</string>
+		<key>time</key>
+		<string>2022-01-01 10:18</string>
+	</dict>
+	<dict>
+		<key>icon</key>
+		<string>icloud</string>
+		<key>type</key>
+		<integer>1</integer>
+		<key>text</key>
+		<string>尼玛的，你才 2B！</string>
+		<key>time</key>
+		<string>2022-01-01 12:05</string>
+	</dict>
+	<dict>
+		<key>icon</key>
+		<string>icloud</string>
+		<key>type</key>
+		<integer>1</integer>
+		<key>text</key>
+		<string>说什么事 ？</string>
+		<key>time</key>
+		<string>2022-01-01 12:05</string>
+	</dict>
+	<dict>
+		<key>icon</key>
+		<string>apple-logo</string>
+		<key>type</key>
+		<integer>0</integer>
+		<key>text</key>
+		<string>你妹，我就是想问一下，你是不是我最好的朋友？</string>
+		<key>time</key>
+		<string>2022-01-01 12:20</string>
+	</dict>
+	<dict>
+		<key>icon</key>
+		<string>icloud</string>
+		<key>type</key>
+		<integer>1</integer>
+		<key>text</key>
+		<string>不借！</string>
+		<key>time</key>
+		<string>2022-01-01 20:15</string>
+	</dict>
+	<dict>
+		<key>icon</key>
+		<string>apple-logo</string>
+		<key>type</key>
+		<integer>0</integer>
+		<key>text</key>
+		<string>借你妹啊，劳资又不缺钱，你就回答“是”或者“不是” </string>
+		<key>time</key>
+		<string>2022-01-01 12:20</string>
+	</dict>
+	<dict>
+		<key>icon</key>
+		<string>icloud</string>
+		<key>type</key>
+		<integer>1</integer>
+		<key>text</key>
+		<string>不是，你是傻B吗?不是，你是傻B吗?不是，你是傻B吗?不是，你是傻B吗?不是，你是傻B吗?不是，你是傻B吗?不是，你是傻B吗?不是，你是傻B吗?不是，你是傻B吗?</string>
+		<key>time</key>
+		<string>2022-01-01 20:15</string>
+	</dict>
+</array>
+</plist>

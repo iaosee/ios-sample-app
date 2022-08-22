@@ -43,7 +43,7 @@
     
     [self initView];
     
-//    [self generateFile];
+    [self generateFile];
 }
 
 
@@ -59,10 +59,10 @@
         int index = (arc4random() % [names count]);
         NSString *name = names[index];
         NSDictionary *dict = @{
-            @"icon": item,
-            @"name": item,
-            @"title": name,
-            @"count": @((arc4random() % 1000)),
+            @"text": item,
+            @"time": item,
+            @"type": name,
+            @"avatar": @((arc4random() % 1000)),
             @"price": @((arc4random() % 10000)),
         };
         [arr addObject:dict];

@@ -39,9 +39,15 @@
 		71476C9D28B12E380054573C /* TableView02Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 71476C9C28B12E380054573C /* TableView02Controller.m */; };
 		71476C9F28B13A450054573C /* DataItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71476C9E28B13A450054573C /* DataItemCell.xib */; };
 		71476CA228B13C290054573C /* DataItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71476CA128B13C290054573C /* DataItemCell.m */; };
+		7175311028B252A300E0C3DA /* SAMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7175310F28B252A300E0C3DA /* SAMessage.m */; };
+		7175311328B2544300E0C3DA /* SAMessageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 7175311228B2544300E0C3DA /* SAMessageFrame.m */; };
+		7175311628B2668E00E0C3DA /* TableView03Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 7175311528B2668E00E0C3DA /* TableView03Controller.m */; };
+		7175311A28B26E7E00E0C3DA /* messages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7175311928B26E7E00E0C3DA /* messages.plist */; };
 		71786D1F289D82F8005C13EC /* ListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 71786D1E289D82F8005C13EC /* ListItem.m */; };
 		71786D22289EB76A005C13EC /* VideoCoverViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71786D21289EB76A005C13EC /* VideoCoverViewCell.m */; };
 		71786D25289FBC08005C13EC /* VideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 71786D24289FBC08005C13EC /* VideoPlayer.m */; };
+		71BE07AE28B28DC400C41330 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BE07AD28B28DC400C41330 /* MessageCell.m */; };
+		71BE07B128B2951A00C41330 /* NSString+TextSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BE07B028B2951A00C41330 /* NSString+TextSize.m */; };
 		71C74C8E28B14CD000A047EA /* TableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71C74C8D28B14CD000A047EA /* TableFooterView.xib */; };
 		71C74C9128B1522500A047EA /* TableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C74C9028B1522500A047EA /* TableFooterView.m */; };
 		71D2E610289BFF7600A34394 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D2E60F289BFF7600A34394 /* DetailViewController.m */; };
@@ -127,12 +133,23 @@
 		71476C9E28B13A450054573C /* DataItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataItemCell.xib; sourceTree = "<group>"; };
 		71476CA028B13C290054573C /* DataItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataItemCell.h; sourceTree = "<group>"; };
 		71476CA128B13C290054573C /* DataItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataItemCell.m; sourceTree = "<group>"; };
+		7175310E28B252A300E0C3DA /* SAMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAMessage.h; sourceTree = "<group>"; };
+		7175310F28B252A300E0C3DA /* SAMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAMessage.m; sourceTree = "<group>"; };
+		7175311128B2544300E0C3DA /* SAMessageFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAMessageFrame.h; sourceTree = "<group>"; };
+		7175311228B2544300E0C3DA /* SAMessageFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAMessageFrame.m; sourceTree = "<group>"; };
+		7175311428B2668E00E0C3DA /* TableView03Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableView03Controller.h; sourceTree = "<group>"; };
+		7175311528B2668E00E0C3DA /* TableView03Controller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableView03Controller.m; sourceTree = "<group>"; };
+		7175311928B26E7E00E0C3DA /* messages.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = messages.plist; sourceTree = "<group>"; };
 		71786D1D289D82F8005C13EC /* ListItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListItem.h; sourceTree = "<group>"; };
 		71786D1E289D82F8005C13EC /* ListItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListItem.m; sourceTree = "<group>"; };
 		71786D20289EB76A005C13EC /* VideoCoverViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoCoverViewCell.h; sourceTree = "<group>"; };
 		71786D21289EB76A005C13EC /* VideoCoverViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoCoverViewCell.m; sourceTree = "<group>"; };
 		71786D23289FBC08005C13EC /* VideoPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoPlayer.h; sourceTree = "<group>"; };
 		71786D24289FBC08005C13EC /* VideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoPlayer.m; sourceTree = "<group>"; };
+		71BE07AC28B28DC400C41330 /* MessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
+		71BE07AD28B28DC400C41330 /* MessageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
+		71BE07AF28B2951A00C41330 /* NSString+TextSize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+TextSize.h"; sourceTree = "<group>"; };
+		71BE07B028B2951A00C41330 /* NSString+TextSize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+TextSize.m"; sourceTree = "<group>"; };
 		71C74C8D28B14CD000A047EA /* TableFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableFooterView.xib; sourceTree = "<group>"; };
 		71C74C8F28B1522500A047EA /* TableFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableFooterView.h; sourceTree = "<group>"; };
 		71C74C9028B1522500A047EA /* TableFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableFooterView.m; sourceTree = "<group>"; };
@@ -243,6 +260,10 @@
 				71C74C8D28B14CD000A047EA /* TableFooterView.xib */,
 				71C74C8F28B1522500A047EA /* TableFooterView.h */,
 				71C74C9028B1522500A047EA /* TableFooterView.m */,
+				7175311428B2668E00E0C3DA /* TableView03Controller.h */,
+				7175311528B2668E00E0C3DA /* TableView03Controller.m */,
+				71BE07AC28B28DC400C41330 /* MessageCell.h */,
+				71BE07AD28B28DC400C41330 /* MessageCell.m */,
 			);
 			path = OtherView;
 			sourceTree = "<group>";
@@ -278,6 +299,8 @@
 				3AA4439428A251DE0058A067 /* Notification.m */,
 				71D73E2928A55C4B004C8D30 /* CommentManager.h */,
 				71D73E2A28A55C4B004C8D30 /* CommentManager.m */,
+				71BE07AF28B2951A00C41330 /* NSString+TextSize.h */,
+				71BE07B028B2951A00C41330 /* NSString+TextSize.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -326,6 +349,7 @@
 				3AAD387F28977C64006D3478 /* Info.plist */,
 				71476C9528B12B650054573C /* mockdata.plist */,
 				3AAD388028977C64006D3478 /* main.m */,
+				7175311928B26E7E00E0C3DA /* messages.plist */,
 			);
 			path = SampleApp;
 			sourceTree = "<group>";
@@ -360,6 +384,10 @@
 			children = (
 				71476C9828B12C470054573C /* DataModel.h */,
 				71476C9928B12C470054573C /* DataModel.m */,
+				7175310E28B252A300E0C3DA /* SAMessage.h */,
+				7175310F28B252A300E0C3DA /* SAMessage.m */,
+				7175311128B2544300E0C3DA /* SAMessageFrame.h */,
+				7175311228B2544300E0C3DA /* SAMessageFrame.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -486,6 +514,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7175311A28B26E7E00E0C3DA /* messages.plist in Resources */,
 				3AAD38AA2898B8F6006D3478 /* icon.bundle in Resources */,
 				3AAD38A52897C7AF006D3478 /* Main.storyboard in Resources */,
 				3AAD387E28977C64006D3478 /* LaunchScreen.storyboard in Resources */,
@@ -555,8 +584,12 @@
 				3AAD387628977C62006D3478 /* ViewController.m in Sources */,
 				71476CA228B13C290054573C /* DataItemCell.m in Sources */,
 				71C74C9128B1522500A047EA /* TableFooterView.m in Sources */,
+				71BE07AE28B28DC400C41330 /* MessageCell.m in Sources */,
 				71476C9A28B12C470054573C /* DataModel.m in Sources */,
 				3AA4439828A348690058A067 /* SearchBar.m in Sources */,
+				7175311628B2668E00E0C3DA /* TableView03Controller.m in Sources */,
+				7175311328B2544300E0C3DA /* SAMessageFrame.m in Sources */,
+				7175311028B252A300E0C3DA /* SAMessage.m in Sources */,
 				3AAD387028977C62006D3478 /* AppDelegate.m in Sources */,
 				3AAD38A82897D706006D3478 /* NewsViewController.m in Sources */,
 				71476C8F28AFF1380054573C /* ImageZoomController.m in Sources */,
@@ -568,6 +601,7 @@
 				71476C9428B0E28D0054573C /* TableView01Controller.m in Sources */,
 				71786D1F289D82F8005C13EC /* ListItem.m in Sources */,
 				71786D25289FBC08005C13EC /* VideoPlayer.m in Sources */,
+				71BE07B128B2951A00C41330 /* NSString+TextSize.m in Sources */,
 				3AAD388128977C64006D3478 /* main.m in Sources */,
 				3AAD38B02898CB19006D3478 /* RecommendViewController.m in Sources */,
 				71476C9D28B12E380054573C /* TableView02Controller.m in Sources */,
