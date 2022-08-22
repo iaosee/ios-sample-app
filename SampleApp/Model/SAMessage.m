@@ -9,7 +9,6 @@
 
 @implementation SAMessage
 
-
 - (instancetype) initWithDict:(NSDictionary *) dict {
     if (self = [super init]) {
         [self setValuesForKeysWithDictionary:dict];

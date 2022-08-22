@@ -16,7 +16,6 @@ typedef enum {
 
 @interface SAMessage : NSObject
 
-
 @property(nonatomic, copy) NSString *text;
 @property(nonatomic, copy) NSString *icon;
 @property(nonatomic, copy) NSString *time;

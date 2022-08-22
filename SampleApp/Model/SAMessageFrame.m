@@ -19,13 +19,14 @@
     CGFloat margin = 10;
     
     CGFloat timeW = screenW;
-    CGFloat timeH = 15;
+    CGFloat timeH = 0;
     CGFloat timeX = 0;
     CGFloat timeY = 0;
     if (!message.hiddenTime) {
+        timeH = 15;
         _timeFrame = CGRectMake(timeX, timeY, timeW, timeH);
     }
-    
+
     CGFloat iconW = 30;
     CGFloat iconH = 30;
     CGFloat iconX = message.type == MessageTypeFrom ? margin : screenW - margin - iconW;

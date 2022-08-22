@@ -43,8 +43,9 @@
         buttonText.titleLabel.font = textFont;
         [buttonText setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
         buttonText.titleLabel.numberOfLines = 0;
+        buttonText.layer.cornerRadius = 6;
+        buttonText.backgroundColor = [UIColor grayColor];
 //        buttonText.titleLabel.backgroundColor = [UIColor redColor];
-        buttonText.backgroundColor = [UIColor blueColor];
         buttonText.contentEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10);
 //        UIButtonConfiguration *config = [UIButtonConfiguration plainButtonConfiguration];
 //        config.contentInsets = NSDirectionalEdgeInsetsMake(10, 10, 10, 10);
@@ -73,6 +74,17 @@
     
     [self.buttonText setTitle:message.text forState:UIControlStateNormal];
     self.buttonText.frame = messageFrame.textFrame;
+
+    if (message.type == MessageTypeFrom) {
+        self.buttonText.backgroundColor = [UIColor whiteColor];
+//        self.buttonText.titleLabel.textColor = [UIColor blackColor];
+        [self.buttonText setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    } else {
+//        self.buttonText.titleLabel.textColor = [UIColor whiteColor];
+        UIColor *color = [UIColor colorWithRed:0 / 255.0 green:160 / 255.0 blue:255 / 255.0 alpha:1.0];
+        self.buttonText.backgroundColor = color;
+        [self.buttonText setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    }
 }
 
 - (void)awakeFromNib {
