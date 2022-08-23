@@ -76,6 +76,8 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     GroupHeaderView *goupHeadear = [GroupHeaderView gourpHeaderWithTableView:tableView];
+    NSArray *groupItem = self.groups[section];
+    goupHeadear.gorup = groupItem;
     goupHeadear.gorupName = [NSString stringWithFormat:@"Group %ld", section];
     return goupHeadear;
 }

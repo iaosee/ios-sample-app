@@ -11,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GroupHeaderView : UITableViewHeaderFooterView
 
+@property(nonatomic, copy) NSArray *gorup;
 @property(nonatomic, copy) NSString *gorupName;
 
 + (instancetype) gourpHeaderWithTableView: (UITableView *) tableView;
