@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TableView04Controller : UITableViewController
 
-@property(nonatomic, strong) NSMutableArray *groups;
+@property(nonatomic, strong) NSMutableArray<NSDictionary *> *groups;
 
 @end
 

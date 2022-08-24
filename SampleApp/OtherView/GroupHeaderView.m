@@ -26,9 +26,10 @@
     return goupHeadear;
 }
 
-- (void)setGorupName:(NSString *)gorupName {
-    [self.buttonTitle setTitle:gorupName forState:UIControlStateNormal];
-    self.labelName.text = [NSString stringWithFormat:@"%ld", self.gorup.count];
+- (void) setGroup:(NSMutableDictionary *)gorup {
+    _group = gorup;
+    [self.buttonTitle setTitle:gorup[@"name"] forState:UIControlStateNormal];
+    self.labelName.text = [NSString stringWithFormat:@"%ld", [[gorup objectForKey:@"list"] count]];
 }
 
 - (instancetype)initWithReuseIdentifier:(NSString *)reuseIdentifier {
@@ -39,7 +40,7 @@
         buttonTitle.backgroundColor = [UIColor lightGrayColor];
         buttonTitle.titleLabel.font = [UIFont systemFontOfSize:12];
         labelName.font = [UIFont systemFontOfSize:12];
-        
+
         [buttonTitle setImage:[UIImage systemImageNamed:@"arrowtriangle.forward.fill"] forState:UIControlStateNormal];
         [buttonTitle setImage:[UIImage systemImageNamed:@"arrowtriangle.down.fill"] forState:UIControlStateHighlighted];
         buttonTitle.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
@@ -57,7 +58,13 @@
 }
 
 - (void) buttonTitleClick {
-    
+    BOOL visible = [self.group objectForKey:@"visible"];
+    [self.group setValue:@(!visible) forKey:@"visible"];
+
+    if ([self.delegate respondsToSelector:@selector(groupHeaderViewButtonClick:)]) {
+        NSLog(@"%@", self.group);
+        [self.delegate groupHeaderViewButtonClick:self];
+    }
 }
 
 - (void)layoutSubviews {

@@ -12,7 +12,7 @@
 
 #define GroupCount 4
 
-@interface TableView04Controller ()
+@interface TableView04Controller () <GroupHeaderViewDelegate>
 
 @end
 
@@ -27,12 +27,17 @@
         for (int i = 0; i < count; i++) {
             const int groupIndex = i / GroupCount;
             if (i % GroupCount == 0) {
-                [arrGroups addObject:[NSMutableArray array]];
+                NSMutableDictionary *group = [[NSMutableDictionary alloc] initWithDictionary:@{
+                    @"name": [NSString stringWithFormat:@"Group %d", groupIndex],
+                    @"visible": @(NO),
+                    @"list": [NSMutableArray array]
+                }];
+                [arrGroups addObject:group];
             }
-            NSMutableArray *groupItem = [arrGroups objectAtIndex:groupIndex];
+            NSDictionary *groupItem = [arrGroups objectAtIndex:groupIndex];
             NSDictionary *dict = [arrDict objectAtIndex:i];
             DataModel *data = [[DataModel alloc] initWithDict:dict];
-            [groupItem addObject:data];
+            [[groupItem objectForKey:@"list"] addObject:data];
         }
         _groups = arrGroups;
     }
@@ -58,14 +63,23 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSArray *groupItem = self.groups[section];
-    return groupItem.count;
+    NSDictionary *groupItem = self.groups[section];
+    BOOL visible = [groupItem objectForKey:@"visible"];
+    NSArray *list = [groupItem objectForKey:@"list"];
+//    [tableView indexPathsForVisibleRows];
+    if (!visible) {
+        return 0;
+    }
+    return list.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSArray *groupItem = self.groups[indexPath.section];
-    DataModel *item = [groupItem objectAtIndex:indexPath.row % GroupCount];
+    NSDictionary *groupItem = self.groups[indexPath.section];
+    NSArray *list = [groupItem objectForKey:@"list"];
+    
+    DataModel *item = [list objectAtIndex:indexPath.row % GroupCount];
     ItemCellView *cell = [ItemCellView dataCellWithTableView:tableView];
+    cell.tag = 0;
     cell.data = item;
     return cell;
 }
@@ -75,55 +89,19 @@
 //}
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    NSMutableDictionary *groupItem = self.groups[section];
+
     GroupHeaderView *goupHeadear = [GroupHeaderView gourpHeaderWithTableView:tableView];
-    NSArray *groupItem = self.groups[section];
-    goupHeadear.gorup = groupItem;
-    goupHeadear.gorupName = [NSString stringWithFormat:@"Group %ld", section];
+    goupHeadear.group = groupItem;
+    goupHeadear.delegate = self;
+
     return goupHeadear;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+#pragma mark - GroupHeaderViewDelegate
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (void)groupHeaderViewButtonClick:(GroupHeaderView *)headerView {
+    [self.tableView reloadData];
 }
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

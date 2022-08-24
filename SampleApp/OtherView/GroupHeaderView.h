@@ -8,12 +8,17 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
+@class GroupHeaderView;
+
+@protocol GroupHeaderViewDelegate <NSObject>
+- (void) groupHeaderViewButtonClick:(GroupHeaderView *) headerView;
+@end
 
 @interface GroupHeaderView : UITableViewHeaderFooterView
 
-@property(nonatomic, copy) NSArray *gorup;
-@property(nonatomic, copy) NSString *gorupName;
+@property(nonatomic, weak) NSMutableDictionary *group;
 
+@property(nonatomic, weak) id<GroupHeaderViewDelegate> delegate;
 + (instancetype) gourpHeaderWithTableView: (UITableView *) tableView;
 
 @end
