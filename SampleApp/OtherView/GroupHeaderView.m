@@ -58,12 +58,12 @@
 }
 
 - (void) buttonTitleClick {
-    BOOL visible = [self.group objectForKey:@"visible"];
-    [self.group setValue:@(!visible) forKey:@"visible"];
+//    BOOL visible = [self.group objectForKey:@"visible"];
+//    [self.group setValue:@(!visible) forKey:@"visible"];
 
-    if ([self.delegate respondsToSelector:@selector(groupHeaderViewButtonClick:)]) {
-        NSLog(@"%@", self.group);
-        [self.delegate groupHeaderViewButtonClick:self];
+    if ([self.delegate respondsToSelector:@selector(groupHeaderViewButtonClick:section:)]) {
+//        NSLog(@"%@", self.group);
+        [self.delegate groupHeaderViewButtonClick:self section: self.groupIndex];
     }
 }
 

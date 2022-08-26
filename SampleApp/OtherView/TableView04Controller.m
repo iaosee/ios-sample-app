@@ -12,6 +12,7 @@
 
 #define GroupCount 4
 
+// TODO: Not effective
 @interface TableView04Controller () <GroupHeaderViewDelegate>
 
 @end
@@ -34,8 +35,8 @@
                 }];
                 [arrGroups addObject:group];
             }
-            NSDictionary *groupItem = [arrGroups objectAtIndex:groupIndex];
-            NSDictionary *dict = [arrDict objectAtIndex:i];
+            NSMutableDictionary *groupItem = [arrGroups objectAtIndex:groupIndex];
+            NSMutableDictionary *dict = [arrDict objectAtIndex:i];
             DataModel *data = [[DataModel alloc] initWithDict:dict];
             [[groupItem objectForKey:@"list"] addObject:data];
         }
@@ -93,15 +94,24 @@
 
     GroupHeaderView *goupHeadear = [GroupHeaderView gourpHeaderWithTableView:tableView];
     goupHeadear.group = groupItem;
+    goupHeadear.groupIndex = section;
     goupHeadear.delegate = self;
+    goupHeadear.tag = section;
 
     return goupHeadear;
 }
 
 #pragma mark - GroupHeaderViewDelegate
 
-- (void)groupHeaderViewButtonClick:(GroupHeaderView *)headerView {
-    [self.tableView reloadData];
+- (void)groupHeaderViewButtonClick:(GroupHeaderView *)headerView section:(NSInteger) index{
+    NSMutableDictionary *groupItem = self.groups[index];
+    BOOL visible = [groupItem objectForKey:@"visible"];
+    [groupItem setValue:@(NO) forKey:@"visible"];
+    NSLog(@"%@", groupItem);    
+//    [self.tableView reloadData];
+    
+    NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:headerView.tag];
+    [self.tableView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationFade];
 }
 
 @end
