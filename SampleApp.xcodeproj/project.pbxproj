@@ -52,6 +52,7 @@
 		71786D25289FBC08005C13EC /* VideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 71786D24289FBC08005C13EC /* VideoPlayer.m */; };
 		71BE07AE28B28DC400C41330 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BE07AD28B28DC400C41330 /* MessageCell.m */; };
 		71BE07B128B2951A00C41330 /* NSString+TextSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BE07B028B2951A00C41330 /* NSString+TextSize.m */; };
+		71BE07B328B7C6E100C41330 /* AutoLayout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71BE07B228B7C6E100C41330 /* AutoLayout.storyboard */; };
 		71C74C8E28B14CD000A047EA /* TableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71C74C8D28B14CD000A047EA /* TableFooterView.xib */; };
 		71C74C9128B1522500A047EA /* TableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C74C9028B1522500A047EA /* TableFooterView.m */; };
 		71D2E610289BFF7600A34394 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D2E60F289BFF7600A34394 /* DetailViewController.m */; };
@@ -161,6 +162,7 @@
 		71BE07AD28B28DC400C41330 /* MessageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
 		71BE07AF28B2951A00C41330 /* NSString+TextSize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+TextSize.h"; sourceTree = "<group>"; };
 		71BE07B028B2951A00C41330 /* NSString+TextSize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+TextSize.m"; sourceTree = "<group>"; };
+		71BE07B228B7C6E100C41330 /* AutoLayout.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AutoLayout.storyboard; sourceTree = "<group>"; };
 		71C74C8D28B14CD000A047EA /* TableFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableFooterView.xib; sourceTree = "<group>"; };
 		71C74C8F28B1522500A047EA /* TableFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableFooterView.h; sourceTree = "<group>"; };
 		71C74C9028B1522500A047EA /* TableFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableFooterView.m; sourceTree = "<group>"; };
@@ -368,6 +370,7 @@
 				71476C9528B12B650054573C /* mockdata.plist */,
 				3AAD388028977C64006D3478 /* main.m */,
 				7175311928B26E7E00E0C3DA /* messages.plist */,
+				71BE07B228B7C6E100C41330 /* AutoLayout.storyboard */,
 			);
 			path = SampleApp;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7175311A28B26E7E00E0C3DA /* messages.plist in Resources */,
+				71BE07B328B7C6E100C41330 /* AutoLayout.storyboard in Resources */,
 				3AAD38AA2898B8F6006D3478 /* icon.bundle in Resources */,
 				3AFFD5E528B3619300A4661A /* Table.storyboard in Resources */,
 				3AAD38A52897C7AF006D3478 /* Main.storyboard in Resources */,

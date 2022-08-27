@@ -134,6 +134,13 @@
         [button addTarget:self action:@selector(goToTableView04) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
+    [self.view addSubview:({
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(180, 100, 150, 30)];
+        [button setTitle:@"goAutoLayout" forState:UIControlStateNormal];
+        button.backgroundColor = [UIColor blueColor];
+        [button addTarget:self action:@selector(goAutoLayout) forControlEvents:UIControlEventTouchUpInside];
+        button;
+    })];
 }
 
 - (void) goViewPage {
@@ -204,6 +211,12 @@
 - (void) goToTableView04 {
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Table" bundle:nil];
     UIViewController *viewController = [storyBoard instantiateViewControllerWithIdentifier:@"TableView04Controller"];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
+- (void) goAutoLayout {
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"AutoLayout" bundle:nil];
+    UIViewController *viewController = [storyBoard instantiateViewControllerWithIdentifier:@"AutoLayoutController"];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
