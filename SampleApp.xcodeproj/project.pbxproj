@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A49E1C428BC87D000F1ECCA /* Picker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A49E1C328BC87D000F1ECCA /* Picker.storyboard */; };
+		3A49E1C728BC9CA500F1ECCA /* PickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A49E1C628BC9CA500F1ECCA /* PickerViewController.m */; };
+		3A49E1CC28BCA8B500F1ECCA /* PickerItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A49E1CB28BCA8B500F1ECCA /* PickerItemView.m */; };
+		3A49E1D028BCB1AE00F1ECCA /* PickerItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A49E1CF28BCB1AE00F1ECCA /* PickerItem.xib */; };
 		3A90B52D289D01A80048F7AE /* ListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A90B52C289D01A80048F7AE /* ListLoader.m */; };
 		3AA4437B28A1FB5F0058A067 /* Mediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA4437A28A1FB5F0058A067 /* Mediator.m */; };
 		3AA4439128A23FE40058A067 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA4439028A23FE40058A067 /* Location.m */; };
@@ -80,6 +84,12 @@
 
 /* Begin PBXFileReference section */
 		123D9E3C5A74594B2F40981D /* Pods-SampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleApp.release.xcconfig"; path = "Target Support Files/Pods-SampleApp/Pods-SampleApp.release.xcconfig"; sourceTree = "<group>"; };
+		3A49E1C328BC87D000F1ECCA /* Picker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Picker.storyboard; sourceTree = "<group>"; };
+		3A49E1C528BC9CA500F1ECCA /* PickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PickerViewController.h; sourceTree = "<group>"; };
+		3A49E1C628BC9CA500F1ECCA /* PickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PickerViewController.m; sourceTree = "<group>"; };
+		3A49E1CA28BCA8B500F1ECCA /* PickerItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PickerItemView.h; sourceTree = "<group>"; };
+		3A49E1CB28BCA8B500F1ECCA /* PickerItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PickerItemView.m; sourceTree = "<group>"; };
+		3A49E1CF28BCB1AE00F1ECCA /* PickerItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickerItem.xib; sourceTree = "<group>"; };
 		3A90B52B289D01A80048F7AE /* ListLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListLoader.h; sourceTree = "<group>"; };
 		3A90B52C289D01A80048F7AE /* ListLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListLoader.m; sourceTree = "<group>"; };
 		3AA4437928A1FB5F0058A067 /* Mediator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mediator.h; sourceTree = "<group>"; };
@@ -202,6 +212,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A49E1C228BC876400F1ECCA /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				3A49E1C328BC87D000F1ECCA /* Picker.storyboard */,
+				3A49E1C528BC9CA500F1ECCA /* PickerViewController.h */,
+				3A49E1C628BC9CA500F1ECCA /* PickerViewController.m */,
+				3A49E1CF28BCB1AE00F1ECCA /* PickerItem.xib */,
+				3A49E1CA28BCA8B500F1ECCA /* PickerItemView.h */,
+				3A49E1CB28BCA8B500F1ECCA /* PickerItemView.m */,
+			);
+			path = Picker;
+			sourceTree = "<group>";
+		};
 		3A90B525289CFEFC0048F7AE /* News */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,6 +380,7 @@
 				3A90B526289CFF420048F7AE /* Video */,
 				3A90B525289CFEFC0048F7AE /* News */,
 				3A90B529289CFFDA0048F7AE /* OtherView */,
+				3A49E1C228BC876400F1ECCA /* Picker */,
 				71476C9728B12BF70054573C /* Model */,
 				3AAD38A92898B8F5006D3478 /* icon.bundle */,
 				3AAD386E28977C62006D3478 /* AppDelegate.h */,
@@ -539,8 +563,10 @@
 				71BE07B328B7C6E100C41330 /* AutoLayout.storyboard in Resources */,
 				3AAD38AA2898B8F6006D3478 /* icon.bundle in Resources */,
 				3AFFD5E528B3619300A4661A /* Table.storyboard in Resources */,
+				3A49E1C428BC87D000F1ECCA /* Picker.storyboard in Resources */,
 				3AAD38A52897C7AF006D3478 /* Main.storyboard in Resources */,
 				3AAD387E28977C64006D3478 /* LaunchScreen.storyboard in Resources */,
+				3A49E1D028BCB1AE00F1ECCA /* PickerItem.xib in Resources */,
 				71C74C8E28B14CD000A047EA /* TableFooterView.xib in Resources */,
 				71476C9628B12B650054573C /* mockdata.plist in Resources */,
 				71476C9F28B13A450054573C /* DataItemCell.xib in Resources */,
@@ -597,6 +623,7 @@
 				3ABBE29128A10140003BDC00 /* SplashView.m in Sources */,
 				71D73E2B28A55C4B004C8D30 /* CommentManager.m in Sources */,
 				3AA4439128A23FE40058A067 /* Location.m in Sources */,
+				3A49E1CC28BCA8B500F1ECCA /* PickerItemView.m in Sources */,
 				3AAD38BB289A0ED4006D3478 /* SliderViewController.m in Sources */,
 				3ABBE28A28A0B0D3003BDC00 /* VideoToolbar.m in Sources */,
 				3AA4439528A251DE0058A067 /* Notification.m in Sources */,
@@ -610,6 +637,7 @@
 				71BE07AE28B28DC400C41330 /* MessageCell.m in Sources */,
 				71476C9A28B12C470054573C /* DataModel.m in Sources */,
 				3AA4439828A348690058A067 /* SearchBar.m in Sources */,
+				3A49E1C728BC9CA500F1ECCA /* PickerViewController.m in Sources */,
 				7175311628B2668E00E0C3DA /* TableView03Controller.m in Sources */,
 				3AFFD5E828B36CC500A4661A /* TableView04Controller.m in Sources */,
 				7175311328B2544300E0C3DA /* SAMessageFrame.m in Sources */,
