@@ -141,6 +141,13 @@
         [button addTarget:self action:@selector(goAutoLayout) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
+    [self.view addSubview:({
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(180, 150, 150, 30)];
+        [button setTitle:@"go Picker" forState:UIControlStateNormal];
+        button.backgroundColor = [UIColor blueColor];
+        [button addTarget:self action:@selector(goPicker) forControlEvents:UIControlEventTouchUpInside];
+        button;
+    })];
 }
 
 - (void) goViewPage {
@@ -217,6 +224,11 @@
 - (void) goAutoLayout {
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"AutoLayout" bundle:nil];
     UIViewController *viewController = [storyBoard instantiateViewControllerWithIdentifier:@"AutoLayoutController"];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+- (void) goPicker {
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Picker" bundle:nil];
+    UIViewController *viewController = [storyBoard instantiateViewControllerWithIdentifier:@"PickerViewController"];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
