@@ -2,7 +2,7 @@
 //  PickerViewController.m
 //  SampleApp
 //
-//  Created by 肖峰 on 2022/8/29.
+//  Created by iaosee on 2022/8/29.
 //
 
 #import "PickerViewController.h"
@@ -77,7 +77,7 @@
     NSDate *date = self.datePicker.date;
     //    NSString *strDate = [NSDateFormatter localizedStringFromDate:date dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterShortStyle];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    formatter.dateFormat = @"yyyy年MM月dd日 HH:mm:ss";
+    formatter.dateFormat = @"yyyy-MM-dd"; // HH:mm:ss
     NSString *strDate = [formatter stringFromDate:date];
 
     self.dateTextField.text = strDate;
