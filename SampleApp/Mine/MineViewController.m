@@ -148,6 +148,13 @@
         [button addTarget:self action:@selector(goPicker) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
+    [self.view addSubview:({
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(180, 200, 150, 30)];
+        [button setTitle:@"Set Badge" forState:UIControlStateNormal];
+        button.backgroundColor = [UIColor blueColor];
+        [button addTarget:self action:@selector(setBadge) forControlEvents:UIControlEventTouchUpInside];
+        button;
+    })];
 }
 
 - (void) goViewPage {
@@ -230,6 +237,17 @@
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Picker" bundle:nil];
     UIViewController *viewController = [storyBoard instantiateViewControllerWithIdentifier:@"PickerViewController"];
     [self.navigationController pushViewController:viewController animated:YES];
+}
+// deprecated
+- (void) setBadge {
+    UIApplication *app = [UIApplication sharedApplication];
+    UIUserNotificationCategory *category = [[UIUserNotificationCategory alloc] init];
+    NSSet *set = [NSSet setWithObject:category];
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge categories:set];
+    [app registerUserNotificationSettings:settings];
+    app.applicationIconBadgeNumber = 10;
+    app.networkActivityIndicatorVisible = YES;
+    app.statusBarHidden = !app.statusBarHidden;
 }
 
 /*
