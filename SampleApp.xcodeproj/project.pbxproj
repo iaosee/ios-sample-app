@@ -225,6 +225,13 @@
 			path = Picker;
 			sourceTree = "<group>";
 		};
+		3A6BA75C28BF0BF600D22BFC /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
 		3A90B525289CFEFC0048F7AE /* News */ = {
 			isa = PBXGroup;
 			children = (
@@ -382,6 +389,7 @@
 				3A90B529289CFFDA0048F7AE /* OtherView */,
 				3A49E1C228BC876400F1ECCA /* Picker */,
 				71476C9728B12BF70054573C /* Model */,
+				3A6BA75C28BF0BF600D22BFC /* Modal */,
 				3AAD38A92898B8F5006D3478 /* icon.bundle */,
 				3AAD386E28977C62006D3478 /* AppDelegate.h */,
 				3AAD386F28977C62006D3478 /* AppDelegate.m */,

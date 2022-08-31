@@ -155,6 +155,13 @@
         [button addTarget:self action:@selector(setBadge) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
+    [self.view addSubview:({
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(180, 250, 150, 30)];
+        [button setTitle:@"Open Modal" forState:UIControlStateNormal];
+        button.backgroundColor = [UIColor blueColor];
+        [button addTarget:self action:@selector(openModal) forControlEvents:UIControlEventTouchUpInside];
+        button;
+    })];
 }
 
 - (void) goViewPage {
@@ -248,6 +255,21 @@
     app.applicationIconBadgeNumber = 10;
     app.networkActivityIndicatorVisible = YES;
     app.statusBarHidden = !app.statusBarHidden;
+}
+
+- (void) openModal {
+    UIViewController *viewController = [[TableView01Controller alloc] init];
+//    viewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+
+//    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Picker" bundle:nil];
+//    UIViewController *viewController = [storyBoard instantiateViewControllerWithIdentifier:@"PickerViewController"];
+    
+//    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Table" bundle:nil];
+//    UIViewController *viewController = [storyBoard instantiateViewControllerWithIdentifier:@"TableView04Controller"];
+    
+    [self presentViewController:viewController animated:YES completion:^{
+        NSLog(@"completion");
+    }];
 }
 
 /*
