@@ -1,28 +1,27 @@
 //
-//  Drawing01Controller.m
+//  Drawing02Controller.m
 //  SampleApp
 //
-//  Created by iaosee on 2022/8/31.
+//  Created by 肖峰 on 2022/8/31.
 //
 
-#import "Drawing01Controller.h"
-#import "DrawingView.h"
+#import "Drawing02Controller.h"
+#import "ChartView.h"
 
-@interface Drawing01Controller ()
+@interface Drawing02Controller ()
 
 @end
 
-@implementation Drawing01Controller
+@implementation Drawing02Controller
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     
-    UIView * view = [[DrawingView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 600)];
+    UIView * view = [[ChartView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 600)];
     view.backgroundColor = [UIColor systemBlueColor];
     [self.view addSubview:view];
-    
 }
 
 /*
