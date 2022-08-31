@@ -11,6 +11,9 @@
 		3A49E1C728BC9CA500F1ECCA /* PickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A49E1C628BC9CA500F1ECCA /* PickerViewController.m */; };
 		3A49E1CC28BCA8B500F1ECCA /* PickerItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A49E1CB28BCA8B500F1ECCA /* PickerItemView.m */; };
 		3A49E1D028BCB1AE00F1ECCA /* PickerItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A49E1CF28BCB1AE00F1ECCA /* PickerItem.xib */; };
+		3A6BA75F28BF115400D22BFC /* Drawing01Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6BA75E28BF115400D22BFC /* Drawing01Controller.m */; };
+		3A6BA76228BF13E200D22BFC /* DrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6BA76128BF13E200D22BFC /* DrawingView.m */; };
+		3A6BA76528BF64D400D22BFC /* PieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6BA76428BF64D400D22BFC /* PieView.m */; };
 		3A90B52D289D01A80048F7AE /* ListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A90B52C289D01A80048F7AE /* ListLoader.m */; };
 		3AA4437B28A1FB5F0058A067 /* Mediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA4437A28A1FB5F0058A067 /* Mediator.m */; };
 		3AA4439128A23FE40058A067 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA4439028A23FE40058A067 /* Location.m */; };
@@ -90,6 +93,12 @@
 		3A49E1CA28BCA8B500F1ECCA /* PickerItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PickerItemView.h; sourceTree = "<group>"; };
 		3A49E1CB28BCA8B500F1ECCA /* PickerItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PickerItemView.m; sourceTree = "<group>"; };
 		3A49E1CF28BCB1AE00F1ECCA /* PickerItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickerItem.xib; sourceTree = "<group>"; };
+		3A6BA75D28BF115400D22BFC /* Drawing01Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Drawing01Controller.h; sourceTree = "<group>"; };
+		3A6BA75E28BF115400D22BFC /* Drawing01Controller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Drawing01Controller.m; sourceTree = "<group>"; };
+		3A6BA76028BF13E200D22BFC /* DrawingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawingView.h; sourceTree = "<group>"; };
+		3A6BA76128BF13E200D22BFC /* DrawingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawingView.m; sourceTree = "<group>"; };
+		3A6BA76328BF64D400D22BFC /* PieView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PieView.h; sourceTree = "<group>"; };
+		3A6BA76428BF64D400D22BFC /* PieView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PieView.m; sourceTree = "<group>"; };
 		3A90B52B289D01A80048F7AE /* ListLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListLoader.h; sourceTree = "<group>"; };
 		3A90B52C289D01A80048F7AE /* ListLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListLoader.m; sourceTree = "<group>"; };
 		3AA4437928A1FB5F0058A067 /* Mediator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mediator.h; sourceTree = "<group>"; };
@@ -225,11 +234,17 @@
 			path = Picker;
 			sourceTree = "<group>";
 		};
-		3A6BA75C28BF0BF600D22BFC /* Modal */ = {
+		3A6BA75C28BF0BF600D22BFC /* Quartz2D */ = {
 			isa = PBXGroup;
 			children = (
+				3A6BA75D28BF115400D22BFC /* Drawing01Controller.h */,
+				3A6BA75E28BF115400D22BFC /* Drawing01Controller.m */,
+				3A6BA76028BF13E200D22BFC /* DrawingView.h */,
+				3A6BA76128BF13E200D22BFC /* DrawingView.m */,
+				3A6BA76328BF64D400D22BFC /* PieView.h */,
+				3A6BA76428BF64D400D22BFC /* PieView.m */,
 			);
-			path = Modal;
+			path = Quartz2D;
 			sourceTree = "<group>";
 		};
 		3A90B525289CFEFC0048F7AE /* News */ = {
@@ -389,7 +404,7 @@
 				3A90B529289CFFDA0048F7AE /* OtherView */,
 				3A49E1C228BC876400F1ECCA /* Picker */,
 				71476C9728B12BF70054573C /* Model */,
-				3A6BA75C28BF0BF600D22BFC /* Modal */,
+				3A6BA75C28BF0BF600D22BFC /* Quartz2D */,
 				3AAD38A92898B8F5006D3478 /* icon.bundle */,
 				3AAD386E28977C62006D3478 /* AppDelegate.h */,
 				3AAD386F28977C62006D3478 /* AppDelegate.m */,
@@ -630,6 +645,8 @@
 			files = (
 				3ABBE29128A10140003BDC00 /* SplashView.m in Sources */,
 				71D73E2B28A55C4B004C8D30 /* CommentManager.m in Sources */,
+				3A6BA76228BF13E200D22BFC /* DrawingView.m in Sources */,
+				3A6BA76528BF64D400D22BFC /* PieView.m in Sources */,
 				3AA4439128A23FE40058A067 /* Location.m in Sources */,
 				3A49E1CC28BCA8B500F1ECCA /* PickerItemView.m in Sources */,
 				3AAD38BB289A0ED4006D3478 /* SliderViewController.m in Sources */,
@@ -658,6 +675,7 @@
 				3AAD38B6289917AA006D3478 /* NormalTableViewCell.m in Sources */,
 				3AAD38AD2898CA53006D3478 /* VideoViewController.m in Sources */,
 				3ABBE28D28A0E10E003BDC00 /* ScreenAdapter.m in Sources */,
+				3A6BA75F28BF115400D22BFC /* Drawing01Controller.m in Sources */,
 				71D2E610289BFF7600A34394 /* DetailViewController.m in Sources */,
 				71476C9428B0E28D0054573C /* TableView01Controller.m in Sources */,
 				71786D1F289D82F8005C13EC /* ListItem.m in Sources */,

@@ -15,6 +15,7 @@
 #import "TableView01Controller.h"
 #import "TableView02Controller.h"
 #import "TableView03Controller.h"
+#import "Drawing01Controller.h"
 
 @interface MineViewController ()
 
@@ -162,6 +163,13 @@
         [button addTarget:self action:@selector(openModal) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
+    [self.view addSubview:({
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(180, 300, 150, 30)];
+        [button setTitle:@"Drawing 01" forState:UIControlStateNormal];
+        button.backgroundColor = [UIColor blueColor];
+        [button addTarget:self action:@selector(drawing01) forControlEvents:UIControlEventTouchUpInside];
+        button;
+    })];
 }
 
 - (void) goViewPage {
@@ -270,6 +278,11 @@
     [self presentViewController:viewController animated:YES completion:^{
         NSLog(@"completion");
     }];
+}
+
+- (void) drawing01 {
+    UIViewController *viewController = [[Drawing01Controller alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 /*
