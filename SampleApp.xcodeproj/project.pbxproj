@@ -58,6 +58,7 @@
 		71786D1F289D82F8005C13EC /* ListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 71786D1E289D82F8005C13EC /* ListItem.m */; };
 		71786D22289EB76A005C13EC /* VideoCoverViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71786D21289EB76A005C13EC /* VideoCoverViewCell.m */; };
 		71786D25289FBC08005C13EC /* VideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 71786D24289FBC08005C13EC /* VideoPlayer.m */; };
+		717DF79B28BFC4F800488F8D /* CircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 717DF79A28BFC4F800488F8D /* CircleProgressView.m */; };
 		71BE07AE28B28DC400C41330 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BE07AD28B28DC400C41330 /* MessageCell.m */; };
 		71BE07B128B2951A00C41330 /* NSString+TextSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BE07B028B2951A00C41330 /* NSString+TextSize.m */; };
 		71BE07B328B7C6E100C41330 /* AutoLayout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71BE07B228B7C6E100C41330 /* AutoLayout.storyboard */; };
@@ -180,6 +181,8 @@
 		71786D21289EB76A005C13EC /* VideoCoverViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoCoverViewCell.m; sourceTree = "<group>"; };
 		71786D23289FBC08005C13EC /* VideoPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoPlayer.h; sourceTree = "<group>"; };
 		71786D24289FBC08005C13EC /* VideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoPlayer.m; sourceTree = "<group>"; };
+		717DF79928BFC4F800488F8D /* CircleProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleProgressView.h; sourceTree = "<group>"; };
+		717DF79A28BFC4F800488F8D /* CircleProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleProgressView.m; sourceTree = "<group>"; };
 		71BE07AC28B28DC400C41330 /* MessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
 		71BE07AD28B28DC400C41330 /* MessageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
 		71BE07AF28B2951A00C41330 /* NSString+TextSize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+TextSize.h"; sourceTree = "<group>"; };
@@ -248,6 +251,8 @@
 				3A6BA76728BF671800D22BFC /* Drawing02Controller.m */,
 				3A6BA76328BF64D400D22BFC /* ChartView.h */,
 				3A6BA76428BF64D400D22BFC /* ChartView.m */,
+				717DF79928BFC4F800488F8D /* CircleProgressView.h */,
+				717DF79A28BFC4F800488F8D /* CircleProgressView.m */,
 			);
 			path = Quartz2D;
 			sourceTree = "<group>";
@@ -653,6 +658,7 @@
 				3A6BA76228BF13E200D22BFC /* DrawingView.m in Sources */,
 				3A6BA76528BF64D400D22BFC /* ChartView.m in Sources */,
 				3AA4439128A23FE40058A067 /* Location.m in Sources */,
+				717DF79B28BFC4F800488F8D /* CircleProgressView.m in Sources */,
 				3A49E1CC28BCA8B500F1ECCA /* PickerItemView.m in Sources */,
 				3AAD38BB289A0ED4006D3478 /* SliderViewController.m in Sources */,
 				3ABBE28A28A0B0D3003BDC00 /* VideoToolbar.m in Sources */,

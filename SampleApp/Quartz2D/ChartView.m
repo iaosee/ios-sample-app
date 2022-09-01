@@ -15,7 +15,7 @@
 - (void)drawRect:(CGRect)rect {
     NSArray *arr = @[ @0.3, @0.1, @0.2, @0.4 ];
     
-    float side = MIN(self.bounds.size.width, self.bounds.size.height);
+    float radius = MIN(self.bounds.size.width, self.bounds.size.height) / 2;
     CGPoint center = CGPointMake(self.bounds.size.width / 2, self.bounds.size.height / 2);
     
     CGFloat start = 0;
@@ -23,7 +23,7 @@
     for (int i = 0; i < arr.count; i++) {
         end = start + M_PI * 2 * [arr[i] floatValue];
         UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:center
-                                                            radius:side / 2
+                                                            radius:radius
                                                         startAngle:start
                                                           endAngle:end
                                                          clockwise:YES];
