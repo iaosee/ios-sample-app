@@ -13,6 +13,7 @@
 
 @property(nonatomic, strong) UISlider *sliderView;
 @property(nonatomic, weak) CircleProgressView *circleProgressView;
+@property(nonatomic, weak) UIImageView *imageView;
 
 @end
 
@@ -41,11 +42,53 @@
     [self.sliderView addTarget:self action:@selector(valueChange:) forControlEvents:UIControlEventValueChanged];
 
     [self.view addSubview:self.sliderView];
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 550, self.view.frame.size.width, 200)];
+    imageView.backgroundColor = [UIColor lightGrayColor];
+    self.imageView = imageView;
+    [self.view addSubview:imageView];
+
+    [self imageTapHandler];
+    
 }
 
 - (void) valueChange: (CGFloat) value {
     float v = self.sliderView.value;
     self.circleProgressView.value = v;
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    [self imageTapHandler];
+    UIImageWriteToSavedPhotosAlbum(self.imageView.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+}
+
+- (void) imageTapHandler {
+    CGSize size = CGSizeMake(self.view.frame.size.width, 200);
+//    UIGraphicsBeginImageContext(size);
+    UIGraphicsBeginImageContextWithOptions(size, NO, 0); // [UIScreen mainScreen].scale
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    CGContextMoveToPoint(ctx, 50, 50);
+    CGContextAddLineToPoint(ctx, 100, 100);
+    CGContextAddLineToPoint(ctx, 150, 50);
+    CGContextStrokePath(ctx);
+    CGContextAddArc(ctx, 200, 100, 50, 0, M_PI * 2, 1);
+    CGContextStrokePath(ctx);
+
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.imageView.image = image;
+}
+
+#pragma mark -- <保存到相册>
+-(void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
+    NSString *msg = nil ;
+    if(error){
+        msg = @"保存图片失败" ;
+    }else{
+        msg = @"保存图片成功" ;
+    }
+    NSLog(@"%@", msg);
 }
 
 /*

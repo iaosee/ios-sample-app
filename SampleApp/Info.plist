@@ -41,5 +41,7 @@
 	<string>需要您的位置推荐地方新闻</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Our application needs permission to write photos...</string>
 </dict>
 </plist>
