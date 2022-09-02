@@ -43,12 +43,13 @@
 
     [self.view addSubview:self.sliderView];
     
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 550, self.view.frame.size.width, 200)];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 550, 256, 256)];
     imageView.backgroundColor = [UIColor lightGrayColor];
     self.imageView = imageView;
     [self.view addSubview:imageView];
 
-    [self imageTapHandler];
+//    [self imageTapHandler];
+    [self drawingCircleImage];
     
 }
 
@@ -63,7 +64,7 @@
 }
 
 - (void) imageTapHandler {
-    CGSize size = CGSizeMake(self.view.frame.size.width, 200);
+    CGSize size = self.imageView.bounds.size;
 //    UIGraphicsBeginImageContext(size);
     UIGraphicsBeginImageContextWithOptions(size, NO, 0); // [UIScreen mainScreen].scale
     CGContextRef ctx = UIGraphicsGetCurrentContext();
@@ -89,6 +90,27 @@
         msg = @"保存图片成功" ;
     }
     NSLog(@"%@", msg);
+}
+
+- (void) drawingCircleImage {
+    UIImage *image = [UIImage imageNamed:@"icon.bundle/icon.png"];
+    UIGraphicsBeginImageContextWithOptions(image.size, NO, 0);
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    CGContextAddArc(
+                    ctx,
+                    image.size.width * 0.5,
+                    image.size.width * 0.5,
+                    image.size.width * 0.5,
+                    0,
+                    M_PI * 2,
+                    1);
+    CGContextClip(ctx);
+    [image drawAtPoint:CGPointZero];
+    
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.imageView.image = newImage;
 }
 
 /*
