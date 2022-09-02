@@ -44,6 +44,8 @@
 		3AFFD5E528B3619300A4661A /* Table.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AFFD5E428B3619300A4661A /* Table.storyboard */; };
 		3AFFD5E828B36CC500A4661A /* TableView04Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFFD5E728B36CC500A4661A /* TableView04Controller.m */; };
 		3AFFD5EB28B36E6F00A4661A /* ItemCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFFD5EA28B36E6F00A4661A /* ItemCellView.m */; };
+		711DEEF228C1CC5800CACECE /* Touch01ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 711DEEF128C1CC5800CACECE /* Touch01ViewController.m */; };
+		711DEEF528C1CC7D00CACECE /* DragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 711DEEF428C1CC7D00CACECE /* DragView.m */; };
 		71476C8F28AFF1380054573C /* ImageZoomController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71476C8E28AFF1380054573C /* ImageZoomController.m */; };
 		71476C9428B0E28D0054573C /* TableView01Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 71476C9328B0E28D0054573C /* TableView01Controller.m */; };
 		71476C9628B12B650054573C /* mockdata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71476C9528B12B650054573C /* mockdata.plist */; };
@@ -156,6 +158,10 @@
 		3AFFD5E728B36CC500A4661A /* TableView04Controller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableView04Controller.m; sourceTree = "<group>"; };
 		3AFFD5E928B36E6F00A4661A /* ItemCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemCellView.h; sourceTree = "<group>"; };
 		3AFFD5EA28B36E6F00A4661A /* ItemCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemCellView.m; sourceTree = "<group>"; };
+		711DEEF028C1CC5800CACECE /* Touch01ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Touch01ViewController.h; sourceTree = "<group>"; };
+		711DEEF128C1CC5800CACECE /* Touch01ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Touch01ViewController.m; sourceTree = "<group>"; };
+		711DEEF328C1CC7D00CACECE /* DragView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DragView.h; sourceTree = "<group>"; };
+		711DEEF428C1CC7D00CACECE /* DragView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DragView.m; sourceTree = "<group>"; };
 		71476C8D28AFF1380054573C /* ImageZoomController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageZoomController.h; sourceTree = "<group>"; };
 		71476C8E28AFF1380054573C /* ImageZoomController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageZoomController.m; sourceTree = "<group>"; };
 		71476C9228B0E28D0054573C /* TableView01Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableView01Controller.h; sourceTree = "<group>"; };
@@ -415,6 +421,7 @@
 				3A49E1C228BC876400F1ECCA /* Picker */,
 				71476C9728B12BF70054573C /* Model */,
 				3A6BA75C28BF0BF600D22BFC /* Quartz2D */,
+				711DEEEF28C1CC3200CACECE /* Touch */,
 				3AAD38A92898B8F5006D3478 /* icon.bundle */,
 				3AAD386E28977C62006D3478 /* AppDelegate.h */,
 				3AAD386F28977C62006D3478 /* AppDelegate.m */,
@@ -455,6 +462,17 @@
 				965D0AA0EA2E2A5DFC3AB933 /* libPods-SampleApp.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		711DEEEF28C1CC3200CACECE /* Touch */ = {
+			isa = PBXGroup;
+			children = (
+				711DEEF028C1CC5800CACECE /* Touch01ViewController.h */,
+				711DEEF128C1CC5800CACECE /* Touch01ViewController.m */,
+				711DEEF328C1CC7D00CACECE /* DragView.h */,
+				711DEEF428C1CC7D00CACECE /* DragView.m */,
+			);
+			path = Touch;
 			sourceTree = "<group>";
 		};
 		71476C9728B12BF70054573C /* Model */ = {
@@ -656,6 +674,7 @@
 				3ABBE29128A10140003BDC00 /* SplashView.m in Sources */,
 				71D73E2B28A55C4B004C8D30 /* CommentManager.m in Sources */,
 				3A6BA76228BF13E200D22BFC /* DrawingView.m in Sources */,
+				711DEEF528C1CC7D00CACECE /* DragView.m in Sources */,
 				3A6BA76528BF64D400D22BFC /* ChartView.m in Sources */,
 				3AA4439128A23FE40058A067 /* Location.m in Sources */,
 				717DF79B28BFC4F800488F8D /* CircleProgressView.m in Sources */,
@@ -664,6 +683,7 @@
 				3ABBE28A28A0B0D3003BDC00 /* VideoToolbar.m in Sources */,
 				3AA4439528A251DE0058A067 /* Notification.m in Sources */,
 				71786D22289EB76A005C13EC /* VideoCoverViewCell.m in Sources */,
+				711DEEF228C1CC5800CACECE /* Touch01ViewController.m in Sources */,
 				3A90B52D289D01A80048F7AE /* ListLoader.m in Sources */,
 				71D2E613289C206100A34394 /* DialogCellView.m in Sources */,
 				3AAD38B32898CBC3006D3478 /* MineViewController.m in Sources */,

@@ -17,6 +17,7 @@
 #import "TableView03Controller.h"
 #import "Drawing01Controller.h"
 #import "Drawing02Controller.h"
+#import "Touch01ViewController.h"
 
 @interface MineViewController ()
 
@@ -175,7 +176,14 @@
         UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(180, 300, 150, 30)];
         [button setTitle:@"ChartView" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
-        [button addTarget:self action:@selector(goPieView) forControlEvents:UIControlEventTouchUpInside];
+        [button addTarget:self action:@selector(goChartView) forControlEvents:UIControlEventTouchUpInside];
+        button;
+    })];
+    [self.view addSubview:({
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(180, 300, 150, 30)];
+        [button setTitle:@"TouchView" forState:UIControlStateNormal];
+        button.backgroundColor = [UIColor blueColor];
+        [button addTarget:self action:@selector(goTouchView) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
 }
@@ -293,11 +301,15 @@
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
-- (void) goPieView {
+- (void) goChartView {
     UIViewController *viewController = [[Drawing02Controller alloc] init];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
+- (void) goTouchView {
+    UIViewController *viewController = [[Touch01ViewController alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
 /*
 #pragma mark - Navigation
 
