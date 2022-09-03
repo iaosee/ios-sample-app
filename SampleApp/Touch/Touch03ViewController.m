@@ -11,6 +11,7 @@
 @interface Touch03ViewController () <GestureLockViewDelegate>
 
 @property(nonatomic, weak) GestureLockView *lockView;
+@property(nonatomic, strong) UIImageView *imageView;
 
 @end
 
@@ -27,18 +28,29 @@
 // Block way
 //    self.lockView.verifyPasswordBlock = ^BOOL(NSString * _Nonnull password) {
 //        NSLog(@"verifyPasswordBlock - %@", password);
-//        return [password isEqualToString:@"0124678"];
+//        return [password isEqual:@"0124678"];
 //    };
 }
 
 // Delegate way
-- (BOOL)verifyPassword:(NSString *)password {
+- (BOOL) verifyPassword:(NSString *)password {
     NSLog(@"verifyPassword - %@", password);
-    return [password isEqualToString:@"0124678"];
+    return [password isEqual:@"0124678"];
+}
+- (void) verifyFinish {
+    NSLog(@"verifyFinish");
+//    self.imageView.image = [self nomalSnapshotImage];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSLog(@"Touch03ViewController touchesBegan");
+}
+- (UIImage *)nomalSnapshotImage {
+    UIGraphicsBeginImageContextWithOptions(self.lockView.frame.size, NO, 0);
+    [self.lockView.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *snapshotImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return snapshotImage;
 }
 
 - (void) initView {
@@ -81,6 +93,13 @@
     self.lockView = lockView;
     [self.view addSubview:self.lockView];
     [self.view addConstraints:constraints];
+
+    //    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake((self.view.bounds.size.width - 100) / 2, 80, 100, 100)];
+//    imageView.translatesAutoresizingMaskIntoConstraints = NO;
+//    imageView.backgroundColor = [UIColor grayColor];
+//    self.imageView = imageView;
+//    self.imageView.contentMode = UIViewContentModeScaleAspectFit;
+//    [self.view addSubview:imageView];
 }
 
 /*

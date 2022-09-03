@@ -42,7 +42,7 @@
 }
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.backgroundColor = [UIColor grayColor];
+    self.backgroundColor = [UIColor clearColor];
 
     int colCount = 3;
     CGFloat w = 60;
@@ -114,10 +114,16 @@
         }
     }
 
-    if (self.verifyPasswordBlock && self.verifyPasswordBlock(password)) {
-        [self correctStyle];
-    } else {
-        [self incorrectStyle];
+    if (self.verifyPasswordBlock) {
+        if (self.verifyPasswordBlock(password)) {
+            [self correctStyle];
+        } else {
+            [self incorrectStyle];
+        }
+    }
+
+    if([self.delegate respondsToSelector:@selector(verifyFinish)]) {
+        [self.delegate verifyFinish];
     }
 }
 - (void) correctStyle {

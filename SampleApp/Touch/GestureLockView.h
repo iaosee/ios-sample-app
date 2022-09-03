@@ -13,6 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (BOOL) verifyPassword:(NSString *) password;
 
+@optional
+- (void) verifyFinish;
+
 @end
 
 @interface GestureLockView : UIView
