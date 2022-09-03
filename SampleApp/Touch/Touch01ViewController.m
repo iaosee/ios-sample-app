@@ -26,6 +26,9 @@
     
     [self.view addSubview:dragView];
 }
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSLog(@"Touch01ViewController touchesBegan");
+}
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSLog(@"Touch01ViewController touchesMoved");

@@ -18,6 +18,7 @@
 #import "Drawing01Controller.h"
 #import "Drawing02Controller.h"
 #import "Touch01ViewController.h"
+#import "Touch02ViewController.h"
 
 @interface MineViewController ()
 
@@ -186,6 +187,13 @@
         [button addTarget:self action:@selector(goTouchView) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
+    [self.view addSubview:({
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(180, 350, 150, 30)];
+        [button setTitle:@"TouchView02" forState:UIControlStateNormal];
+        button.backgroundColor = [UIColor blueColor];
+        [button addTarget:self action:@selector(goTouchView02) forControlEvents:UIControlEventTouchUpInside];
+        button;
+    })];
 }
 
 - (void) goViewPage {
@@ -308,6 +316,10 @@
 
 - (void) goTouchView {
     UIViewController *viewController = [[Touch01ViewController alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+- (void) goTouchView02 {
+    UIViewController *viewController = [[Touch02ViewController alloc] init];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 /*
