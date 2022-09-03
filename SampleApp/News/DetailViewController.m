@@ -2,7 +2,7 @@
 //  DetailViewController.m
 //  SampleApp
 //
-//  Created by xiaofeng on 2022/8/4.
+//  Created by iaosee on 2022/8/4.
 //
 
 #import "DetailViewController.h"

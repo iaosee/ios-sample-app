@@ -2,7 +2,7 @@
 //  VideoPlayer.h
 //  SampleApp
 //
-//  Created by xiaofeng on 2022/8/7.
+//  Created by iaosee on 2022/8/7.
 //
 
 #import <Foundation/Foundation.h>

@@ -2,7 +2,7 @@
 //  TableFooterView.h
 //  SampleApp
 //
-//  Created by xiaofeng on 2022/8/21.
+//  Created by iaosee on 2022/8/21.
 //
 
 #import <UIKit/UIKit.h>

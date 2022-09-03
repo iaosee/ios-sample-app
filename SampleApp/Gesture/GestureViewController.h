@@ -1,5 +1,5 @@
 //
-//  Touch03ViewController.h
+//  GestureViewController.h
 //  SampleApp
 //
 //  Created by iaosee on 2022/9/3.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Touch03ViewController : UIViewController
+@interface GestureViewController : UIViewController
 
 @end
 

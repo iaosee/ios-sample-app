@@ -57,6 +57,7 @@
 		71476CA228B13C290054573C /* DataItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71476CA128B13C290054573C /* DataItemCell.m */; };
 		71737D2128C3446600A5EB45 /* Playground.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71737D2028C3446600A5EB45 /* Playground.storyboard */; };
 		71737D2428C3668D00A5EB45 /* GestureLockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D2328C3668D00A5EB45 /* GestureLockView.m */; };
+		71737D2828C3A74800A5EB45 /* GestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D2728C3A74800A5EB45 /* GestureViewController.m */; };
 		7175311028B252A300E0C3DA /* SAMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7175310F28B252A300E0C3DA /* SAMessage.m */; };
 		7175311328B2544300E0C3DA /* SAMessageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 7175311228B2544300E0C3DA /* SAMessageFrame.m */; };
 		7175311628B2668E00E0C3DA /* TableView03Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 7175311528B2668E00E0C3DA /* TableView03Controller.m */; };
@@ -185,6 +186,8 @@
 		71737D2028C3446600A5EB45 /* Playground.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Playground.storyboard; sourceTree = "<group>"; };
 		71737D2228C3668D00A5EB45 /* GestureLockView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GestureLockView.h; sourceTree = "<group>"; };
 		71737D2328C3668D00A5EB45 /* GestureLockView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestureLockView.m; sourceTree = "<group>"; };
+		71737D2628C3A74800A5EB45 /* GestureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GestureViewController.h; sourceTree = "<group>"; };
+		71737D2728C3A74800A5EB45 /* GestureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestureViewController.m; sourceTree = "<group>"; };
 		7175310E28B252A300E0C3DA /* SAMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAMessage.h; sourceTree = "<group>"; };
 		7175310F28B252A300E0C3DA /* SAMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAMessage.m; sourceTree = "<group>"; };
 		7175311128B2544300E0C3DA /* SAMessageFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAMessageFrame.h; sourceTree = "<group>"; };
@@ -433,6 +436,7 @@
 				71476C9728B12BF70054573C /* Model */,
 				3A6BA75C28BF0BF600D22BFC /* Quartz2D */,
 				711DEEEF28C1CC3200CACECE /* Touch */,
+				71737D2528C3A68800A5EB45 /* Gesture */,
 				3AAD38A92898B8F5006D3478 /* icon.bundle */,
 				3AAD386E28977C62006D3478 /* AppDelegate.h */,
 				3AAD386F28977C62006D3478 /* AppDelegate.m */,
@@ -504,6 +508,15 @@
 				7175311228B2544300E0C3DA /* SAMessageFrame.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		71737D2528C3A68800A5EB45 /* Gesture */ = {
+			isa = PBXGroup;
+			children = (
+				71737D2628C3A74800A5EB45 /* GestureViewController.h */,
+				71737D2728C3A74800A5EB45 /* GestureViewController.m */,
+			);
+			path = Gesture;
 			sourceTree = "<group>";
 		};
 		71786D1C289D82D2005C13EC /* Model */ = {
@@ -702,6 +715,7 @@
 				3AAD38BB289A0ED4006D3478 /* SliderViewController.m in Sources */,
 				3ABBE28A28A0B0D3003BDC00 /* VideoToolbar.m in Sources */,
 				3AA4439528A251DE0058A067 /* Notification.m in Sources */,
+				71737D2828C3A74800A5EB45 /* GestureViewController.m in Sources */,
 				71786D22289EB76A005C13EC /* VideoCoverViewCell.m in Sources */,
 				711DEEF228C1CC5800CACECE /* Touch01ViewController.m in Sources */,
 				3A90B52D289D01A80048F7AE /* ListLoader.m in Sources */,

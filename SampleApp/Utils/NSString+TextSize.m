@@ -2,7 +2,7 @@
 //  NSString+TextSize.m
 //  SampleApp
 //
-//  Created by xiaofeng on 2022/8/22.
+//  Created by iaosee on 2022/8/22.
 //
 
 #import "NSString+TextSize.h"

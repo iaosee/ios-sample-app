@@ -2,7 +2,7 @@
 //  CircleProgressView.h
 //  SampleApp
 //
-//  Created by xiaofeng on 2022/9/1.
+//  Created by iaosee on 2022/9/1.
 //
 
 #import <UIKit/UIKit.h>

@@ -2,7 +2,7 @@
 //  VideoCoverViewCell.h
 //  SampleApp
 //
-//  Created by xiaofeng on 2022/8/6.
+//  Created by iaosee on 2022/8/6.
 //
 
 #import <UIKit/UIKit.h>
