@@ -47,6 +47,7 @@
 		711DEEF228C1CC5800CACECE /* Touch01ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 711DEEF128C1CC5800CACECE /* Touch01ViewController.m */; };
 		711DEEF528C1CC7D00CACECE /* DragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 711DEEF428C1CC7D00CACECE /* DragView.m */; };
 		711DEEFA28C25CBA00CACECE /* Touch02ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 711DEEF928C25CBA00CACECE /* Touch02ViewController.m */; };
+		711DEEFD28C3404400CACECE /* Touch03ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 711DEEFC28C3404400CACECE /* Touch03ViewController.m */; };
 		71476C8F28AFF1380054573C /* ImageZoomController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71476C8E28AFF1380054573C /* ImageZoomController.m */; };
 		71476C9428B0E28D0054573C /* TableView01Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 71476C9328B0E28D0054573C /* TableView01Controller.m */; };
 		71476C9628B12B650054573C /* mockdata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71476C9528B12B650054573C /* mockdata.plist */; };
@@ -54,6 +55,8 @@
 		71476C9D28B12E380054573C /* TableView02Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 71476C9C28B12E380054573C /* TableView02Controller.m */; };
 		71476C9F28B13A450054573C /* DataItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71476C9E28B13A450054573C /* DataItemCell.xib */; };
 		71476CA228B13C290054573C /* DataItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71476CA128B13C290054573C /* DataItemCell.m */; };
+		71737D2128C3446600A5EB45 /* Playground.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71737D2028C3446600A5EB45 /* Playground.storyboard */; };
+		71737D2428C3668D00A5EB45 /* GestureLockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D2328C3668D00A5EB45 /* GestureLockView.m */; };
 		7175311028B252A300E0C3DA /* SAMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7175310F28B252A300E0C3DA /* SAMessage.m */; };
 		7175311328B2544300E0C3DA /* SAMessageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 7175311228B2544300E0C3DA /* SAMessageFrame.m */; };
 		7175311628B2668E00E0C3DA /* TableView03Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 7175311528B2668E00E0C3DA /* TableView03Controller.m */; };
@@ -165,6 +168,8 @@
 		711DEEF428C1CC7D00CACECE /* DragView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DragView.m; sourceTree = "<group>"; };
 		711DEEF828C25CBA00CACECE /* Touch02ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Touch02ViewController.h; sourceTree = "<group>"; };
 		711DEEF928C25CBA00CACECE /* Touch02ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Touch02ViewController.m; sourceTree = "<group>"; };
+		711DEEFB28C3404400CACECE /* Touch03ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Touch03ViewController.h; sourceTree = "<group>"; };
+		711DEEFC28C3404400CACECE /* Touch03ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Touch03ViewController.m; sourceTree = "<group>"; };
 		71476C8D28AFF1380054573C /* ImageZoomController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageZoomController.h; sourceTree = "<group>"; };
 		71476C8E28AFF1380054573C /* ImageZoomController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageZoomController.m; sourceTree = "<group>"; };
 		71476C9228B0E28D0054573C /* TableView01Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableView01Controller.h; sourceTree = "<group>"; };
@@ -177,6 +182,9 @@
 		71476C9E28B13A450054573C /* DataItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataItemCell.xib; sourceTree = "<group>"; };
 		71476CA028B13C290054573C /* DataItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataItemCell.h; sourceTree = "<group>"; };
 		71476CA128B13C290054573C /* DataItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataItemCell.m; sourceTree = "<group>"; };
+		71737D2028C3446600A5EB45 /* Playground.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Playground.storyboard; sourceTree = "<group>"; };
+		71737D2228C3668D00A5EB45 /* GestureLockView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GestureLockView.h; sourceTree = "<group>"; };
+		71737D2328C3668D00A5EB45 /* GestureLockView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestureLockView.m; sourceTree = "<group>"; };
 		7175310E28B252A300E0C3DA /* SAMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAMessage.h; sourceTree = "<group>"; };
 		7175310F28B252A300E0C3DA /* SAMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAMessage.m; sourceTree = "<group>"; };
 		7175311128B2544300E0C3DA /* SAMessageFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAMessageFrame.h; sourceTree = "<group>"; };
@@ -438,6 +446,7 @@
 				3AAD388028977C64006D3478 /* main.m */,
 				7175311928B26E7E00E0C3DA /* messages.plist */,
 				71BE07B228B7C6E100C41330 /* AutoLayout.storyboard */,
+				71737D2028C3446600A5EB45 /* Playground.storyboard */,
 			);
 			path = SampleApp;
 			sourceTree = "<group>";
@@ -476,6 +485,10 @@
 				711DEEF428C1CC7D00CACECE /* DragView.m */,
 				711DEEF828C25CBA00CACECE /* Touch02ViewController.h */,
 				711DEEF928C25CBA00CACECE /* Touch02ViewController.m */,
+				711DEEFB28C3404400CACECE /* Touch03ViewController.h */,
+				711DEEFC28C3404400CACECE /* Touch03ViewController.m */,
+				71737D2228C3668D00A5EB45 /* GestureLockView.h */,
+				71737D2328C3668D00A5EB45 /* GestureLockView.m */,
 			);
 			path = Touch;
 			sourceTree = "<group>";
@@ -620,6 +633,7 @@
 				3AAD38AA2898B8F6006D3478 /* icon.bundle in Resources */,
 				3AFFD5E528B3619300A4661A /* Table.storyboard in Resources */,
 				3A49E1C428BC87D000F1ECCA /* Picker.storyboard in Resources */,
+				71737D2128C3446600A5EB45 /* Playground.storyboard in Resources */,
 				3AAD38A52897C7AF006D3478 /* Main.storyboard in Resources */,
 				3AAD387E28977C64006D3478 /* LaunchScreen.storyboard in Resources */,
 				3A49E1D028BCB1AE00F1ECCA /* PickerItem.xib in Resources */,
@@ -691,9 +705,11 @@
 				71786D22289EB76A005C13EC /* VideoCoverViewCell.m in Sources */,
 				711DEEF228C1CC5800CACECE /* Touch01ViewController.m in Sources */,
 				3A90B52D289D01A80048F7AE /* ListLoader.m in Sources */,
+				71737D2428C3668D00A5EB45 /* GestureLockView.m in Sources */,
 				71D2E613289C206100A34394 /* DialogCellView.m in Sources */,
 				3AAD38B32898CBC3006D3478 /* MineViewController.m in Sources */,
 				3AAD387628977C62006D3478 /* ViewController.m in Sources */,
+				711DEEFD28C3404400CACECE /* Touch03ViewController.m in Sources */,
 				71476CA228B13C290054573C /* DataItemCell.m in Sources */,
 				71C74C9128B1522500A047EA /* TableFooterView.m in Sources */,
 				71BE07AE28B28DC400C41330 /* MessageCell.m in Sources */,

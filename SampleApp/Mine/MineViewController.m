@@ -19,6 +19,7 @@
 #import "Drawing02Controller.h"
 #import "Touch01ViewController.h"
 #import "Touch02ViewController.h"
+#import "Touch03ViewController.h"
 
 @interface MineViewController ()
 
@@ -174,24 +175,31 @@
         button;
     })];
     [self.view addSubview:({
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(180, 300, 150, 30)];
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(180, 350, 150, 30)];
         [button setTitle:@"ChartView" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(goChartView) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
     [self.view addSubview:({
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(180, 300, 150, 30)];
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(180, 400, 150, 30)];
         [button setTitle:@"TouchView" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(goTouchView) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
     [self.view addSubview:({
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(180, 350, 150, 30)];
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(180, 450, 150, 30)];
         [button setTitle:@"TouchView02" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(goTouchView02) forControlEvents:UIControlEventTouchUpInside];
+        button;
+    })];
+    [self.view addSubview:({
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(180, 500, 150, 30)];
+        [button setTitle:@"TouchView03" forState:UIControlStateNormal];
+        button.backgroundColor = [UIColor blueColor];
+        [button addTarget:self action:@selector(goTouchView03) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
 }
@@ -320,6 +328,10 @@
 }
 - (void) goTouchView02 {
     UIViewController *viewController = [[Touch02ViewController alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+- (void) goTouchView03 {
+    UIViewController *viewController = [[Touch03ViewController alloc] init];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 /*
