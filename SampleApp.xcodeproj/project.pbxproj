@@ -59,6 +59,8 @@
 		71737D2428C3668D00A5EB45 /* GestureLockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D2328C3668D00A5EB45 /* GestureLockView.m */; };
 		71737D2828C3A74800A5EB45 /* GestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D2728C3A74800A5EB45 /* GestureViewController.m */; };
 		71737D2C28C460BB00A5EB45 /* AnimateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D2B28C460BB00A5EB45 /* AnimateViewController.m */; };
+		71737D3028C483C200A5EB45 /* DrawingboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D2F28C483C200A5EB45 /* DrawingboardViewController.m */; };
+		71737D3228C484E400A5EB45 /* Drawingboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71737D3128C484E400A5EB45 /* Drawingboard.storyboard */; };
 		7175311028B252A300E0C3DA /* SAMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7175310F28B252A300E0C3DA /* SAMessage.m */; };
 		7175311328B2544300E0C3DA /* SAMessageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 7175311228B2544300E0C3DA /* SAMessageFrame.m */; };
 		7175311628B2668E00E0C3DA /* TableView03Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 7175311528B2668E00E0C3DA /* TableView03Controller.m */; };
@@ -191,6 +193,9 @@
 		71737D2728C3A74800A5EB45 /* GestureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestureViewController.m; sourceTree = "<group>"; };
 		71737D2A28C460BB00A5EB45 /* AnimateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimateViewController.h; sourceTree = "<group>"; };
 		71737D2B28C460BB00A5EB45 /* AnimateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimateViewController.m; sourceTree = "<group>"; };
+		71737D2E28C483C200A5EB45 /* DrawingboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawingboardViewController.h; sourceTree = "<group>"; };
+		71737D2F28C483C200A5EB45 /* DrawingboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawingboardViewController.m; sourceTree = "<group>"; };
+		71737D3128C484E400A5EB45 /* Drawingboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Drawingboard.storyboard; sourceTree = "<group>"; };
 		7175310E28B252A300E0C3DA /* SAMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAMessage.h; sourceTree = "<group>"; };
 		7175310F28B252A300E0C3DA /* SAMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAMessage.m; sourceTree = "<group>"; };
 		7175311128B2544300E0C3DA /* SAMessageFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAMessageFrame.h; sourceTree = "<group>"; };
@@ -441,6 +446,7 @@
 				711DEEEF28C1CC3200CACECE /* Touch */,
 				71737D2528C3A68800A5EB45 /* Gesture */,
 				71737D2928C4609D00A5EB45 /* Animate */,
+				71737D2D28C4836B00A5EB45 /* Drawingboard */,
 				3AAD38A92898B8F5006D3478 /* icon.bundle */,
 				3AAD386E28977C62006D3478 /* AppDelegate.h */,
 				3AAD386F28977C62006D3478 /* AppDelegate.m */,
@@ -530,6 +536,16 @@
 				71737D2B28C460BB00A5EB45 /* AnimateViewController.m */,
 			);
 			path = Animate;
+			sourceTree = "<group>";
+		};
+		71737D2D28C4836B00A5EB45 /* Drawingboard */ = {
+			isa = PBXGroup;
+			children = (
+				71737D2E28C483C200A5EB45 /* DrawingboardViewController.h */,
+				71737D2F28C483C200A5EB45 /* DrawingboardViewController.m */,
+				71737D3128C484E400A5EB45 /* Drawingboard.storyboard */,
+			);
+			path = Drawingboard;
 			sourceTree = "<group>";
 		};
 		71786D1C289D82D2005C13EC /* Model */ = {
@@ -662,6 +678,7 @@
 				71737D2128C3446600A5EB45 /* Playground.storyboard in Resources */,
 				3AAD38A52897C7AF006D3478 /* Main.storyboard in Resources */,
 				3AAD387E28977C64006D3478 /* LaunchScreen.storyboard in Resources */,
+				71737D3228C484E400A5EB45 /* Drawingboard.storyboard in Resources */,
 				3A49E1D028BCB1AE00F1ECCA /* PickerItem.xib in Resources */,
 				71C74C8E28B14CD000A047EA /* TableFooterView.xib in Resources */,
 				71476C9628B12B650054573C /* mockdata.plist in Resources */,
@@ -738,6 +755,7 @@
 				3AAD387628977C62006D3478 /* ViewController.m in Sources */,
 				71737D2C28C460BB00A5EB45 /* AnimateViewController.m in Sources */,
 				711DEEFD28C3404400CACECE /* Touch03ViewController.m in Sources */,
+				71737D3028C483C200A5EB45 /* DrawingboardViewController.m in Sources */,
 				71476CA228B13C290054573C /* DataItemCell.m in Sources */,
 				71C74C9128B1522500A047EA /* TableFooterView.m in Sources */,
 				71BE07AE28B28DC400C41330 /* MessageCell.m in Sources */,

@@ -22,6 +22,7 @@
 #import "Touch03ViewController.h"
 #import "GestureViewController.h"
 #import "AnimateViewController.h"
+#import "DrawingboardViewController.h"
 
 @interface MineViewController ()
 
@@ -218,6 +219,13 @@
         [button addTarget:self action:@selector(animateView) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
+    [self.view addSubview:({
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(180, 650, 150, 30)];
+        [button setTitle:@"drawingboardView" forState:UIControlStateNormal];
+        button.backgroundColor = [UIColor blueColor];
+        [button addTarget:self action:@selector(drawingboardView) forControlEvents:UIControlEventTouchUpInside];
+        button;
+    })];
 }
 
 - (void) goViewPage {
@@ -356,6 +364,12 @@
 }
 - (void) animateView {
     UIViewController *viewController = [[AnimateViewController alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+- (void) drawingboardView {
+//    UIViewController *viewController = [[DrawingboardViewController alloc] init];
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Drawingboard" bundle:nil];
+    UIViewController *viewController = [storyBoard instantiateViewControllerWithIdentifier:@"DrawingboardViewController"];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
