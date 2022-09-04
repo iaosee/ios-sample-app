@@ -23,39 +23,67 @@
                                     <constraint firstAttribute="height" constant="44" id="emH-9a-4Ml"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="clear" id="YVJ-Wr-ABz"/>
-                                    <barButtonItem title="previous" id="wdi-WQ-qqO"/>
-                                    <barButtonItem title="eraser" id="Uac-xk-CES"/>
+                                    <barButtonItem title="clear" id="YVJ-Wr-ABz">
+                                        <connections>
+                                            <action selector="clearAction:" destination="Y6W-OH-hqX" id="9B9-E2-Cai"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="previous" id="wdi-WQ-qqO">
+                                        <connections>
+                                            <action selector="previousAction:" destination="Y6W-OH-hqX" id="0Wu-9X-XZS"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="eraser" id="Uac-xk-CES">
+                                        <connections>
+                                            <action selector="eraserAction:" destination="Y6W-OH-hqX" id="OFZ-rO-fB4"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem systemItem="flexibleSpace" id="odm-li-GH1"/>
-                                    <barButtonItem title="save" id="RAd-2x-N4a"/>
+                                    <barButtonItem title="save" id="RAd-2x-N4a">
+                                        <connections>
+                                            <action selector="saveAction:" destination="Y6W-OH-hqX" id="PhF-gA-pAY"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Z6-s7-b9N">
                                 <rect key="frame" x="0.0" y="730" width="390" height="80"/>
                                 <subviews>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="629-xs-7kB">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="629-xs-7kB">
                                         <rect key="frame" x="6" y="8" width="378" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="aiH-vD-rFq"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="sliderChange:" destination="Y6W-OH-hqX" eventType="valueChanged" id="bUH-Fu-s4Q"/>
+                                        </connections>
                                     </slider>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gsm-E1-D7n">
                                         <rect key="frame" x="7.9999999999999929" y="37" width="119.33333333333331" height="35"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title=""/>
+                                        <connections>
+                                            <action selector="setColor:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ueO-oL-B8P"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcy-tg-NPq">
                                         <rect key="frame" x="135.33333333333334" y="37" width="119.33333333333334" height="35"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title=""/>
+                                        <connections>
+                                            <action selector="setColor:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="iMs-LE-0ih"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Msy-Vr-Z0W">
                                         <rect key="frame" x="262.66666666666669" y="37" width="119.33333333333331" height="35"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title=""/>
+                                        <connections>
+                                            <action selector="setColor:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="nNr-CV-Nru"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
@@ -78,7 +106,7 @@
                                     <constraint firstAttribute="trailing" secondItem="Msy-Vr-Z0W" secondAttribute="trailing" constant="8" id="v5s-W9-USk"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qnf-3u-CkU">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qnf-3u-CkU" customClass="DrawingboardView">
                                 <rect key="frame" x="0.0" y="88" width="390" height="642"/>
                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
                             </view>
@@ -98,6 +126,9 @@
                             <constraint firstItem="Qnf-3u-CkU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="zr2-vF-kJn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="drawingView" destination="Qnf-3u-CkU" id="w3V-ON-yOb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

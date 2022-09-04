@@ -61,6 +61,7 @@
 		71737D2C28C460BB00A5EB45 /* AnimateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D2B28C460BB00A5EB45 /* AnimateViewController.m */; };
 		71737D3028C483C200A5EB45 /* DrawingboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D2F28C483C200A5EB45 /* DrawingboardViewController.m */; };
 		71737D3228C484E400A5EB45 /* Drawingboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71737D3128C484E400A5EB45 /* Drawingboard.storyboard */; };
+		71737D3528C4906800A5EB45 /* DrawingboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D3428C4906800A5EB45 /* DrawingboardView.m */; };
 		7175311028B252A300E0C3DA /* SAMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7175310F28B252A300E0C3DA /* SAMessage.m */; };
 		7175311328B2544300E0C3DA /* SAMessageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 7175311228B2544300E0C3DA /* SAMessageFrame.m */; };
 		7175311628B2668E00E0C3DA /* TableView03Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 7175311528B2668E00E0C3DA /* TableView03Controller.m */; };
@@ -196,6 +197,8 @@
 		71737D2E28C483C200A5EB45 /* DrawingboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawingboardViewController.h; sourceTree = "<group>"; };
 		71737D2F28C483C200A5EB45 /* DrawingboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawingboardViewController.m; sourceTree = "<group>"; };
 		71737D3128C484E400A5EB45 /* Drawingboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Drawingboard.storyboard; sourceTree = "<group>"; };
+		71737D3328C4906800A5EB45 /* DrawingboardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawingboardView.h; sourceTree = "<group>"; };
+		71737D3428C4906800A5EB45 /* DrawingboardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawingboardView.m; sourceTree = "<group>"; };
 		7175310E28B252A300E0C3DA /* SAMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAMessage.h; sourceTree = "<group>"; };
 		7175310F28B252A300E0C3DA /* SAMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAMessage.m; sourceTree = "<group>"; };
 		7175311128B2544300E0C3DA /* SAMessageFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAMessageFrame.h; sourceTree = "<group>"; };
@@ -544,6 +547,8 @@
 				71737D2E28C483C200A5EB45 /* DrawingboardViewController.h */,
 				71737D2F28C483C200A5EB45 /* DrawingboardViewController.m */,
 				71737D3128C484E400A5EB45 /* Drawingboard.storyboard */,
+				71737D3328C4906800A5EB45 /* DrawingboardView.h */,
+				71737D3428C4906800A5EB45 /* DrawingboardView.m */,
 			);
 			path = Drawingboard;
 			sourceTree = "<group>";
@@ -777,6 +782,7 @@
 				3ABBE28D28A0E10E003BDC00 /* ScreenAdapter.m in Sources */,
 				3A6BA75F28BF115400D22BFC /* Drawing01Controller.m in Sources */,
 				71D2E610289BFF7600A34394 /* DetailViewController.m in Sources */,
+				71737D3528C4906800A5EB45 /* DrawingboardView.m in Sources */,
 				71476C9428B0E28D0054573C /* TableView01Controller.m in Sources */,
 				71786D1F289D82F8005C13EC /* ListItem.m in Sources */,
 				71786D25289FBC08005C13EC /* VideoPlayer.m in Sources */,
