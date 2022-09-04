@@ -2,7 +2,7 @@
 //  GestureLockView.m
 //  SampleApp
 //
-//  Created by xiaofeng on 2022/9/3.
+//  Created by iaosee on 2022/9/3.
 //
 
 #import "GestureLockView.h"
@@ -53,6 +53,8 @@
         CGFloat y = (i / colCount) * (h + margin) + margin;
 
         self.btns[i].layer.cornerRadius = w / 2;
+        self.btns[i].layer.borderWidth = 5;
+        self.btns[i].layer.borderColor = [[UIColor purpleColor] CGColor];
         [self.btns[i] setFrame:CGRectMake(x, y, w, h)];
     }
 }

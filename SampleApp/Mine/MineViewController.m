@@ -20,6 +20,7 @@
 #import "Touch01ViewController.h"
 #import "Touch02ViewController.h"
 #import "Touch03ViewController.h"
+#import "GestureViewController.h"
 
 @interface MineViewController ()
 
@@ -202,6 +203,13 @@
         [button addTarget:self action:@selector(goTouchView03) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
+    [self.view addSubview:({
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(180, 550, 150, 30)];
+        [button setTitle:@"GestureView" forState:UIControlStateNormal];
+        button.backgroundColor = [UIColor blueColor];
+        [button addTarget:self action:@selector(gestureView) forControlEvents:UIControlEventTouchUpInside];
+        button;
+    })];
 }
 
 - (void) goViewPage {
@@ -334,6 +342,11 @@
     UIViewController *viewController = [[Touch03ViewController alloc] init];
     [self.navigationController pushViewController:viewController animated:YES];
 }
+- (void) gestureView {
+    UIViewController *viewController = [[GestureViewController alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
 /*
 #pragma mark - Navigation
 
