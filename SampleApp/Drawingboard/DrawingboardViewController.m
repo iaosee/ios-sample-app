@@ -26,7 +26,7 @@
 - (IBAction)clearAction:(id)sender {
     [self.drawingView clear];
 }
-- (IBAction)previousAction:(id)sender {
+- (IBAction)backAction:(id)sender {
     [self.drawingView revoke];
 }
 - (IBAction)eraserAction:(id)sender {

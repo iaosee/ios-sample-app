@@ -28,9 +28,9 @@
                                             <action selector="clearAction:" destination="Y6W-OH-hqX" id="9B9-E2-Cai"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="previous" id="wdi-WQ-qqO">
+                                    <barButtonItem title="back" id="wdi-WQ-qqO">
                                         <connections>
-                                            <action selector="previousAction:" destination="Y6W-OH-hqX" id="0Wu-9X-XZS"/>
+                                            <action selector="backAction:" destination="Y6W-OH-hqX" id="WQC-4G-qJS"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="eraser" id="Uac-xk-CES">
