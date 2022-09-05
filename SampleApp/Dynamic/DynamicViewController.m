@@ -65,7 +65,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    [self dynamicAnimate];
+//    [self dynamicAnimate];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -105,8 +105,8 @@
 //    UISnapBehavior *snap2 = [[UISnapBehavior alloc] initWithItem:self.yellowView snapToPoint:self.pos];
 
     [animator addBehavior:gravity];
-//    [animator addBehavior:collision];
-//    [animator addBehavior:snap];
+    [animator addBehavior:collision];
+    [animator addBehavior:snap];
     
     self.animator = animator;
 }

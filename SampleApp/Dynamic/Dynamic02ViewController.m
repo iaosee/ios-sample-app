@@ -34,7 +34,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
 
     UIView *redView = [[UIView alloc] init];
-    redView.backgroundColor = [UIColor redColor];
+    redView.backgroundColor = [UIColor colorWithRed:1 green:0 blue:0 alpha:0.8];
     redView.frame = CGRectMake(150, 200, 100, 100);
     [self.view addSubview:redView];
     
