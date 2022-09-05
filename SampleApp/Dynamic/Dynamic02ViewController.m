@@ -8,7 +8,7 @@
 #import "Dynamic02ViewController.h"
 
 @interface XView : UIView
-@property(nonatomic, strong) UIBezierPath * path;
+@property(nonatomic, strong) UIBezierPath *path;
 @end
 @implementation XView
 - (void)drawRect:(CGRect)rect {
@@ -18,6 +18,7 @@
 
 @interface Dynamic02ViewController ()
 @property (nonatomic, weak) UIView *redView;
+@property (nonatomic, weak) UIView *greenView;
 @property (nonatomic, assign) CGPoint pos;
 @property (nonatomic, strong) UIDynamicAnimator *animator;
 @property (nonatomic, strong) UIAttachmentBehavior *attach;
@@ -38,7 +39,13 @@
     redView.frame = CGRectMake(150, 200, 100, 100);
     [self.view addSubview:redView];
     
+    UIView *greenView = [[UIView alloc] init];
+    greenView.backgroundColor = [UIColor greenColor];
+    greenView.frame = CGRectMake(150, 400, 60, 60);
+    [self.view addSubview:greenView];
+
     self.redView = redView;
+    self.greenView = greenView;
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -59,6 +66,7 @@
         UIBezierPath *path = [[UIBezierPath alloc] init];
         [path moveToPoint:p];
         [path addLineToPoint:wself.redView.center];
+        [path addLineToPoint:wself.greenView.center];
         ((XView *)wself.view).path = path;
         [wself.view setNeedsDisplay];
     };
@@ -67,19 +75,23 @@
 - (void) dynamicAnimate {
     UIDynamicAnimator *animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
     
-    UIGravityBehavior *gravity = [[UIGravityBehavior alloc] initWithItems:@[self.redView]];
+    UIGravityBehavior *gravity = [[UIGravityBehavior alloc] initWithItems:@[self.redView, self.greenView]];
     gravity.gravityDirection = CGVectorMake(0, 1);
     
     UIAttachmentBehavior *attach = [[UIAttachmentBehavior alloc] initWithItem:self.redView attachedToAnchor:self.pos];
     attach.damping = 0.5;
     attach.frequency = 0.5;
-    
-    UICollisionBehavior *collision = [[UICollisionBehavior alloc] initWithItems:@[self.redView]];
-    collision.translatesReferenceBoundsIntoBoundary = YES;
+    UIAttachmentBehavior *attach2 = [[UIAttachmentBehavior alloc] initWithItem:self.greenView attachedToItem:self.redView];
+    attach2.damping = 1;
+    attach2.frequency = 0.9;
+
+    UICollisionBehavior *collision = [[UICollisionBehavior alloc] initWithItems:@[self.redView, self.greenView]];
+//    collision.translatesReferenceBoundsIntoBoundary = YES;
     
     [animator addBehavior:gravity];
-//    [animator addBehavior:collision];
+    [animator addBehavior:collision];
     [animator addBehavior:attach];
+    [animator addBehavior:attach2];
     
     self.attach = attach;
     self.animator = animator;
