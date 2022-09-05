@@ -23,6 +23,8 @@
 #import "GestureViewController.h"
 #import "AnimateViewController.h"
 #import "DrawingboardViewController.h"
+#import "DynamicViewController.h"
+#import "Dynamic02ViewController.h"
 
 @interface MineViewController ()
 
@@ -216,7 +218,7 @@
         UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(180, 600, 150, 30)];
         [button setTitle:@"AnimateView" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
-        [button addTarget:self action:@selector(animateView) forControlEvents:UIControlEventTouchUpInside];
+        [button addTarget:self action:@selector(redView) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
     [self.view addSubview:({
@@ -224,6 +226,20 @@
         [button setTitle:@"drawingboardView" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(drawingboardView) forControlEvents:UIControlEventTouchUpInside];
+        button;
+    })];
+    [self.view addSubview:({
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(180, 650, 150, 30)];
+        [button setTitle:@"Dynamic01" forState:UIControlStateNormal];
+        button.backgroundColor = [UIColor blueColor];
+        [button addTarget:self action:@selector(dynamic01View) forControlEvents:UIControlEventTouchUpInside];
+        button;
+    })];
+    [self.view addSubview:({
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(180, 700, 150, 30)];
+        [button setTitle:@"Dynamic02" forState:UIControlStateNormal];
+        button.backgroundColor = [UIColor blueColor];
+        [button addTarget:self action:@selector(dynamic02View) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
 }
@@ -370,6 +386,14 @@
 //    UIViewController *viewController = [[DrawingboardViewController alloc] init];
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Drawingboard" bundle:nil];
     UIViewController *viewController = [storyBoard instantiateViewControllerWithIdentifier:@"DrawingboardViewController"];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+- (void) dynamic01View {
+    UIViewController *viewController = [[DynamicViewController alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+- (void) dynamic02View {
+    UIViewController *viewController = [[Dynamic02ViewController alloc] init];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 

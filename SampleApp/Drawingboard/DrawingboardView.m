@@ -2,7 +2,7 @@
 //  DrawingboardView.m
 //  SampleApp
 //
-//  Created by xiaofeng on 2022/9/4.
+//  Created by iaosee on 2022/9/4.
 //
 
 #import "DrawingboardView.h"
