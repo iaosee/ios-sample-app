@@ -48,7 +48,7 @@
 //    self.view.backgroundColor = [UIColor grayColor];
     
     [self.view addSubview:({
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 100, 150, 30)];
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 100, 100, 30)];
         [button setTitle:@"ViewPage" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(goViewPage) forControlEvents:UIControlEventTouchUpInside];
@@ -56,23 +56,23 @@
     })];
     
     [self.view addSubview:({
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 150, 150, 30)];
-        [button setTitle:@"SliderPage" forState:UIControlStateNormal];
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 150, 100, 30)];
+        [button setTitle:@"Slider" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(goSliderPage) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
 
     [self.view addSubview:({
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 200, 150, 30)];
-        [button setTitle:@"WebViewPage" forState:UIControlStateNormal];
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 200, 100, 30)];
+        [button setTitle:@"WebView" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(goWebViewPage) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
     
     [self.view addSubview:({
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 250, 150, 30)];
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 250, 100, 30)];
         [button setTitle:@"OpenSafari" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(openSafari) forControlEvents:UIControlEventTouchUpInside];
@@ -80,163 +80,163 @@
     })];
     
     [self.view addSubview:({
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 300, 150, 30)];
-        [button setTitle:@"Open App" forState:UIControlStateNormal];
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 300, 100, 30)];
+        [button setTitle:@"OpenApp" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(openApp) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
     
     [self.view addSubview:({
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 350, 150, 30)];
-        [button setTitle:@"Push Notification" forState:UIControlStateNormal];
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 350, 100, 30)];
+        [button setTitle:@"Notification" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(notify) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
     
     [self.view addSubview:({
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 400, 150, 30)];
-        [button setTitle:@"Click Comment" forState:UIControlStateNormal];
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 400, 100, 30)];
+        [button setTitle:@"ClickComment" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(showCommentView) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
     [self.view addSubview:({
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 450, 150, 30)];
-        [button setTitle:@"Image Zoom" forState:UIControlStateNormal];
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 450, 100, 30)];
+        [button setTitle:@"ImageZoom" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(goToImageZoom) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
     [self.view addSubview:({
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 500, 150, 30)];
-        [button setTitle:@"TableView 01" forState:UIControlStateNormal];
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 500, 100, 30)];
+        [button setTitle:@"TableView01" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(goToTableView01) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
     [self.view addSubview:({
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 550, 150, 30)];
-        [button setTitle:@"TableView 02" forState:UIControlStateNormal];
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 550, 100, 30)];
+        [button setTitle:@"TableView02" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(goToTableView02) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
     [self.view addSubview:({
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 600, 150, 30)];
-        [button setTitle:@"TableView 03" forState:UIControlStateNormal];
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 600, 100, 30)];
+        [button setTitle:@"TableView03" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(goToTableView03) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
     [self.view addSubview:({
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 650, 150, 30)];
-        [button setTitle:@"Static TbaleView" forState:UIControlStateNormal];
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 650, 100, 30)];
+        [button setTitle:@"StaticTable" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(goToStaticTableView) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
     [self.view addSubview:({
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 700, 150, 30)];
-        [button setTitle:@"TableView 04" forState:UIControlStateNormal];
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 700, 100, 30)];
+        [button setTitle:@"TableView04" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(goToTableView04) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
     [self.view addSubview:({
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(180, 100, 150, 30)];
-        [button setTitle:@"goAutoLayout" forState:UIControlStateNormal];
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(130, 100, 100, 30)];
+        [button setTitle:@"AutoLayout" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(goAutoLayout) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
     [self.view addSubview:({
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(180, 150, 150, 30)];
-        [button setTitle:@"go Picker" forState:UIControlStateNormal];
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(130, 150, 100, 30)];
+        [button setTitle:@"Picker" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(goPicker) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
     [self.view addSubview:({
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(180, 200, 150, 30)];
-        [button setTitle:@"Set Badge" forState:UIControlStateNormal];
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(130, 200, 100, 30)];
+        [button setTitle:@"SetBadge" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(setBadge) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
     [self.view addSubview:({
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(180, 250, 150, 30)];
-        [button setTitle:@"Open Modal" forState:UIControlStateNormal];
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(130, 250, 100, 30)];
+        [button setTitle:@"OpenModal" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(openModal) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
     [self.view addSubview:({
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(180, 300, 150, 30)];
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(130, 300, 100, 30)];
         [button setTitle:@"Drawing 01" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(drawing01) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
     [self.view addSubview:({
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(180, 350, 150, 30)];
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(130, 350, 100, 30)];
         [button setTitle:@"ChartView" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(goChartView) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
     [self.view addSubview:({
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(180, 400, 150, 30)];
-        [button setTitle:@"TouchView" forState:UIControlStateNormal];
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(130, 400, 100, 30)];
+        [button setTitle:@"Touch01" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(goTouchView) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
     [self.view addSubview:({
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(180, 450, 150, 30)];
-        [button setTitle:@"TouchView02" forState:UIControlStateNormal];
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(130, 450, 100, 30)];
+        [button setTitle:@"Touch02" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(goTouchView02) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
     [self.view addSubview:({
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(180, 500, 150, 30)];
-        [button setTitle:@"TouchView03" forState:UIControlStateNormal];
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(130, 500, 100, 30)];
+        [button setTitle:@"Touch03" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(goTouchView03) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
     [self.view addSubview:({
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(180, 550, 150, 30)];
-        [button setTitle:@"GestureView" forState:UIControlStateNormal];
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(130, 550, 100, 30)];
+        [button setTitle:@"Gesture" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(gestureView) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
     [self.view addSubview:({
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(180, 600, 150, 30)];
-        [button setTitle:@"AnimateView" forState:UIControlStateNormal];
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(130, 600, 100, 30)];
+        [button setTitle:@"Animate" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(redView) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
     [self.view addSubview:({
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(180, 650, 150, 30)];
-        [button setTitle:@"drawingboardView" forState:UIControlStateNormal];
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(130, 650, 100, 30)];
+        [button setTitle:@"Drawingboard" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(drawingboardView) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
     [self.view addSubview:({
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(180, 650, 150, 30)];
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(130, 650, 100, 30)];
         [button setTitle:@"Dynamic01" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(dynamic01View) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
     [self.view addSubview:({
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(180, 700, 150, 30)];
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(130, 700, 100, 30)];
         [button setTitle:@"Dynamic02" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(dynamic02View) forControlEvents:UIControlEventTouchUpInside];

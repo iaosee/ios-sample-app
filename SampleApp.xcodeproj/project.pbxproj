@@ -64,6 +64,7 @@
 		71737D3528C4906800A5EB45 /* DrawingboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D3428C4906800A5EB45 /* DrawingboardView.m */; };
 		71737D4428C4EC7B00A5EB45 /* DynamicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D4328C4EC7B00A5EB45 /* DynamicViewController.m */; };
 		71737D4828C50B2500A5EB45 /* Dynamic02ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D4728C50B2500A5EB45 /* Dynamic02ViewController.m */; };
+		71737D4B28C7575F00A5EB45 /* Dynamic03ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D4A28C7575F00A5EB45 /* Dynamic03ViewController.m */; };
 		7175311028B252A300E0C3DA /* SAMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7175310F28B252A300E0C3DA /* SAMessage.m */; };
 		7175311328B2544300E0C3DA /* SAMessageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 7175311228B2544300E0C3DA /* SAMessageFrame.m */; };
 		7175311628B2668E00E0C3DA /* TableView03Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 7175311528B2668E00E0C3DA /* TableView03Controller.m */; };
@@ -205,6 +206,8 @@
 		71737D4328C4EC7B00A5EB45 /* DynamicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicViewController.m; sourceTree = "<group>"; };
 		71737D4628C50B2500A5EB45 /* Dynamic02ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dynamic02ViewController.h; sourceTree = "<group>"; };
 		71737D4728C50B2500A5EB45 /* Dynamic02ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dynamic02ViewController.m; sourceTree = "<group>"; };
+		71737D4928C7575F00A5EB45 /* Dynamic03ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dynamic03ViewController.h; sourceTree = "<group>"; };
+		71737D4A28C7575F00A5EB45 /* Dynamic03ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dynamic03ViewController.m; sourceTree = "<group>"; };
 		7175310E28B252A300E0C3DA /* SAMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAMessage.h; sourceTree = "<group>"; };
 		7175310F28B252A300E0C3DA /* SAMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAMessage.m; sourceTree = "<group>"; };
 		7175311128B2544300E0C3DA /* SAMessageFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAMessageFrame.h; sourceTree = "<group>"; };
@@ -567,6 +570,8 @@
 				71737D4328C4EC7B00A5EB45 /* DynamicViewController.m */,
 				71737D4628C50B2500A5EB45 /* Dynamic02ViewController.h */,
 				71737D4728C50B2500A5EB45 /* Dynamic02ViewController.m */,
+				71737D4928C7575F00A5EB45 /* Dynamic03ViewController.h */,
+				71737D4A28C7575F00A5EB45 /* Dynamic03ViewController.m */,
 			);
 			path = Dynamic;
 			sourceTree = "<group>";
@@ -809,6 +814,7 @@
 				71BE07B128B2951A00C41330 /* NSString+TextSize.m in Sources */,
 				3AAD388128977C64006D3478 /* main.m in Sources */,
 				3AAD38B02898CB19006D3478 /* RecommendViewController.m in Sources */,
+				71737D4B28C7575F00A5EB45 /* Dynamic03ViewController.m in Sources */,
 				71476C9D28B12E380054573C /* TableView02Controller.m in Sources */,
 				3AAD387328977C62006D3478 /* SceneDelegate.m in Sources */,
 				3AFFD5EB28B36E6F00A4661A /* ItemCellView.m in Sources */,
