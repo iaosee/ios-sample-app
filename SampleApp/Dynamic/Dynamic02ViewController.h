@@ -9,6 +9,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@interface XView : UIView
+@property(nonatomic, strong) UIBezierPath *path;
+@end
+
 @interface Dynamic02ViewController : UIViewController
 
 @end

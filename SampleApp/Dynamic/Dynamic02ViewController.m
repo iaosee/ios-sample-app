@@ -7,9 +7,6 @@
 
 #import "Dynamic02ViewController.h"
 
-@interface XView : UIView
-@property(nonatomic, strong) UIBezierPath *path;
-@end
 @implementation XView
 - (void)drawRect:(CGRect)rect {
     [self.path stroke];

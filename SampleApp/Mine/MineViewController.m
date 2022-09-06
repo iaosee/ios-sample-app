@@ -25,6 +25,7 @@
 #import "DrawingboardViewController.h"
 #import "DynamicViewController.h"
 #import "Dynamic02ViewController.h"
+#import "Dynamic03ViewController.h"
 
 @interface MineViewController ()
 
@@ -242,6 +243,13 @@
         [button addTarget:self action:@selector(dynamic02View) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
+    [self.view addSubview:({
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(240, 100, 100, 30)];
+        [button setTitle:@"Dynamic03" forState:UIControlStateNormal];
+        button.backgroundColor = [UIColor blueColor];
+        [button addTarget:self action:@selector(dynamic03View) forControlEvents:UIControlEventTouchUpInside];
+        button;
+    })];
 }
 
 - (void) goViewPage {
@@ -394,6 +402,10 @@
 }
 - (void) dynamic02View {
     UIViewController *viewController = [[Dynamic02ViewController alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+- (void) dynamic03View {
+    UIViewController *viewController = [[Dynamic03ViewController alloc] init];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
