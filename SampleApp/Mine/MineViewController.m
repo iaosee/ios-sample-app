@@ -46,7 +46,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    self.view.backgroundColor = [UIColor grayColor];
+    //    self.view.backgroundColor = [UIColor grayColor];
     
     [self.view addSubview:({
         UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 100, 100, 30)];
@@ -63,7 +63,7 @@
         [button addTarget:self action:@selector(goSliderPage) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
-
+    
     [self.view addSubview:({
         UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 200, 100, 30)];
         [button setTitle:@"WebView" forState:UIControlStateNormal];
@@ -290,8 +290,8 @@
 -(void) goToImageZoom {
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UIViewController *viewController = [storyBoard instantiateViewControllerWithIdentifier:@"ImageZoomController"];
-
-//    ImageZoomController *viewController = [[ImageZoomController alloc] init];
+    
+    //    ImageZoomController *viewController = [[ImageZoomController alloc] init];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
@@ -347,13 +347,13 @@
 
 - (void) openModal {
     UIViewController *viewController = [[TableView01Controller alloc] init];
-//    viewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-
-//    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Picker" bundle:nil];
-//    UIViewController *viewController = [storyBoard instantiateViewControllerWithIdentifier:@"PickerViewController"];
+    //    viewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     
-//    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Table" bundle:nil];
-//    UIViewController *viewController = [storyBoard instantiateViewControllerWithIdentifier:@"TableView04Controller"];
+    //    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Picker" bundle:nil];
+    //    UIViewController *viewController = [storyBoard instantiateViewControllerWithIdentifier:@"PickerViewController"];
+    
+    //    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Table" bundle:nil];
+    //    UIViewController *viewController = [storyBoard instantiateViewControllerWithIdentifier:@"TableView04Controller"];
     
     [self presentViewController:viewController animated:YES completion:^{
         NSLog(@"completion");
@@ -391,7 +391,7 @@
     [self.navigationController pushViewController:viewController animated:YES];
 }
 - (void) drawingboardView {
-//    UIViewController *viewController = [[DrawingboardViewController alloc] init];
+    //    UIViewController *viewController = [[DrawingboardViewController alloc] init];
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Drawingboard" bundle:nil];
     UIViewController *viewController = [storyBoard instantiateViewControllerWithIdentifier:@"DrawingboardViewController"];
     [self.navigationController pushViewController:viewController animated:YES];
@@ -408,6 +408,67 @@
     UIViewController *viewController = [[Dynamic03ViewController alloc] init];
     [self.navigationController pushViewController:viewController animated:YES];
 }
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self test6];
+}
+
+- (void) test {
+    NSLog(@"test task ..., %@", [NSThread currentThread]);
+}
+- (void) test1 {
+    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+    dispatch_group_t group = dispatch_group_create();
+    for (int i = 0; i < 5; i++) {
+        dispatch_group_async(group, queue, ^{
+            NSLog(@"Download-%d , %@", i, [NSThread currentThread]);
+        });
+    }
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        NSLog(@"Download finish,  %@", [NSThread currentThread]);
+        // Updating UI
+    });
+}
+/** 在当前线程执行，不开启新线程 */
+- (void) test2 {
+    NSInvocationOperation *op = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(test) object:nil];
+    [op start];
+}
+/** 将任务加入队列，会开启新线程执行 */
+- (void) test3 {
+    NSInvocationOperation *op = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(test) object:nil];
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    [queue addOperation:op];
+}
+/** 在当前线程执行，不开启新线程 */
+- (void) test4 {
+    NSBlockOperation *op = [NSBlockOperation blockOperationWithBlock:^{
+        [self test];
+    }];
+    [op start];
+}
+/** 将任务加入队列，会开启新线程执行 */
+- (void) test5 {
+    NSBlockOperation *op = [NSBlockOperation blockOperationWithBlock:^{
+        [self test];
+    }];
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    [queue addOperation:op];
+}
+- (void) test6 {
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    [queue addOperationWithBlock:^{
+        [self test];
+    }];
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        NSLog(@"mainQueue end, %@", [NSThread currentThread]);
+    }];
+}
+- (void) test7 {
+    
+}
+
+
 
 /*
 #pragma mark - Navigation
