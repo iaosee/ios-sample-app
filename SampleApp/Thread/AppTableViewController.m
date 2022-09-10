@@ -91,7 +91,7 @@
     cell.imageView.image = [UIImage imageNamed:@"icon.bundle/icon.png"];
 
     if (self.imageCahce[item.iconUrl]) {
-        NSLog(@"Loading iamge from cache.");
+        NSLog(@"Loading iamge from memory cache.");
         cell.imageView.image = self.imageCahce[item.iconUrl];
         return cell;
     }
@@ -102,7 +102,7 @@
 
     NSData *imgData = [NSData dataWithContentsOfFile:[[item.iconUrl SHA1] appendCache]];
     if (imgData) {
-        NSLog(@"Loading image from sandbox.");
+        NSLog(@"Loading image from sandbox cache.");
         UIImage *img = [UIImage imageWithData:imgData];
         self.imageCahce[item.iconUrl] = img;
         cell.imageView.image = img;
