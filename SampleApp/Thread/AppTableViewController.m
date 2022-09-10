@@ -95,6 +95,13 @@
         NSLog(@"Already started download.");
         return cell;
     }
+    
+    [self downloadImage:indexPath];
+
+    return cell;
+}
+- (void) downloadImage:(NSIndexPath *)indexPath {
+    AppModel *item = self.appList[indexPath.row];
 
 //    __weak typeof (self) wkSelf = self;
     NSOperation *op = [NSBlockOperation blockOperationWithBlock:^{
@@ -108,18 +115,19 @@
         NSURL *url = [NSURL URLWithString:item.iconUrl];
         NSData *data = [NSData dataWithContentsOfURL:url];
         UIImage *img = [UIImage imageWithData:data];
-        
+
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            if (!img) {
+                return;
+            }
             [self.imageCahce setValue:img forKey:item.iconUrl];
             [self.operationCache removeObjectForKey:item.iconUrl];
-            [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+            [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
         }];
     }];
 
     [self.queue addOperation:op];
     [self.operationCache setValue:op forKey:item.iconUrl];
-
-    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
