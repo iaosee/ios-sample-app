@@ -147,10 +147,6 @@
 //    downloadImageThread.name = @"downloadImageThread";
 //    [downloadImageThread start];
 
-//    [[NSThread mainThread] initWithBlock:^{
-//
-//    }];
-
 //    dispatch_queue_global_t downloadQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
 //    dispatch_queue_main_t mainQueue = dispatch_get_main_queue();
 //    dispatch_async(downloadQueue, ^{
