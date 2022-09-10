@@ -146,7 +146,7 @@
     [self.queue addOperation:op];
     [self.operationCache setValue:op forKey:item.iconUrl];
 }
-
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"Queue Operation Count: %zd", (unsigned long)self.queue.operationCount);
 }
