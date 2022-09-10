@@ -27,6 +27,7 @@
 #import "Dynamic02ViewController.h"
 #import "Dynamic03ViewController.h"
 #import "AppTableViewController.h"
+#import "App02TableViewController.h"
 
 @interface MineViewController ()
 
@@ -258,6 +259,13 @@
         [button addTarget:self action:@selector(appTable) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
+    [self.view addSubview:({
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(240, 200, 100, 30)];
+        [button setTitle:@"App02Table" forState:UIControlStateNormal];
+        button.backgroundColor = [UIColor blueColor];
+        [button addTarget:self action:@selector(app02Table) forControlEvents:UIControlEventTouchUpInside];
+        button;
+    })];
 }
 
 - (void) goViewPage {
@@ -418,6 +426,11 @@
 }
 - (void) appTable {
     UIViewController *viewController = [[AppTableViewController alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
+- (void) app02Table {
+    UIViewController *viewController = [[App02TableViewController alloc] init];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
