@@ -113,7 +113,7 @@
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
     
-  NSString *listDataFile = [cachePath stringByAppendingPathComponent:@"XFDdata/list"];
+    NSString *listDataFile = [cachePath stringByAppendingPathComponent:@"XFDdata/list"];
     NSData *readListData = [fileManager contentsAtPath:listDataFile];
     NSArray<ListItem *> *unarchiveObj = [NSKeyedUnarchiver unarchivedObjectOfClasses:[NSSet setWithObjects:[NSArray class], [ListItem class], nil]
                                       fromData:readListData

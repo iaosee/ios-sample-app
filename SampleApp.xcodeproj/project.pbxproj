@@ -65,6 +65,10 @@
 		71737D4428C4EC7B00A5EB45 /* DynamicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D4328C4EC7B00A5EB45 /* DynamicViewController.m */; };
 		71737D4828C50B2500A5EB45 /* Dynamic02ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D4728C50B2500A5EB45 /* Dynamic02ViewController.m */; };
 		71737D4B28C7575F00A5EB45 /* Dynamic03ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D4A28C7575F00A5EB45 /* Dynamic03ViewController.m */; };
+		71737D4D28CB865500A5EB45 /* app-list.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71737D4C28CB865500A5EB45 /* app-list.plist */; };
+		71737D5128CBA9CB00A5EB45 /* AppTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D5028CBA9CB00A5EB45 /* AppTableViewController.m */; };
+		71737D5428CBAA6900A5EB45 /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D5328CBAA6900A5EB45 /* AppModel.m */; };
+		71737D5728CBBC8000A5EB45 /* AppTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D5628CBBC8000A5EB45 /* AppTableViewCell.m */; };
 		7175311028B252A300E0C3DA /* SAMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7175310F28B252A300E0C3DA /* SAMessage.m */; };
 		7175311328B2544300E0C3DA /* SAMessageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 7175311228B2544300E0C3DA /* SAMessageFrame.m */; };
 		7175311628B2668E00E0C3DA /* TableView03Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 7175311528B2668E00E0C3DA /* TableView03Controller.m */; };
@@ -208,6 +212,13 @@
 		71737D4728C50B2500A5EB45 /* Dynamic02ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dynamic02ViewController.m; sourceTree = "<group>"; };
 		71737D4928C7575F00A5EB45 /* Dynamic03ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dynamic03ViewController.h; sourceTree = "<group>"; };
 		71737D4A28C7575F00A5EB45 /* Dynamic03ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dynamic03ViewController.m; sourceTree = "<group>"; };
+		71737D4C28CB865500A5EB45 /* app-list.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "app-list.plist"; sourceTree = "<group>"; };
+		71737D4F28CBA9CB00A5EB45 /* AppTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppTableViewController.h; sourceTree = "<group>"; };
+		71737D5028CBA9CB00A5EB45 /* AppTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppTableViewController.m; sourceTree = "<group>"; };
+		71737D5228CBAA6900A5EB45 /* AppModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppModel.h; sourceTree = "<group>"; };
+		71737D5328CBAA6900A5EB45 /* AppModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppModel.m; sourceTree = "<group>"; };
+		71737D5528CBBC8000A5EB45 /* AppTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppTableViewCell.h; sourceTree = "<group>"; };
+		71737D5628CBBC8000A5EB45 /* AppTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppTableViewCell.m; sourceTree = "<group>"; };
 		7175310E28B252A300E0C3DA /* SAMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAMessage.h; sourceTree = "<group>"; };
 		7175310F28B252A300E0C3DA /* SAMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAMessage.m; sourceTree = "<group>"; };
 		7175311128B2544300E0C3DA /* SAMessageFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAMessageFrame.h; sourceTree = "<group>"; };
@@ -460,6 +471,7 @@
 				71737D2928C4609D00A5EB45 /* Animate */,
 				71737D2D28C4836B00A5EB45 /* Drawingboard */,
 				71737D4528C50B0100A5EB45 /* Dynamic */,
+				71737D4E28CBA98000A5EB45 /* Thread */,
 				3AAD38A92898B8F5006D3478 /* icon.bundle */,
 				3AAD386E28977C62006D3478 /* AppDelegate.h */,
 				3AAD386F28977C62006D3478 /* AppDelegate.m */,
@@ -574,6 +586,20 @@
 				71737D4A28C7575F00A5EB45 /* Dynamic03ViewController.m */,
 			);
 			path = Dynamic;
+			sourceTree = "<group>";
+		};
+		71737D4E28CBA98000A5EB45 /* Thread */ = {
+			isa = PBXGroup;
+			children = (
+				71737D4C28CB865500A5EB45 /* app-list.plist */,
+				71737D4F28CBA9CB00A5EB45 /* AppTableViewController.h */,
+				71737D5028CBA9CB00A5EB45 /* AppTableViewController.m */,
+				71737D5228CBAA6900A5EB45 /* AppModel.h */,
+				71737D5328CBAA6900A5EB45 /* AppModel.m */,
+				71737D5528CBBC8000A5EB45 /* AppTableViewCell.h */,
+				71737D5628CBBC8000A5EB45 /* AppTableViewCell.m */,
+			);
+			path = Thread;
 			sourceTree = "<group>";
 		};
 		71786D1C289D82D2005C13EC /* Model */ = {
@@ -710,6 +736,7 @@
 				3A49E1D028BCB1AE00F1ECCA /* PickerItem.xib in Resources */,
 				71C74C8E28B14CD000A047EA /* TableFooterView.xib in Resources */,
 				71476C9628B12B650054573C /* mockdata.plist in Resources */,
+				71737D4D28CB865500A5EB45 /* app-list.plist in Resources */,
 				71476C9F28B13A450054573C /* DataItemCell.xib in Resources */,
 				3AAD387B28977C64006D3478 /* Assets.xcassets in Resources */,
 			);
@@ -770,6 +797,7 @@
 				711DEEFA28C25CBA00CACECE /* Touch02ViewController.m in Sources */,
 				717DF79B28BFC4F800488F8D /* CircleProgressView.m in Sources */,
 				3A49E1CC28BCA8B500F1ECCA /* PickerItemView.m in Sources */,
+				71737D5728CBBC8000A5EB45 /* AppTableViewCell.m in Sources */,
 				3AAD38BB289A0ED4006D3478 /* SliderViewController.m in Sources */,
 				3ABBE28A28A0B0D3003BDC00 /* VideoToolbar.m in Sources */,
 				3AA4439528A251DE0058A067 /* Notification.m in Sources */,
@@ -792,6 +820,7 @@
 				3A49E1C728BC9CA500F1ECCA /* PickerViewController.m in Sources */,
 				7175311628B2668E00E0C3DA /* TableView03Controller.m in Sources */,
 				3AFFD5E828B36CC500A4661A /* TableView04Controller.m in Sources */,
+				71737D5128CBA9CB00A5EB45 /* AppTableViewController.m in Sources */,
 				3A6BA76828BF671800D22BFC /* Drawing02Controller.m in Sources */,
 				7175311328B2544300E0C3DA /* SAMessageFrame.m in Sources */,
 				7175311028B252A300E0C3DA /* SAMessage.m in Sources */,
@@ -814,6 +843,7 @@
 				71BE07B128B2951A00C41330 /* NSString+TextSize.m in Sources */,
 				3AAD388128977C64006D3478 /* main.m in Sources */,
 				3AAD38B02898CB19006D3478 /* RecommendViewController.m in Sources */,
+				71737D5428CBAA6900A5EB45 /* AppModel.m in Sources */,
 				71737D4B28C7575F00A5EB45 /* Dynamic03ViewController.m in Sources */,
 				71476C9D28B12E380054573C /* TableView02Controller.m in Sources */,
 				3AAD387328977C62006D3478 /* SceneDelegate.m in Sources */,

@@ -24,6 +24,11 @@
     }
     return _bodys;
 }
+
+- (void)dealloc {
+    NSLog(@"%@ dealloc", [self class]);
+}
+
 - (void)loadView {
     self.view = [[XView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.view.backgroundColor = [UIColor whiteColor];
