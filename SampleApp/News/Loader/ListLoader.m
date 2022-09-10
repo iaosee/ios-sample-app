@@ -40,7 +40,9 @@
         finsihBlock(YES, listData);
     }
 
-    NSString *urlString = @"https://static001.geekbang.org/univer/classes/ios_dev/lession/45/toutiao.json";
+//    NSString *urlString = @"https://static001.geekbang.org/univer/classes/ios_dev/lession/45/toutiao.json";
+    NSString *key = @"T1348647853363";
+    NSString *urlString = [NSString stringWithFormat:@"http://c.m.163.com/nc/article/headline/%@/0-40.html", key];
     NSURL *listUrl = [NSURL URLWithString:urlString];
 //    NSURLRequest *listRequest = [NSURLRequest requestWithURL:listUrl];
     
@@ -54,17 +56,18 @@
         NSError *jsonError = nil;
         id jsonObj = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
 //        NSLog(@"jsonObj - %@", jsonObj);
-        
+
         #warning type checkeck
-        NSArray *dataArray = [((NSDictionary *)[((NSDictionary *) jsonObj) objectForKey:@"result"]) objectForKey:@"data"];
-        NSMutableArray *listArray = @[].mutableCopy;
+//        NSArray *dataArray = [((NSDictionary *)[((NSDictionary *) jsonObj) objectForKey:@"result"]) objectForKey:@"data"];
+        NSArray *dataArray = [((NSDictionary *) jsonObj) objectForKey:key];
+        NSMutableArray *listArray = [NSMutableArray arrayWithCapacity:10];
         
         for (NSDictionary *info in dataArray) {
             ListItem *item = [[ListItem alloc] init];
             [item configWithDictionary:info];
             [listArray addObject:item];
         }
-        
+
         [strongSelf _archiveListDataWithArray:listArray];
 //        NSLog(@"listArray - %@", listArray);
         dispatch_async(dispatch_get_main_queue(), ^{

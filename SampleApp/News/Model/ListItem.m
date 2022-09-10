@@ -41,11 +41,12 @@
     
     #warning type match
     self.category = [dictionary objectForKey:@"category"];
-    self.picUrl = [dictionary objectForKey:@"thumbnail_pic_s"];
-    self.uniqueKey = [dictionary objectForKey:@"uniquekey"];
+    self.picUrl = [dictionary objectForKey:@"imgsrc"];
+    self.uniqueKey = [dictionary objectForKey:@"postid"];
     self.title = [dictionary objectForKey:@"title"];
-    self.date = [dictionary objectForKey:@"date"];
-    self.authorName = [dictionary objectForKey:@"author_name"];
+    self.digest = [dictionary objectForKey:@"digest"];
+    self.date = [dictionary objectForKey:@"ptime"];
+    self.authorName = [dictionary objectForKey:@"source"];
     self.articleUrl = [dictionary objectForKey:@"url"];
 }
 

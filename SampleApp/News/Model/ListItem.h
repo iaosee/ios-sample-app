@@ -11,13 +11,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ListItem : NSObject <NSSecureCoding>
 
-@property(nonatomic, strong, readwrite) NSString *category;
-@property(nonatomic, strong, readwrite) NSString *picUrl;
-@property(nonatomic, strong, readwrite) NSString *uniqueKey;
-@property(nonatomic, strong, readwrite) NSString *title;
-@property(nonatomic, strong, readwrite) NSString *date;
-@property(nonatomic, strong, readwrite) NSString *authorName;
-@property(nonatomic, strong, readwrite) NSString *articleUrl;
+@property(nonatomic, copy, readwrite) NSString *category;
+@property(nonatomic, copy, readwrite) NSString *picUrl;
+@property(nonatomic, copy, readwrite) NSString *uniqueKey;
+@property(nonatomic, copy, readwrite) NSString *title;
+@property(nonatomic, copy, readwrite) NSString *date;
+@property(nonatomic, copy, readwrite) NSString *authorName;
+@property(nonatomic, copy, readwrite) NSString *articleUrl;
+@property(nonatomic, copy, readwrite) NSString *digest;
 
 - (void) configWithDictionary:(NSDictionary *) dictionary;
 

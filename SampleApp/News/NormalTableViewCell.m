@@ -136,21 +136,26 @@
 
     [self cellLayout];
     
-//    UIImage *image = [NSData dataWithContentsOfURL: [NSURL URLWithString:item.picUrl]];
-//    self.rightImageView.image = image;
+//    NSData *imageData = [NSData dataWithContentsOfURL: [NSURL URLWithString:item.picUrl]];
+//    self.rightImageView.image = [UIImage imageWithData:imageData];
 
 //    NSThread *downloadImageThread = [[NSThread alloc] initWithBlock:^{
-//        UIImage *image = [NSData dataWithContentsOfURL: [NSURL URLWithString:item.picUrl]];
+//        NSData *data = [NSData dataWithContentsOfURL: [NSURL URLWithString:item.picUrl]];
+//        UIImage *image = [UIImage imageWithData:data];
 //        self.rightImageView.image = image;
 //    }];
 //    downloadImageThread.name = @"downloadImageThread";
 //    [downloadImageThread start];
-    
+
+//    [[NSThread mainThread] initWithBlock:^{
+//
+//    }];
+
 //    dispatch_queue_global_t downloadQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
 //    dispatch_queue_main_t mainQueue = dispatch_get_main_queue();
 //    dispatch_async(downloadQueue, ^{
-//        UIImage *image = [NSData dataWithContentsOfURL: [NSURL URLWithString:item.picUrl]];
-//
+//        NSData *data = [NSData dataWithContentsOfURL: [NSURL URLWithString:item.picUrl]];
+//        UIImage *image = [UIImage imageWithData:data];
 //        dispatch_async(mainQueue, ^{
 //            self.rightImageView.image = image;
 //        });
