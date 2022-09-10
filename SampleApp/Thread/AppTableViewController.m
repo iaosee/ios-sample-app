@@ -8,6 +8,8 @@
 #import "AppTableViewController.h"
 #import "AppModel.h"
 #import "AppTableViewCell.h"
+#import "NSString+Hash.h"
+#import "NSString+Sandbox.h"
 
 @interface AppTableViewController ()
 @property(nonatomic, strong) NSArray *appList;
@@ -49,6 +51,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSLog(@"%@", NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES));
 }
 
 #pragma mark - Table view data source
@@ -95,6 +99,15 @@
         NSLog(@"Already started download.");
         return cell;
     }
+
+    NSData *imgData = [NSData dataWithContentsOfFile:[[item.iconUrl SHA1] appendCache]];
+    if (imgData) {
+        NSLog(@"Loading image from sandbox.");
+        UIImage *img = [UIImage imageWithData:imgData];
+        self.imageCahce[item.iconUrl] = img;
+        cell.imageView.image = img;
+        return cell;
+    }
     
     [self downloadImage:indexPath];
 
@@ -116,6 +129,10 @@
         NSData *data = [NSData dataWithContentsOfURL:url];
         UIImage *img = [UIImage imageWithData:data];
 
+        if (img) {
+            [data writeToFile:[[item.iconUrl SHA1] appendCache] atomically:YES];
+        }
+        
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             if (!img) {
                 return;
@@ -129,7 +146,7 @@
     [self.queue addOperation:op];
     [self.operationCache setValue:op forKey:item.iconUrl];
 }
-
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"Queue Operation Count: %zd", (unsigned long)self.queue.operationCount);
 }

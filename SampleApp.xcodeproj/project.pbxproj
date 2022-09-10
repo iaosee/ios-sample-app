@@ -69,6 +69,8 @@
 		71737D5128CBA9CB00A5EB45 /* AppTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D5028CBA9CB00A5EB45 /* AppTableViewController.m */; };
 		71737D5428CBAA6900A5EB45 /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D5328CBAA6900A5EB45 /* AppModel.m */; };
 		71737D5728CBBC8000A5EB45 /* AppTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D5628CBBC8000A5EB45 /* AppTableViewCell.m */; };
+		71737D5A28CC5F6700A5EB45 /* NSString+Sandbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D5928CC5F6700A5EB45 /* NSString+Sandbox.m */; };
+		71737D5D28CC7A6000A5EB45 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D5C28CC7A6000A5EB45 /* NSString+Hash.m */; };
 		7175311028B252A300E0C3DA /* SAMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7175310F28B252A300E0C3DA /* SAMessage.m */; };
 		7175311328B2544300E0C3DA /* SAMessageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 7175311228B2544300E0C3DA /* SAMessageFrame.m */; };
 		7175311628B2668E00E0C3DA /* TableView03Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 7175311528B2668E00E0C3DA /* TableView03Controller.m */; };
@@ -219,6 +221,10 @@
 		71737D5328CBAA6900A5EB45 /* AppModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppModel.m; sourceTree = "<group>"; };
 		71737D5528CBBC8000A5EB45 /* AppTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppTableViewCell.h; sourceTree = "<group>"; };
 		71737D5628CBBC8000A5EB45 /* AppTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppTableViewCell.m; sourceTree = "<group>"; };
+		71737D5828CC5F6700A5EB45 /* NSString+Sandbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Sandbox.h"; sourceTree = "<group>"; };
+		71737D5928CC5F6700A5EB45 /* NSString+Sandbox.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Sandbox.m"; sourceTree = "<group>"; };
+		71737D5B28CC7A6000A5EB45 /* NSString+Hash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
+		71737D5C28CC7A6000A5EB45 /* NSString+Hash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
 		7175310E28B252A300E0C3DA /* SAMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAMessage.h; sourceTree = "<group>"; };
 		7175310F28B252A300E0C3DA /* SAMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAMessage.m; sourceTree = "<group>"; };
 		7175311128B2544300E0C3DA /* SAMessageFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAMessageFrame.h; sourceTree = "<group>"; };
@@ -427,6 +433,10 @@
 				71D73E2A28A55C4B004C8D30 /* CommentManager.m */,
 				71BE07AF28B2951A00C41330 /* NSString+TextSize.h */,
 				71BE07B028B2951A00C41330 /* NSString+TextSize.m */,
+				71737D5828CC5F6700A5EB45 /* NSString+Sandbox.h */,
+				71737D5928CC5F6700A5EB45 /* NSString+Sandbox.m */,
+				71737D5B28CC7A6000A5EB45 /* NSString+Hash.h */,
+				71737D5C28CC7A6000A5EB45 /* NSString+Hash.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -809,6 +819,7 @@
 				71D2E613289C206100A34394 /* DialogCellView.m in Sources */,
 				3AAD38B32898CBC3006D3478 /* MineViewController.m in Sources */,
 				3AAD387628977C62006D3478 /* ViewController.m in Sources */,
+				71737D5D28CC7A6000A5EB45 /* NSString+Hash.m in Sources */,
 				71737D2C28C460BB00A5EB45 /* AnimateViewController.m in Sources */,
 				711DEEFD28C3404400CACECE /* Touch03ViewController.m in Sources */,
 				71737D3028C483C200A5EB45 /* DrawingboardViewController.m in Sources */,
@@ -844,6 +855,7 @@
 				3AAD388128977C64006D3478 /* main.m in Sources */,
 				3AAD38B02898CB19006D3478 /* RecommendViewController.m in Sources */,
 				71737D5428CBAA6900A5EB45 /* AppModel.m in Sources */,
+				71737D5A28CC5F6700A5EB45 /* NSString+Sandbox.m in Sources */,
 				71737D4B28C7575F00A5EB45 /* Dynamic03ViewController.m in Sources */,
 				71476C9D28B12E380054573C /* TableView02Controller.m in Sources */,
 				3AAD387328977C62006D3478 /* SceneDelegate.m in Sources */,
