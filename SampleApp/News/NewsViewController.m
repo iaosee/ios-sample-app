@@ -116,6 +116,11 @@
 //    [Mediator openUrl:@"detail://" params:@{@"url":item.articleUrl,@"controller":self.navigationController}];
     
 //    protocol class
+    
+    if (!item.articleUrl || [item.articleUrl isEqual:@""]) {
+        return;
+    }
+    
     Class cls = [Mediator classForProtocol:@protocol(DetailViewControllerProtocol)];
     [self.navigationController pushViewController:[[cls alloc] initWithUrl:item.articleUrl] animated:YES];
     

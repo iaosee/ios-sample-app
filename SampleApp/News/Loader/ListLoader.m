@@ -43,6 +43,8 @@
 //    NSString *urlString = @"https://static001.geekbang.org/univer/classes/ios_dev/lession/45/toutiao.json";
     NSString *key = @"T1348647853363";
     NSString *urlString = [NSString stringWithFormat:@"http://c.m.163.com/nc/article/headline/%@/0-40.html", key];
+//    NSString *key = @"T1467284926140";
+//    NSString *urlString = [NSString stringWithFormat:@"http://c.3g.163.com/nc/article/list/%@/0-20.html", key];
     NSURL *listUrl = [NSURL URLWithString:urlString];
 //    NSURLRequest *listRequest = [NSURLRequest requestWithURL:listUrl];
     
