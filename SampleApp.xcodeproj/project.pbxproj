@@ -72,6 +72,9 @@
 		71737D5A28CC5F6700A5EB45 /* NSString+Sandbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D5928CC5F6700A5EB45 /* NSString+Sandbox.m */; };
 		71737D5D28CC7A6000A5EB45 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D5C28CC7A6000A5EB45 /* NSString+Hash.m */; };
 		71737D6028CCFA8100A5EB45 /* App02TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D5F28CCFA8100A5EB45 /* App02TableViewController.m */; };
+		71737D6428CCFC5800A5EB45 /* DownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D6328CCFC5800A5EB45 /* DownloadOperation.m */; };
+		71737D6728CD054300A5EB45 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D6628CD054300A5EB45 /* DownloadManager.m */; };
+		71737D6D28CD21BD00A5EB45 /* UIImageView+WebImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D6C28CD21BD00A5EB45 /* UIImageView+WebImageCache.m */; };
 		7175311028B252A300E0C3DA /* SAMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7175310F28B252A300E0C3DA /* SAMessage.m */; };
 		7175311328B2544300E0C3DA /* SAMessageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 7175311228B2544300E0C3DA /* SAMessageFrame.m */; };
 		7175311628B2668E00E0C3DA /* TableView03Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 7175311528B2668E00E0C3DA /* TableView03Controller.m */; };
@@ -228,6 +231,12 @@
 		71737D5C28CC7A6000A5EB45 /* NSString+Hash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
 		71737D5E28CCFA8100A5EB45 /* App02TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = App02TableViewController.h; path = SampleApp/Dynamic/App02TableViewController.h; sourceTree = SOURCE_ROOT; };
 		71737D5F28CCFA8100A5EB45 /* App02TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = App02TableViewController.m; path = SampleApp/Dynamic/App02TableViewController.m; sourceTree = SOURCE_ROOT; };
+		71737D6228CCFC5800A5EB45 /* DownloadOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadOperation.h; sourceTree = "<group>"; };
+		71737D6328CCFC5800A5EB45 /* DownloadOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadOperation.m; sourceTree = "<group>"; };
+		71737D6528CD054300A5EB45 /* DownloadManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
+		71737D6628CD054300A5EB45 /* DownloadManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadManager.m; sourceTree = "<group>"; };
+		71737D6B28CD21BD00A5EB45 /* UIImageView+WebImageCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebImageCache.h"; sourceTree = "<group>"; };
+		71737D6C28CD21BD00A5EB45 /* UIImageView+WebImageCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebImageCache.m"; sourceTree = "<group>"; };
 		7175310E28B252A300E0C3DA /* SAMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAMessage.h; sourceTree = "<group>"; };
 		7175310F28B252A300E0C3DA /* SAMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAMessage.m; sourceTree = "<group>"; };
 		7175311128B2544300E0C3DA /* SAMessageFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAMessageFrame.h; sourceTree = "<group>"; };
@@ -604,6 +613,7 @@
 		71737D4E28CBA98000A5EB45 /* Thread */ = {
 			isa = PBXGroup;
 			children = (
+				71737D6128CCFBFC00A5EB45 /* WebImage */,
 				71737D4C28CB865500A5EB45 /* app-list.plist */,
 				71737D4F28CBA9CB00A5EB45 /* AppTableViewController.h */,
 				71737D5028CBA9CB00A5EB45 /* AppTableViewController.m */,
@@ -615,6 +625,19 @@
 				71737D5F28CCFA8100A5EB45 /* App02TableViewController.m */,
 			);
 			path = Thread;
+			sourceTree = "<group>";
+		};
+		71737D6128CCFBFC00A5EB45 /* WebImage */ = {
+			isa = PBXGroup;
+			children = (
+				71737D6228CCFC5800A5EB45 /* DownloadOperation.h */,
+				71737D6328CCFC5800A5EB45 /* DownloadOperation.m */,
+				71737D6528CD054300A5EB45 /* DownloadManager.h */,
+				71737D6628CD054300A5EB45 /* DownloadManager.m */,
+				71737D6B28CD21BD00A5EB45 /* UIImageView+WebImageCache.h */,
+				71737D6C28CD21BD00A5EB45 /* UIImageView+WebImageCache.m */,
+			);
+			path = WebImage;
 			sourceTree = "<group>";
 		};
 		71786D1C289D82D2005C13EC /* Model */ = {
@@ -826,6 +849,7 @@
 				3AAD387628977C62006D3478 /* ViewController.m in Sources */,
 				71737D5D28CC7A6000A5EB45 /* NSString+Hash.m in Sources */,
 				71737D2C28C460BB00A5EB45 /* AnimateViewController.m in Sources */,
+				71737D6428CCFC5800A5EB45 /* DownloadOperation.m in Sources */,
 				711DEEFD28C3404400CACECE /* Touch03ViewController.m in Sources */,
 				71737D3028C483C200A5EB45 /* DrawingboardViewController.m in Sources */,
 				71476CA228B13C290054573C /* DataItemCell.m in Sources */,
@@ -845,10 +869,12 @@
 				3AAD38A82897D706006D3478 /* NewsViewController.m in Sources */,
 				71476C8F28AFF1380054573C /* ImageZoomController.m in Sources */,
 				3AD6209828B3826F00437A40 /* GroupHeaderView.m in Sources */,
+				71737D6728CD054300A5EB45 /* DownloadManager.m in Sources */,
 				3AA4437B28A1FB5F0058A067 /* Mediator.m in Sources */,
 				3AAD38B6289917AA006D3478 /* NormalTableViewCell.m in Sources */,
 				3AAD38AD2898CA53006D3478 /* VideoViewController.m in Sources */,
 				3ABBE28D28A0E10E003BDC00 /* ScreenAdapter.m in Sources */,
+				71737D6D28CD21BD00A5EB45 /* UIImageView+WebImageCache.m in Sources */,
 				3A6BA75F28BF115400D22BFC /* Drawing01Controller.m in Sources */,
 				71D2E610289BFF7600A34394 /* DetailViewController.m in Sources */,
 				71737D4428C4EC7B00A5EB45 /* DynamicViewController.m in Sources */,
