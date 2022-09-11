@@ -113,6 +113,7 @@
 
     return cell;
 }
+
 - (void) downloadImage:(NSIndexPath *)indexPath {
     AppModel *item = self.appList[indexPath.row];
 
