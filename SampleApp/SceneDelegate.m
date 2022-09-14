@@ -45,7 +45,8 @@
 //    [tabbarController setViewControllers: @[navController, videoController, recommendController, mineController]];
     [tabbarController setViewControllers: @[newsController, videoController, recommendController, mineController]];
     tabbarController.tabBar.translucent = NO;
-//    tabbarController.navigationItem.title = @"App";
+//    tabbarController.navigationItem.title = @"iOS App";
+//    [navController setNavigationBarHidden:YES];
 
 //    self.window.rootViewController = tabbarController;
     self.window.rootViewController = navController;

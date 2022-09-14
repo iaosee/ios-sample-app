@@ -50,11 +50,10 @@
 
 - (void)downloadWithURLString:(NSString *)url finishedBlock:(void (^)(UIImage *))finishedBlock {
     NSAssert(finishedBlock != nil, @"finishedBlock cannot be nil");
-    
     if (!url) {
         return;
     }
-    
+
     if ([self isCached:url]) {
         finishedBlock(self.imageCahce[url]);
         return;

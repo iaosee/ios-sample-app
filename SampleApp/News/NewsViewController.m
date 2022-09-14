@@ -50,6 +50,7 @@
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     _tableView.dataSource = self;
     _tableView.delegate = self;
+    _tableView.tableHeaderView = [[SearchBar alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
     [self.view addSubview:_tableView];
     
     
@@ -127,10 +128,13 @@
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:item.uniqueKey];
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    SearchBar *searchBar = [[SearchBar alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH - 20, self.navigationController.navigationBar.bounds.size.height)];
-    return searchBar;
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+//    return 50;
+//}
+//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+//    SearchBar *searchBar = [[SearchBar alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 40)];
+//    return searchBar;
+//}
 
 #pragma mark - NormalTableViewCellDelegate
 

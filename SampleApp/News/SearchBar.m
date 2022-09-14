@@ -19,11 +19,18 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self addSubview:({
-            _textField = [[UITextField alloc] initWithFrame:CGRectMake(10, 7, frame.size.width - 10 *2, frame.size.height - 7 * 2)];
+            _textField = [[UITextField alloc] initWithFrame:CGRectMake(10, 7, frame.size.width - 10 * 2, frame.size.height - 7 * 2)];
             _textField.backgroundColor = [UIColor whiteColor];
             _textField.delegate = self;
-            _textField.leftView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"search"]];
-            _textField.leftViewMode = UITextFieldViewModeUnlessEditing;
+            _textField.layer.borderColor = [[UIColor systemBlueColor] CGColor];
+            _textField.layer.borderWidth = 1;
+            _textField.layer.cornerRadius = 5;
+//            UIImageView *leftView = [[UIImageView alloc] initWithImage:[UIImage systemImageNamed:@"magnifyingglass"]];;
+            UIView *leftView = [[UIView alloc] init];
+//            leftView.backgroundColor = [UIColor redColor];
+            leftView.frame = CGRectMake(10, 0, 10, 10);
+            _textField.leftView = leftView;
+            _textField.leftViewMode = UITextFieldViewModeAlways;
             _textField.clearButtonMode = UITextFieldViewModeAlways;
             _textField.placeholder = @"今日热点推荐";
             _textField;
