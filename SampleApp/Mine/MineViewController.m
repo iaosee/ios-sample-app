@@ -9,8 +9,10 @@
 #import "ViewController.h"
 #import "SliderViewController.h"
 #import "DetailViewController.h"
+#import "Downloader.h"
 #import "Notification.h"
 #import "CommentManager.h"
+
 #import "ImageZoomController.h"
 #import "TableView01Controller.h"
 #import "TableView02Controller.h"
@@ -266,6 +268,13 @@
         [button addTarget:self action:@selector(app02Table) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
+    [self.view addSubview:({
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(240, 250, 100, 30)];
+        [button setTitle:@"download" forState:UIControlStateNormal];
+        button.backgroundColor = [UIColor blueColor];
+        [button addTarget:self action:@selector(downloadFile) forControlEvents:UIControlEventTouchUpInside];
+        button;
+    })];
 }
 
 - (void) goViewPage {
@@ -436,6 +445,27 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self test6];
+//    [self downloadFile];
+}
+
+- (void) downloadFile {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:@"Please enter url" preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    }]];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Sure" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        UITextField *userNameTextField = alertController.textFields.firstObject;
+        NSLog(@"Url = %@",userNameTextField.text);
+
+//        NSString *netFile = @"https://nginx.org/download/nginx-1.22.0.tar.gz";
+        NSString *netFile = userNameTextField.text;
+        Downloader *downloader = [[Downloader alloc] init];
+        [downloader download:netFile];
+    }]];
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.placeholder = @"URL";
+        textField.keyboardType = UIKeyboardTypeURL;
+    }];
+    [self presentViewController:alertController animated:true completion:nil];
 }
 
 - (void) test {
