@@ -459,7 +459,13 @@
 //        NSString *netFile = @"https://nginx.org/download/nginx-1.22.0.tar.gz";
         NSString *netFile = userNameTextField.text;
         Downloader *downloader = [[Downloader alloc] init];
-        [downloader download:netFile];
+        [downloader download:netFile successBlock:^(NSString *path) {
+            NSLog(@"download finish - %@", path);
+        } progressBlock:^(float progress) {
+            NSLog(@"download progress - %f", progress);
+        } errorBlock:^(NSError *error) {
+            NSLog(@"download error - %@", error);
+        }];
     }]];
     [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
         textField.placeholder = @"URL";
