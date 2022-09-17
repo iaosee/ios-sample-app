@@ -1,5 +1,5 @@
 //
-//  DownloadManager.h
+//  WebImageDownloadManager.h
 //  SampleApp
 //
 //  Created by iaosee on 2022/9/11.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DownloadManager : NSObject
+@interface WebImageDownloadManager : NSObject
 
 + (instancetype) sharedManager;
 

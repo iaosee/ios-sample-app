@@ -6,12 +6,12 @@
 //
 
 #import "UIImageView+WebImageCache.h"
-#import "DownloadManager.h"
+#import "WebImageDownloadManager.h"
 
 @implementation UIImageView (WebImageCache)
 
 - (void)setWebImageWithURL:(NSString *)url {
-    [DownloadManager.sharedManager downloadWithURLString:url finishedBlock:^(UIImage *img) {
+    [WebImageDownloadManager.sharedManager downloadWithURLString:url finishedBlock:^(UIImage *img) {
         self.image = img;
     }];
 }

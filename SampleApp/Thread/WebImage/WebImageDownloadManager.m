@@ -5,18 +5,18 @@
 //  Created by iaosee on 2022/9/11.
 //
 
-#import "DownloadManager.h"
+#import "WebImageDownloadManager.h"
 #import "DownloadOperation.h"
 #import "NSString+Hash.h"
 #import "NSString+Sandbox.h"
 
-@interface DownloadManager ()
+@interface WebImageDownloadManager ()
 @property(nonatomic, strong) NSOperationQueue *queue;
 @property(nonatomic, strong) NSMutableDictionary<NSString *, UIImage *> *imageCahce;
 @property(nonatomic, strong) NSMutableDictionary<NSString *, NSOperation *> *operationCache;
 @end
 
-@implementation DownloadManager
+@implementation WebImageDownloadManager
 
 - (NSOperationQueue *)queue {
     if (_queue == nil) {
@@ -38,11 +38,11 @@
 }
 
 + (instancetype)sharedManager {
-    static DownloadManager *instance;
+    static WebImageDownloadManager *instance;
     static dispatch_once_t onceToken;
     
     dispatch_once(&onceToken, ^{
-        instance = [[DownloadManager alloc] init];
+        instance = [[WebImageDownloadManager alloc] init];
     });
 
     return instance;

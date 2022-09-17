@@ -10,7 +10,7 @@
 #import "AppTableViewCell.h"
 #import "NSString+Hash.h"
 #import "NSString+Sandbox.h"
-#import "DownloadManager.h"
+#import "WebImageDownloadManager.h"
 #import "UIImageView+WebImageCache.h"
 
 @interface App02TableViewController ()

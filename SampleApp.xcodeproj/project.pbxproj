@@ -74,7 +74,7 @@
 		71737D5D28CC7A6000A5EB45 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D5C28CC7A6000A5EB45 /* NSString+Hash.m */; };
 		71737D6028CCFA8100A5EB45 /* App02TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D5F28CCFA8100A5EB45 /* App02TableViewController.m */; };
 		71737D6428CCFC5800A5EB45 /* DownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D6328CCFC5800A5EB45 /* DownloadOperation.m */; };
-		71737D6728CD054300A5EB45 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D6628CD054300A5EB45 /* DownloadManager.m */; };
+		71737D6728CD054300A5EB45 /* WebImageDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D6628CD054300A5EB45 /* WebImageDownloadManager.m */; };
 		71737D6D28CD21BD00A5EB45 /* UIImageView+WebImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D6C28CD21BD00A5EB45 /* UIImageView+WebImageCache.m */; };
 		7175311028B252A300E0C3DA /* SAMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7175310F28B252A300E0C3DA /* SAMessage.m */; };
 		7175311328B2544300E0C3DA /* SAMessageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 7175311228B2544300E0C3DA /* SAMessageFrame.m */; };
@@ -236,8 +236,8 @@
 		71737D5F28CCFA8100A5EB45 /* App02TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = App02TableViewController.m; path = SampleApp/Dynamic/App02TableViewController.m; sourceTree = SOURCE_ROOT; };
 		71737D6228CCFC5800A5EB45 /* DownloadOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadOperation.h; sourceTree = "<group>"; };
 		71737D6328CCFC5800A5EB45 /* DownloadOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadOperation.m; sourceTree = "<group>"; };
-		71737D6528CD054300A5EB45 /* DownloadManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
-		71737D6628CD054300A5EB45 /* DownloadManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadManager.m; sourceTree = "<group>"; };
+		71737D6528CD054300A5EB45 /* WebImageDownloadManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebImageDownloadManager.h; sourceTree = "<group>"; };
+		71737D6628CD054300A5EB45 /* WebImageDownloadManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebImageDownloadManager.m; sourceTree = "<group>"; };
 		71737D6B28CD21BD00A5EB45 /* UIImageView+WebImageCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebImageCache.h"; sourceTree = "<group>"; };
 		71737D6C28CD21BD00A5EB45 /* UIImageView+WebImageCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebImageCache.m"; sourceTree = "<group>"; };
 		7175310E28B252A300E0C3DA /* SAMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAMessage.h; sourceTree = "<group>"; };
@@ -637,8 +637,8 @@
 			children = (
 				71737D6228CCFC5800A5EB45 /* DownloadOperation.h */,
 				71737D6328CCFC5800A5EB45 /* DownloadOperation.m */,
-				71737D6528CD054300A5EB45 /* DownloadManager.h */,
-				71737D6628CD054300A5EB45 /* DownloadManager.m */,
+				71737D6528CD054300A5EB45 /* WebImageDownloadManager.h */,
+				71737D6628CD054300A5EB45 /* WebImageDownloadManager.m */,
 				71737D6B28CD21BD00A5EB45 /* UIImageView+WebImageCache.h */,
 				71737D6C28CD21BD00A5EB45 /* UIImageView+WebImageCache.m */,
 			);
@@ -874,7 +874,7 @@
 				3AAD38A82897D706006D3478 /* NewsViewController.m in Sources */,
 				71476C8F28AFF1380054573C /* ImageZoomController.m in Sources */,
 				3AD6209828B3826F00437A40 /* GroupHeaderView.m in Sources */,
-				71737D6728CD054300A5EB45 /* DownloadManager.m in Sources */,
+				71737D6728CD054300A5EB45 /* WebImageDownloadManager.m in Sources */,
 				3AA4437B28A1FB5F0058A067 /* Mediator.m in Sources */,
 				3AAD38B6289917AA006D3478 /* NormalTableViewCell.m in Sources */,
 				3AAD38AD2898CA53006D3478 /* VideoViewController.m in Sources */,

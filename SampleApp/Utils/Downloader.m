@@ -12,6 +12,7 @@
 @property(nonatomic, assign) long long currentContentLength;
 @property(nonatomic, strong) NSOutputStream *outputStream;
 @property(nonatomic, copy) NSString *filename;
+@property(nonatomic, strong) NSURLConnection *conn;
 
 @property(nonatomic, copy) void(^successBlock)(NSString *path);
 @property(nonatomic, copy) void(^progressBlock)(float progress);
@@ -41,12 +42,16 @@
     [self downloadFile:url];
 }
 
+- (void) pause {
+    [self.conn cancel];
+}
+
 - (void) downloadFile:(NSURL *) url {
     [[NSOperationQueue new] addOperationWithBlock:^{
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
         [request setValue:[NSString stringWithFormat:@"bytes=%lld-", self.currentContentLength] forHTTPHeaderField:@"Range"];
         NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-
+        self.conn = conn;
         [[NSRunLoop currentRunLoop] run];
     }];
 }
