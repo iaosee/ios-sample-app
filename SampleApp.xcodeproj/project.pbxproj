@@ -56,6 +56,7 @@
 		71476C9F28B13A450054573C /* DataItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71476C9E28B13A450054573C /* DataItemCell.xib */; };
 		71476CA228B13C290054573C /* DataItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71476CA128B13C290054573C /* DataItemCell.m */; };
 		714E677A28D22FC9003EEB7E /* Downloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 714E677928D22FC9003EEB7E /* Downloader.m */; };
+		714E677D28D57D68003EEB7E /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 714E677C28D57D68003EEB7E /* DownloadManager.m */; };
 		71737D2128C3446600A5EB45 /* Playground.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71737D2028C3446600A5EB45 /* Playground.storyboard */; };
 		71737D2428C3668D00A5EB45 /* GestureLockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D2328C3668D00A5EB45 /* GestureLockView.m */; };
 		71737D2828C3A74800A5EB45 /* GestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71737D2728C3A74800A5EB45 /* GestureViewController.m */; };
@@ -203,6 +204,8 @@
 		71476CA128B13C290054573C /* DataItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataItemCell.m; sourceTree = "<group>"; };
 		714E677828D22FC9003EEB7E /* Downloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Downloader.h; sourceTree = "<group>"; };
 		714E677928D22FC9003EEB7E /* Downloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Downloader.m; sourceTree = "<group>"; };
+		714E677B28D57D68003EEB7E /* DownloadManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
+		714E677C28D57D68003EEB7E /* DownloadManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadManager.m; sourceTree = "<group>"; };
 		71737D2028C3446600A5EB45 /* Playground.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Playground.storyboard; sourceTree = "<group>"; };
 		71737D2228C3668D00A5EB45 /* GestureLockView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GestureLockView.h; sourceTree = "<group>"; };
 		71737D2328C3668D00A5EB45 /* GestureLockView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestureLockView.m; sourceTree = "<group>"; };
@@ -454,6 +457,8 @@
 				71737D5C28CC7A6000A5EB45 /* NSString+Hash.m */,
 				714E677828D22FC9003EEB7E /* Downloader.h */,
 				714E677928D22FC9003EEB7E /* Downloader.m */,
+				714E677B28D57D68003EEB7E /* DownloadManager.h */,
+				714E677C28D57D68003EEB7E /* DownloadManager.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -898,6 +903,7 @@
 				3AAD387328977C62006D3478 /* SceneDelegate.m in Sources */,
 				3AFFD5EB28B36E6F00A4661A /* ItemCellView.m in Sources */,
 				71737D6028CCFA8100A5EB45 /* App02TableViewController.m in Sources */,
+				714E677D28D57D68003EEB7E /* DownloadManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
