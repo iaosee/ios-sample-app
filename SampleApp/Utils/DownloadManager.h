@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
      successBlock:(void(^)(NSString *path)) successBlock
     progressBlock:(void(^)(float progress))progressBlock
        errorBlock:(void(^)(NSError *error)) errorBlock;
-
+- (void) pauseTaskForUrl:(NSString *)urlString;
 @end
 
 NS_ASSUME_NONNULL_END

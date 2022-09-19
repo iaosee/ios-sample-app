@@ -61,4 +61,13 @@
     [self.downloadCache setObject:downloader forKey:urlString];
 }
 
+- (void)pauseTaskForUrl:(NSString *)urlString {
+    Downloader *downloder = self.downloadCache[urlString];
+    if (downloder == nil) {
+        return;
+    }
+    
+    [downloder pause];
+    [self.downloadCache removeObjectForKey:urlString];
+}
 @end
