@@ -11,8 +11,9 @@
 @property(nonatomic, assign) long long expectedContentLength;
 @property(nonatomic, assign) long long currentContentLength;
 @property(nonatomic, strong) NSOutputStream *outputStream;
-@property(nonatomic, copy) NSString *filename;
 @property(nonatomic, strong) NSURLConnection *conn;
+@property(nonatomic, copy) NSString *filename;
+@property(nonatomic, copy) NSString *urlString;
 
 @property(nonatomic, copy) void(^successBlock)(NSString *path);
 @property(nonatomic, copy) void(^progressBlock)(float progress);
@@ -22,32 +23,54 @@
 
 @implementation Downloader
 
-- (void) download:(NSString *) urlString
-     successBlock:(void(^)(NSString *path)) successBlock
-    progressBlock:(void(^)(float progress))progressBlock
-       errorBlock:(void(^)(NSError *error)) errorBlock {
-
-    self.successBlock = successBlock;
-    self.progressBlock = progressBlock;
-    self.errorBlock = errorBlock;
-    
-    NSURL *url = [NSURL URLWithString:urlString];
-    [self getServerFileInfo:url];
-    self.currentContentLength = [self checkLocalFileInfo];
-    if (self.currentContentLength == -1) {
-        NSLog(@"Already downloaded !!!");
-        if (self.successBlock) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                self.successBlock(self.filename);
-            });
+- (void)main {
+    @autoreleasepool {
+        
+        NSURL *url = [NSURL URLWithString:self.urlString];
+        [self getServerFileInfo:url];
+        
+        if (self.isCancelled) {
+            return;
         }
-        return;
+        
+        self.currentContentLength = [self checkLocalFileInfo];
+        if (self.currentContentLength == -1) {
+            NSLog(@"Already downloaded !!!");
+            if (self.successBlock) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    self.successBlock(self.filename);
+                });
+            }
+            return;
+        }
+
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+        [request setValue:[NSString stringWithFormat:@"bytes=%lld-", self.currentContentLength] forHTTPHeaderField:@"Range"];
+        NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+        self.conn = conn;
+        [[NSRunLoop currentRunLoop] run];
     }
-    [self downloadFile:url];
+}
+
++ (instancetype) downloader:(NSString *) urlString
+     successBlock:(void(^)(NSString *path)) successBlock
+    progressBlock:(void(^)(float progress)) progressBlock
+       errorBlock:(void(^)(NSError *error)) errorBlock {
+    
+    Downloader *downloer = [[Downloader alloc] init];
+
+    downloer.urlString = urlString;
+    downloer.successBlock = successBlock;
+    downloer.progressBlock = progressBlock;
+    downloer.errorBlock = errorBlock;
+
+//    [self downloadFile:url];
+    return downloer;
 }
 
 - (void) pause {
     [self.conn cancel];
+    [self cancel];
 }
 
 - (void) downloadFile:(NSURL *) url {

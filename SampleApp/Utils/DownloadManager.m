@@ -42,8 +42,8 @@
         return;
     }
 
-    Downloader *downloader = [[Downloader alloc] init];
-    [downloader download:urlString
+//    Downloader *downloader = [[Downloader alloc] init];
+    Downloader *downloader = [Downloader downloader:urlString
             successBlock:^(NSString *path) {
         [self.downloadCache removeObjectForKey:urlString];
         if (successBlock) {
@@ -57,7 +57,8 @@
             errorBlock(error);
         }
     }];
-
+    
+    [[NSOperationQueue new] addOperation:downloader];
     [self.downloadCache setObject:downloader forKey:urlString];
 }
 
@@ -66,7 +67,7 @@
     if (downloder == nil) {
         return;
     }
-    
+
     [downloder pause];
     [self.downloadCache removeObjectForKey:urlString];
 }

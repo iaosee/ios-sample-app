@@ -458,7 +458,7 @@
         NSLog(@"Url = %@",userNameTextField.text);
 
 //        NSString *netFile = @"https://nginx.org/download/nginx-1.22.0.tar.gz";
-//        NSString *netFile = @"https://nginx.org/download/nginx-1.22.0.tar.gz";
+//        NSString *netFile = @"https://dlcdn.apache.org/httpd/httpd-2.4.54.tar.gz";
         NSString *netFile = userNameTextField.text;
 
 //        Downloader *downloader = [[Downloader alloc] init];
