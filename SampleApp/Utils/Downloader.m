@@ -22,7 +22,11 @@
 
 @implementation Downloader
 
-- (void) download:(NSString *) urlString successBlock:(void(^)(NSString *path)) successBlock progressBlock:(void(^)(float progress))progressBlock errorBlock:(void(^)(NSError *error)) errorBlock {
+- (void) download:(NSString *) urlString
+     successBlock:(void(^)(NSString *path)) successBlock
+    progressBlock:(void(^)(float progress))progressBlock
+       errorBlock:(void(^)(NSError *error)) errorBlock {
+
     self.successBlock = successBlock;
     self.progressBlock = progressBlock;
     self.errorBlock = errorBlock;

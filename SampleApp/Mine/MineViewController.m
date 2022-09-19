@@ -30,6 +30,7 @@
 #import "Dynamic03ViewController.h"
 #import "AppTableViewController.h"
 #import "App02TableViewController.h"
+#import "DownloadManager.h"
 
 @interface MineViewController ()
 
@@ -457,9 +458,19 @@
         NSLog(@"Url = %@",userNameTextField.text);
 
 //        NSString *netFile = @"https://nginx.org/download/nginx-1.22.0.tar.gz";
+//        NSString *netFile = @"https://nginx.org/download/nginx-1.22.0.tar.gz";
         NSString *netFile = userNameTextField.text;
-        Downloader *downloader = [[Downloader alloc] init];
-        [downloader download:netFile successBlock:^(NSString *path) {
+
+//        Downloader *downloader = [[Downloader alloc] init];
+//        [downloader download:netFile successBlock:^(NSString *path) {
+//            NSLog(@"download finish - %@", path);
+//        } progressBlock:^(float progress) {
+//            NSLog(@"download progress - %f", progress);
+//        } errorBlock:^(NSError *error) {
+//            NSLog(@"download error - %@", error);
+//        }];
+
+        [[DownloadManager sharedManager] download:netFile successBlock:^(NSString *path) {
             NSLog(@"download finish - %@", path);
         } progressBlock:^(float progress) {
             NSLog(@"download progress - %f", progress);

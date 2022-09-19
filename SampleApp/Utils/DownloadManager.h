@@ -11,6 +11,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DownloadManager : NSObject
 
++ (instancetype) sharedManager;
+- (void) download:(NSString *) urlString
+     successBlock:(void(^)(NSString *path)) successBlock
+    progressBlock:(void(^)(float progress))progressBlock
+       errorBlock:(void(^)(NSError *error)) errorBlock;
+
 @end
 
 NS_ASSUME_NONNULL_END
